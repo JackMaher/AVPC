@@ -1,0 +1,437 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"start",
+				"startCov(  )\tVoid"
+			],
+			[
+				"Term",
+				"TerminalScreen"
+			],
+			[
+				"to",
+				"toLowerCase(  )\tString"
+			],
+			[
+				"flxc",
+				"FlxColor\tflixel.util"
+			],
+			[
+				"Psh",
+				"Pshipstop\tObjects"
+			],
+			[
+				"cut",
+				"cutscene1"
+			],
+			[
+				"spac",
+				"Spacestation"
+			],
+			[
+				"en",
+				"endgame1"
+			],
+			[
+				"attack",
+				"attack3_wait1\tfunction"
+			],
+			[
+				"attac",
+				"attack3_wait1"
+			],
+			[
+				"coc",
+				"Cockwindow"
+			],
+			[
+				"att",
+				"attack3_wait\tfunction"
+			],
+			[
+				"GR",
+				"GREEN\tflixel.util.FlxColor"
+			],
+			[
+				"P",
+				"PURPLE\tflixel.util.FlxColor"
+			],
+			[
+				"flx",
+				"FlxColor"
+			],
+			[
+				"cu",
+				"currentRoom"
+			],
+			[
+				"pixel",
+				"pixelDistance( Other : Object )\tInt"
+			],
+			[
+				"sw",
+				"switchState(...)\tVoid"
+			],
+			[
+				"ch",
+				"characterResponds"
+			],
+			[
+				"ter",
+				"TerminalScreen"
+			],
+			[
+				"gam",
+				"Game\tclass"
+			],
+			[
+				"Halw",
+				"Hallway5"
+			],
+			[
+				"locke",
+				"lockedText\tString"
+			],
+			[
+				"pow",
+				"Powerpc\tclass"
+			],
+			[
+				"Hall",
+				"Hallway2"
+			],
+			[
+				"Ter",
+				"TerminalScreen\tclass"
+			],
+			[
+				"Power",
+				"Powerpc\tclass"
+			],
+			[
+				"Pow",
+				"Powerpc\tclass"
+			],
+			[
+				"wak",
+				"walkTo(...)\tVoid"
+			],
+			[
+				"st",
+				"state\tflixel.FlxState"
+			],
+			[
+				"gen",
+				"generator"
+			],
+			[
+				"Good",
+				"Goodbye"
+			],
+			[
+				"op",
+				"op2_3"
+			],
+			[
+				"Smu",
+				"Schmuggler"
+			],
+			[
+				"open",
+				"Opened\tBool"
+			],
+			[
+				"Ca",
+				"Captinsroom"
+			],
+			[
+				"newPlayer",
+				"newPlayerY\tInt"
+			],
+			[
+				"Ha",
+				"Hallway2"
+			],
+			[
+				"new",
+				"newRoom"
+			],
+			[
+				"fun",
+				"Function\tflash.utils"
+			],
+			[
+				"im",
+				"images"
+			],
+			[
+				"obj",
+				"Object"
+			],
+			[
+				"_",
+				"_right\tvar"
+			],
+			[
+				"fl",
+				"FlxG\tflixel"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "Package Control: install",
+		"selected_items":
+		[
+			[
+				"Package Control: install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: instal",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 432.0
+	},
+	"console":
+	{
+		"height": 146.0,
+		"history":
+		[
+			"import urllib2,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); os.makedirs( ipp ) if not os.path.exists(ipp) else None; urllib2.install_opener( urllib2.build_opener( urllib2.ProxyHandler()) ); by = urllib2.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); open( os.path.join( ipp, pf), 'wb' ).write(by) if dh == h else None; print('Error validating download (got %s instead of %s), please try manual install' % (dh, h) if dh != h else 'Please restart Sublime Text to finish installation')",
+			"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/jacks/Documents/Spacegame2/source/Main.hx",
+		"/C/Users/jacks/Documents/spacegame/usage.txt",
+		"/C/Users/jacks/Documents/Spacegame2/source/Cargo.hx",
+		"/C/Users/jacks/Documents/Spacegame2/source/Player.hx",
+		"/C/Users/jacks/Documents/Spacegame2/adventure-engine-test.sublime-project",
+		"/C/Users/jacks/Documents/spacegame/source/Definitions.hx",
+		"/C/Users/jacks/Documents/spacegame/source/TerminalScreen.hx",
+		"/C/Users/jacks/Documents/spacegame/source/MenuState.hx",
+		"/C/Users/jacks/Documents/spacegame/source/Main.hx",
+		"/C/Users/jacks/Documents/spacegame/source/Game.hx",
+		"/C/Users/jacks/Documents/spacegame/source/Countdown.hx",
+		"/C/Users/jacks/Documents/spacegame/source/Characters.hx",
+		"/C/Users/jacks/Documents/spacegame/source/Todo",
+		"/C/Users/jacks/Documents/spacegame/source/Objects.hx",
+		"/C/Users/jacks/Documents/spacegame/source/Rooms.hx",
+		"/C/Users/jacks/Documents/spacegame/source/Speech.hx",
+		"/C/Users/jacks/Documents/spacegame/source/EndGameState.hx",
+		"/C/Users/jacks/Documents/spacegame/source/WinGameState.hx",
+		"/C/Users/jacks/Documents/spacegame/source/Inventory.hx",
+		"/C/Users/jacks/Documents/spacegame/source/R.hx",
+		"/C/Users/jacks/Documents/spacegame/spacegame.sublime-project",
+		"/D/Downloads/Sublime Text 3 - Build 3083/Readme.txt"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"C:\\Users\\jacks\\Documents\\spacegame\\source",
+			"*.txt,C:\\Users\\jacks\\Documents\\spacegame\\source"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"powerpc",
+			"computer",
+			"power",
+			"cut",
+			"rp",
+			"_ending",
+			"report",
+			"_rp",
+			"scene",
+			"ending",
+			"cut",
+			"cockpc",
+			"ending",
+			"powerpc",
+			"power",
+			"screw",
+			"shipdoo",
+			"shipdoor",
+			"lock",
+			"its",
+			"powerOn",
+			"poweron",
+			"power",
+			"powerpc",
+			"_shi",
+			"_ship",
+			"\"sodsbury\"",
+			"sodsbury",
+			"o.n",
+			"doesnt",
+			"hammer",
+			"ship is",
+			"ship un",
+			"Smugger",
+			"cast",
+			"smallobje",
+			"cargo cont",
+			"pshi",
+			"cast",
+			"var",
+			"fadin",
+			"hammer",
+			"block",
+			"fade",
+			"spaceb",
+			"enter",
+			"tilex",
+			"move1",
+			"_warning",
+			"what",
+			"power",
+			"animatio",
+			"cock",
+			"default",
+			"cock",
+			"dead",
+			"dr",
+			"player",
+			"());\n",
+			"members"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"\"Sodsbury\"",
+			"Sodsbury",
+			"objects"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "Project.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 231.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

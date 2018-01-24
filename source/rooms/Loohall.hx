@@ -12,6 +12,7 @@ class Loohall extends Room {
 					new RoomTrigger(107,Hallwaybar,10,10),
 					new MenLooDoor(24,8),
 					new Ladyloodoor(62,8),
+					new Ladyloo(64,10),
         			new Player(10,10)];
     }
 
