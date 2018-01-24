@@ -11,4 +11,9 @@ class MenLooDoor extends Door {
 		customName = "Male";
 	}
 
+	override public function use(){
+		super.use();
+		Global.currentRoom.get(Player).flipX = true;
+	}
+
 }

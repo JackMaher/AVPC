@@ -4,17 +4,11 @@ import flixel.util.FlxColor;
 
 
 
-class PTwink2 extends Object {
+class Curtine extends Object {
 
 	public function new(x,y){
 		super (x,y);
-		customName = "Bruce";
+		customName = " ";
 		layer=FORE;
-	}
-	override function look(){
-
-		say("PTwink2");
-
-
 	}
 }

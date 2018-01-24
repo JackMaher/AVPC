@@ -2,11 +2,11 @@ package objects;
 import adventure.*;
 import rooms.*;
 
-class H1Door extends Door {
+class Penlift extends Door {
 	public function new(x,y){
 		super(x,y);
 		newRoom=Lift;
-		newPlayerX = 15;
+		newPlayerX = 30;
 		newPlayerY =10;
 	}
 

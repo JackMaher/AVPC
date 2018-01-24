@@ -23,6 +23,9 @@ class Player extends Object {
         maxVelocity.x = 500;
         drag.x = 5000;
         moveSpeed = 8;
+        layer=CHAR;
+
+        update(0);
     }
 
     override public function update(d) {

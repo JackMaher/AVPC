@@ -24,6 +24,7 @@ class RoomTrigger extends Trigger {
     }
     function trigger(){
         var oldVel   = room.get(Player).velocity.x;
+        room.get(Player).velocity.x = 0;
         var oldFlipX = room.get(Player).flipX;
        // trace(oldVel);
 

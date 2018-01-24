@@ -8,7 +8,7 @@ class PTwink1 extends Object {
 
 	public function new(x,y){
 		super (x,y);
-		customName = "Jake";
+		customName = "Lance";
 		layer=FORE;
 	}
 	override function look(){
