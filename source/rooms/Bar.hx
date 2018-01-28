@@ -19,7 +19,7 @@ class Bar extends Room {
         			new Waterfall(80,30),
         			new Waterfall(102,30),
                     new Block(5),
-        			new Player(10,10)];
+        			new Player(140, 21)];
     }
 
 

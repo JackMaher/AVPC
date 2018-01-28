@@ -14,8 +14,9 @@ class Penthouse extends Room {
 					new Waterfall(90,11),
 					new Boss(84,15),
 					new Curtine(76,1),
-					new Block(6),
-        			new Player(75,10)];
+					new Block(75),
+
+        			new Player(10,10)];
     }
 
 

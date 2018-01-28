@@ -14,7 +14,7 @@ class Lift extends Room {
 					new LiftAI(42,13),
 					new Block(7),
 					new Block(52),
-        			new Player(30,20)];
+        			new Player(15,20)];
     }
 
 

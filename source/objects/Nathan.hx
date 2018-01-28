@@ -16,18 +16,21 @@ class Nathan extends Object {
 
 
 		var player:Player = room.get(Player);
+		var roomX = room.getX(79);
+		var roomY = room.getY(16);
+
 
 		var interact = [
 			{time:0.0,run:function(){
 
-				say("test", FlxColor.GREEN, 4);
+				player.say("Hey! Are you OK?", FlxColor.ORANGE, 2);
 			}},
 			{time:2.0,run:function(){
-				player.say("test", FlxColor.WHITE,4);
+				say("Mmmph.... mmmph", FlxColor.GREEN,3);
 			}},		
 		];
 		
-		player.walkToObject(Nathan, X, LEFT, function(){
+		player.walkTo(roomX, roomY, function(){
 			player.flipX = true;
 			Event.run(interact);
 			});

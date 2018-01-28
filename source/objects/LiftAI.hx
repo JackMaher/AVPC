@@ -23,6 +23,7 @@ class LiftAI extends Object {
 
 		player.canControl = false;
 
+
 		var changeFloor = function(Floor,PlayerX,PlayerY) {
 			var door = room.get(LiftDoor);
 			door.newRoom = Floor;
@@ -38,6 +39,23 @@ class LiftAI extends Object {
 
 			Event.run(done,false);
 		}
+
+		var speakToBoss = [
+			{time:0.0,run:function(){
+				say("Hello", FlxColor.GREEN, 2);
+				animation.play("Talk");
+			}},
+			{time:2.0,run:function(){
+				player.say("Umm Hello?", null, 2);
+			}},			
+			{time:4.0,run:function(){
+				say("Mr Luthberge asked me to send you straight to him.", FlxColor.GREEN, 2);
+				changeFloor(PenthouseHallway, 39, 10);
+			}},
+		];
+
+
+
 
 		var interact = [
 
@@ -83,7 +101,15 @@ class LiftAI extends Object {
 			}},		
 		];
 
-		Event.run(interact, false);
+		if (Player.spoketoBoss == true){
+				Event.run(interact, false);
+			}
+		else{
+				Event.run(speakToBoss, false);
+			}
+
+
+		//Event.run(speakToBoss, false);
 
 	}
 }

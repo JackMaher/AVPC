@@ -9,6 +9,8 @@ class Player extends Object {
 
 	public var canControl:Bool = true;
 	public var customAnimation:String;
+	public static var passwordHeard = false;
+	public static var spoketoBoss = false;
 
     public function new(x,y) {
         super(x,y);
@@ -40,6 +42,7 @@ class Player extends Object {
 		else {
 			offset.x = 3*scale.x;
 		}
+
 
 
     	var movingLeft  = false;
@@ -102,6 +105,12 @@ class Player extends Object {
 	    if(customAnimation != null) {
 	    	animation.play(customAnimation);
 	    }
+
+
+
+
+
+
 
     }
 

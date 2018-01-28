@@ -11,6 +11,8 @@ class Hallwaybar extends Room {
 					new RoomTrigger(6,Loohall,90,10),
 					new Block(109),
 					new Nathan(107,11),
+					new Hallwaybardoor(45,8),
+					new Doorman(71,13),
         			new Player(10,10)];
     }
 

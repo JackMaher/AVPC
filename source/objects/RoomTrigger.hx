@@ -14,10 +14,11 @@ class RoomTrigger extends Trigger {
 
     var newY:Int;
 
+
     function new (x,nRoom,nX,nY){
         super (x);
         newRoom = nRoom;
-        visible = true;
+        visible = false;
         newX = nX;
         newY = nY;
 
