@@ -9,8 +9,8 @@ class Player extends Object {
 
 	public var canControl:Bool = true;
 	public var customAnimation:String;
-	public static var passwordHeard = false;
-	public static var spoketoBoss = false;
+	public static var passwordHeard = true;
+	public static var spoketoBoss = true;
 
     public function new(x,y) {
         super(x,y);

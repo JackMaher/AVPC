@@ -7,7 +7,6 @@ import flixel.util.FlxColor;
 class Hallwaybardoor extends Door {
 var doorActive:Bool = false;
 	public function new(x,y){
-
 		super(x,y);
 	}
 
@@ -49,7 +48,8 @@ var doorActive:Bool = false;
 			}},
 			{time:8.0,run:function(){
 				say("*CLICK*");
-				var doorActive = true;
+				doorActive = true;
+
 			}},	
 		
 	
@@ -64,8 +64,9 @@ var doorActive:Bool = false;
 			
 			if (Player.passwordHeard == true&&doorActive == true){
 				newRoom=MaxxCreamRoom;
-				newPlayerX = 15;
+				newPlayerX = 20;
 				newPlayerY =10;
+				go();
 
 			}
 
