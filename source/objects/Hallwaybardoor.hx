@@ -5,10 +5,8 @@ import flixel.util.FlxColor;
 
 class Hallwaybardoor extends Door {
 	public function new(x,y){
+	var doorActive = false;
 		super(x,y);
-		//newRoom=Lift;
-		newPlayerX = 15;
-		newPlayerY =10;
 	}
 
 	override function use(){
@@ -49,7 +47,10 @@ class Hallwaybardoor extends Door {
 			}},
 			{time:8.0,run:function(){
 				say("*CLICK*");
-			}}			
+				var doorActive = true;
+			}},	
+		
+	
 		];
 
 			if (Player.passwordHeard == false){
@@ -57,6 +58,13 @@ class Hallwaybardoor extends Door {
 			}
 			else{
 				Event.run(test, false);
+			}
+			
+			if (Player.passwordHeard == true||doorActive == true){
+				newRoom=MaxxCreamRoom;
+				newPlayerX = 15;
+				newPlayerY =10;
+
 			}
 
 		}

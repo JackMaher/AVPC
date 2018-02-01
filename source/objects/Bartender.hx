@@ -30,13 +30,13 @@ class Bartender extends Object {
 				say("Greetings Madam... Sir... ", FlxColor.PINK, 4);
 			}},
 			{time:2.0,run:function(){
-				player.say("...its Sir...", null, 3);
+				player.say("...its Sir...", FlxColor.ORANGE, 3);
 			}},
 			{time:5.0,run:function(){
 				say("Whatever you say luv, need a drink?", FlxColor.PINK, 4);
 			}},
 			{time:8.0,run:function(){
-				player.say("No thanks");
+				player.say("No thanks.",FlxColor.ORANGE);
 			}}
 			];
 			Event.run(interact);

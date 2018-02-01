@@ -22,17 +22,17 @@ class PTwink1 extends Object {
 
 
 		var interact = [
-			{time:0.0,run:function(){
+			{time:2.0,run:function(){
 				say("Who are you staring at?", FlxColor.CYAN, 2);
 			}},
-			{time:2.0,run:function(){
-				player.say("I... I just wanted to ask yo....", null,1.7);
+			{time:4.0,run:function(){
+				player.say("I... I just wanted to ask yo....", null,1.5);
 			}},	
-			{time:2.7,run:function(){
+			{time:4.7,run:function(){
 				say("Just leave me alone", FlxColor.CYAN,3);
 			}},	
-			{time:3.7,run:function(){
-				player.say("Oh... OK", null,3);
+			{time:7.0,run:function(){
+				player.say("(oh... ok)", null,3);
 			}},	
 		];
 
