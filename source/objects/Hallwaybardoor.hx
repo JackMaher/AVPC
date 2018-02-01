@@ -3,9 +3,11 @@ import adventure.*;
 import rooms.*;
 import flixel.util.FlxColor;
 
+
 class Hallwaybardoor extends Door {
+var doorActive:Bool = false;
 	public function new(x,y){
-	var doorActive = false;
+
 		super(x,y);
 	}
 
