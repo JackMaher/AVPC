@@ -10,14 +10,12 @@ class Docking extends Room {
         scaleFactor = 8;
         objects = [
                     new RoomTrigger(6,Hallway2,110,36),
-                    new Hal(123,38),
-                    new Space(96,11),
-                    new Dockdoor(93,9),
-                    new Dockingstation(45,22),
-                    new Bench(55,51),
+                    new Hal(123,28),
+                    //new Dockdoor(93,9),
+                    //new Dockdoorfront(93,9),
                     new Block(151),
-                    new Chair (36,50),
         			new Player(106,37),
+                    new Dockingfront(0,0),
                     new HalTrigger(88)];
     }
 
