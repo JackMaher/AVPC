@@ -12,7 +12,7 @@ class Main extends Sprite
 	public function new()
 	{
 		super();
-        Global.startingRoom = MaxxCreamRoom;
+        Global.startingRoom = Bar;
 		addChild(new FlxGame(1920, 1080, Game));
 	}
 }

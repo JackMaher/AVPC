@@ -60,7 +60,7 @@ class Hallwaybardoor extends Door {
 				Event.run(test, false);
 			}
 			
-			if (Player.passwordHeard == true||doorActive == true){
+			if (Player.passwordHeard == true&&doorActive == true){
 				newRoom=MaxxCreamRoom;
 				newPlayerX = 15;
 				newPlayerY =10;
