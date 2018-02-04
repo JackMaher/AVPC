@@ -13,7 +13,9 @@ class Hal extends Object {
 	}
 	
 	override function look(){
-		say("Hello Dave. Umm I mean Dick.",FlxColor.RED);
+		say("Hello Dave. Umm I mean Packwood.",FlxColor.RED);
+		//Global.inventory.add(this);
+		Global.inventory.add(new ReusableProphylactic(100,20) );
 	}
 
 
