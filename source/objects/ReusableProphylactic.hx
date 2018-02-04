@@ -6,7 +6,6 @@ import flixel.util.FlxColor;
 
 
 class ReusableProphylactic extends Object {
-	//var twink1:objects.PTwink1 = room.get(PTwink1);
 
 	public function new(x,y){
 		super (x,y);
@@ -16,12 +15,23 @@ class ReusableProphylactic extends Object {
 		layer=FORE;
 	}
 	override function useOn ( other:Object ) {
+	var player:Player = room.get(Player);
+
+
 	trace(other.type);
 	  if(other.name == "Lance") {
-	    other.say("Not bloody likely mate");
-	  }
-	  if(other.type == Player){
-	  	other.say("I havent made the animation for that yet",FlxColor.ORANGE);
+
+		var interact = [
+			{time:2.0,run:function(){
+				other.say("Not bloody likely mate", FlxColor.CYAN, 2);
+					}},
+			];
+
+	  	player.walkToObject(PTwink1, X, RIGHT, function(){
+			player.flipX = false;
+			Event.run(interact, false);
+		});
+
 	  }
 	}
 
