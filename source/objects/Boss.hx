@@ -30,7 +30,7 @@ class Boss extends Object {
 				player.say("Mr Luthberge, I wasnt expecting to be docked by you today", FlxColor.WHITE, 4);
 			}},
 			{time:3.0,run:function(){
-				say("Let's dispense with the pleasantries shall we Dick Sparrow", FlxColor.GREEN,4);
+				say("Let's dispense with the pleasantries shall we Rodger Packwood", FlxColor.GREEN,4);
 			}},
 			{time:7.0,run:function(){
 				say("Where is my money, its time to pay your debts.",FlxColor.GREEN, 3);

@@ -22,7 +22,7 @@ class ReusableProphylactic extends Object {
 	  if(other.name == "Lance") {
 
 		var interact = [
-			{time:1.0,run:function(){
+			{time:0.0,run:function(){
 				other.say("Not bloody likely mate", FlxColor.CYAN, 2);
 					}},
 			];
