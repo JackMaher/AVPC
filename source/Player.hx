@@ -21,6 +21,7 @@ class Player extends Object {
         animation.add("kneel",[10,11,12,13],6,false);
         animation.add("kneeled",[13],0,false);
         animation.add("standup",[13,12,11,10],6,false);
+        customName="Rodger Packwood";
 
         maxVelocity.x = 500;
         drag.x = 5000;

@@ -1,6 +1,7 @@
 package objects;
 import adventure.*;
 import flixel.util.FlxColor;
+import flixel.util.FlxColor;
 
 
 
@@ -10,13 +11,17 @@ class ReusableProphylactic extends Object {
 	public function new(x,y){
 		super (x,y);
 		customName = "Reusable Prophylactic";
-		//changeScale(4);
+		changeScale(4);
 		//updateHitbox();
 		layer=FORE;
 	}
 	override function useOn ( other:Object ) {
-	  if(other.name == "PTwink1") {
-	    other.say("test");
+	trace(other.type);
+	  if(other.name == "Lance") {
+	    other.say("Not bloody likely mate");
+	  }
+	  if(other.type == Player){
+	  	other.say("I havent made the animation for that yet",FlxColor.ORANGE);
 	  }
 	}
 

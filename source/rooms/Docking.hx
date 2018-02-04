@@ -10,13 +10,13 @@ class Docking extends Room {
         scaleFactor = 8;
         objects = [
                                                 new Space(49,13),
-                    new Dockwindow(49,13),
+                    //new Dockwindow(49,13),
                     new RoomTrigger(6,Hallway2,110,36),
                     //new Dockdoor(93,9),
                     //new Dockdoorfront(93,9),
                     new Block(151),
-        			new Player(125,37),
-                    //new Dockingfront(0,0),
+        			new Player(123,37),
+                    new Tele(105,28),
                     new SitTwink2(50,41),
                     new SitTwink(83,41),
                     new Hal(75,14),
