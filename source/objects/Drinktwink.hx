@@ -5,6 +5,7 @@ import flixel.util.FlxColor;
 
 
 class Drinktwink extends Object {
+	var introDone = false;
 
 	public function new(x,y){
 		super (x,y);
@@ -18,7 +19,9 @@ class Drinktwink extends Object {
 	override function use(){
 		var player:Player = room.get(Player);
 
+		if(introDone) { return; }
 
+									//Intro Dialog
 		var interact = [
 			{time:0.0,run:function(){
 				player.say("Umm...", FlxColor.ORANGE, 1);
@@ -37,12 +40,46 @@ class Drinktwink extends Object {
 				say("I hope Adam and Steve didnt cause any troubles when you came in", 0xffAD2DA5,4);
 			}},	
 
+					//Intro Dialog Tree
 			{time:16,run:function(){
-				player.option("Whats their deal?", FlxColor.BLUE,function(){
-					player.say("fuck those guys");
+				player.option("Nothing I coudnt handle.", FlxColor.BLUE,function(){ 
+			        var opt1 = [
+			            {time:3.0,run:function(){
+			                say("Glad to hear, they've had a stick up their arse since Pride.", 0xffAD2DA5, 3);
+			            }},
+			            {time:6.0,run:function(){
+			                say("Apperently Brit-Tron invited them backstage", 0xffAD2DA5, 3);
+			              	say("They've been insufferable since.", 0xffAD2DA5, 3);
+			            }},
+		            ];
+					Event.run(opt1);
 
-			)}};
-			
+				});
+				player.option("[[A reasonable and leveled headed telling of what happen]]", FlxColor.BLUE,function(){ 
+					
+					player.say("Fuck those guys.",FlxColor.ORANGE);
+					
+			        var opt2 = [
+			            {time:3.0,run:function(){
+			                say("Yep sounds like Adam and Steve.", 0xffAD2DA5, 3);
+			            }},
+			            {time:6.0,run:function(){
+			                say("Just ignore them, they're just a couple of H.F.Q.", 0xffAD2DA5, 3);
+			            }},
+			         	{time:9.0,run:function(){
+			                player.say("HFQ?", FlxColor.ORANGE, 3);
+			            }},
+			  			 {time:12.0,run:function(){
+			                say("High Functioning Queers.", 0xffAD2DA5, 3);
+			            }},
+
+		            ];
+					Event.run(opt2);
+				});
+				player.endOptions();
+				introDone = true;
+			}},	
+				
 		];
 		
 			Event.run(interact);
