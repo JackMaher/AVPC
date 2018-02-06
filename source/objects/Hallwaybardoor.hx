@@ -23,7 +23,7 @@ var doorActive:Bool = false;
 				doorman.say("Password?", FlxColor.GREEN, 4);
 			}},
 			{time:4.0,run:function(){
-				player.say("Umm?", FlxColor.WHITE,4);
+				player.say("Umm?", null,4);
 
 			}},			
 			{time:5.0,run:function(){
@@ -40,7 +40,7 @@ var doorActive:Bool = false;
 				doorman.say("Password?", FlxColor.GREEN, 4);
 			}},
 			{time:4.0,run:function(){
-				player.say("Umm 'Technically Legal'?", FlxColor.WHITE,4);
+				player.say("Umm 'Technically Legal'?", null ,4);
 
 			}},			
 			{time:6.0,run:function(){

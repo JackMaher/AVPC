@@ -2,6 +2,7 @@ package;
 
 import adventure.*;
 import flixel.FlxObject;
+import flixel.util.FlxColor;
 
 using Effects;
 
@@ -22,6 +23,7 @@ class Player extends Object {
         animation.add("kneeled",[13],0,false);
         animation.add("standup",[13,12,11,10],6,false);
         customName="Rodger Packwood";
+        speechColor = FlxColor.ORANGE;
 
         maxVelocity.x = 500;
         drag.x = 5000;

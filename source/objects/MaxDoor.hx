@@ -3,12 +3,12 @@ import adventure.*;
 import rooms.*;
 import flixel.util.FlxColor;
 
-class H1Door extends Door {
+class MaxDoor extends Door {
 	public function new(x,y){
 		super(x,y,"door");
 		//color = FlxColor.RED;
-		newRoom=Lift;
-		newPlayerX = 15;
+		newRoom=Hallwaybar;
+		newPlayerX = 50;
 		newPlayerY =10;
 	}
 
