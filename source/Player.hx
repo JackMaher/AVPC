@@ -18,8 +18,9 @@ class Player extends Object {
         loadGraphic("assets/images/player.png", true,24,30);
 
         animation.add("lr",[0,1,2,3,4,5],6,true);
-        animation.add("nakedLR",[19,20,21,22,23,24],23,true);
+        animation.add("nakedLR",[19,20,21,22,23,24],6,true);
         animation.add("nakedIdle",[23],0,true);
+        animation.add("undress"[10,11,12,13,14,15,16,17,6, true)];
         animation.add("idle",[6],0,true);
         animation.add("kneel",[10,11,12,13],6,false);
         animation.add("kneeled",[13],0,false);
