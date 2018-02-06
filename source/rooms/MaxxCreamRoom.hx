@@ -3,13 +3,14 @@ package rooms;
 import adventure.*;
 import objects.*;
 import rooms.*;
+import flixel.FlxG;
 
 class MaxxCreamRoom extends Room {
     override public function create() {
        // scaleFactor = 8;
         objects = [
 					//new RoomTrigger(6,Bar,130,21),
-					new MaxxCream(90,15),
+					new MaxxCream(85,10),
 					new MaxDoor(21,8),
 					new Block(146),
 					new Block(6),
@@ -23,6 +24,7 @@ class MaxxCreamRoom extends Room {
         			
         			var player:Player = get(Player);
         			player.flipX = true;
+        			FlxG.timeScale = 2;
     }
 
 

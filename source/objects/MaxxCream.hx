@@ -11,6 +11,10 @@ class MaxxCream extends Object {
 	public function new(x,y){
 		super (x,y);
 		customName = "Maxx Cream";
+		loadGraphic("assets/images/maxxcream.png", true,30,30);
+		animation.add("lr",[7,8,9,10,11,12],4,true);
+		animation.add("getUp",[0,1,2,3,3,3,3,3],6,false);
+		animation.add("idle",[5],0,false);
 		speechColor = 0xffcccccc;
 		layer=BACK;
 	}
@@ -96,14 +100,21 @@ class MaxxCream extends Object {
 			{time:50.0,run:function(){
 				say("That did take much convincing.", null, 3);
 			}},
-			{time:53,run:function(){
-				flipX = true;
-				walkTo(roomPos(145,15).x, roomPos(145,15).y, function(){
-					say("come anf get it");
-					cutDone = true;
-				});
+			{time:53.0,run:function(){
+				animation.play("getUp");
+				afterAnimation (function(){			
+					animation.play("lr");
+					flipX = true;
+					walkTo(roomPos(145,15).x, y, function(){
+						say("come anf get it");
+						cutDone = true;
+						animation.play("idle");
+						flipX = false;
 
+					});
+				});
 			}},
+
 			];
 			Event.run(interact, false);
 		}
