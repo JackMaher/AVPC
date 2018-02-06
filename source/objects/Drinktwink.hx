@@ -58,7 +58,7 @@ class Drinktwink extends Object {
 				player.option("[[A reasonable and leveled headed telling of what happen]]", FlxColor.BLUE,function(){ 
 					
 					player.say("Fuck those guys.",FlxColor.ORANGE);
-					
+
 			        var opt2 = [
 			            {time:3.0,run:function(){
 			                say("Yep sounds like Adam and Steve.", 0xffAD2DA5, 3);
@@ -67,10 +67,13 @@ class Drinktwink extends Object {
 			                say("Just ignore them, they're just a couple of H.F.Q.", 0xffAD2DA5, 3);
 			            }},
 			         	{time:9.0,run:function(){
-			                player.say("HFQ?", FlxColor.ORANGE, 3);
+			                player.say("H.F.Q.?", FlxColor.ORANGE, 3);
 			            }},
 			  			 {time:12.0,run:function(){
 			                say("High Functioning Queers.", 0xffAD2DA5, 3);
+			            }},
+			        	{time:15.0,run:function(){
+			                say("If you need anything just come asking.", 0xffAD2DA5, 3);
 			            }},
 
 		            ];

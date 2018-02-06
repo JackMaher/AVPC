@@ -9,6 +9,7 @@ using Effects;
 class Player extends Object {
 
 	public var canControl:Bool = true;
+	public static var clothed:Bool = true;
 	public var customAnimation:String;
 	public static var passwordHeard = true;
 	public static var spoketoBoss = true;
@@ -19,8 +20,9 @@ class Player extends Object {
 
         animation.add("lr",[0,1,2,3,4,5],6,true);
         animation.add("nakedLR",[19,20,21,22,23,24],6,true);
-        animation.add("nakedIdle",[23],0,true);
-        animation.add("undress"[10,11,12,13,14,15,16,17,6, true)];
+        animation.add("nakedIdle",[18],0,true);
+        animation.add("undress",[10,11,12,13,14,15,16,17],8, false);
+        animation.add("redress",[17,16,15,14,13,12,11,10],8, false);
         animation.add("idle",[6],0,true);
         animation.add("kneel",[10,11,12,13],6,false);
         animation.add("kneeled",[13],0,false);
@@ -32,8 +34,25 @@ class Player extends Object {
         drag.x = 5000;
         moveSpeed = 8;
         layer=CHAR;
+        pixelPerfect = false;
 
         update(0);
+    }
+
+    override public function use(){
+    	if (clothed == true){
+    		clothed =false;
+    		customAnimation = "undress";
+    		canControl = false;
+    		afterAnimation(function(){customAnimation= null; canControl= true;});
+    		
+    	}
+    	else{
+    		clothed = true;
+       		customAnimation = "redress";
+       		canControl = false;
+    		afterAnimation(function(){customAnimation= null; canControl= true;});
+    	}
     }
 
     override public function update(d) {
@@ -59,15 +78,15 @@ class Player extends Object {
     	// When there's an automatic movement (from walkToObject)
     	if(move != null) {
     		if(move.x > x) {
-	    		animation.play("lr");
+	    		animation.play(if(clothed) "lr" else "nakedLR");
     			flipX = true;
     		}
     		else if(move.x < x) {
-	    		animation.play("lr");
+	    		animation.play(if(clothed) "lr" else "nakedLR");
     			flipX = false;
     		}
     		else {
-	    		animation.play("idle");
+	    		animation.play(if(clothed) "idle" else "nakedIdle");
     		}
     	}
 
@@ -85,7 +104,7 @@ class Player extends Object {
 
 	    	if(movingLeft) {
 	    		if(customAnimation == null) {
-	    			animation.play("lr");
+	    			animation.play(if(clothed) "lr" else "nakedLR");
 	    		}
 
 	    		acceleration.x = -5000;
@@ -93,7 +112,7 @@ class Player extends Object {
 	    	}
 	    	else if(movingRight) {
 	    		if(customAnimation == null) {
-	    			animation.play("lr");
+	    			animation.play(if(clothed) "lr" else "nakedLR");
 	    		}
 
 	    		acceleration.x = 5000;
@@ -101,7 +120,7 @@ class Player extends Object {
 	    	}
 	    	else {
 	    		if(customAnimation == null) {
-	    			animation.play("idle");
+	    			animation.play(if(clothed) "idle" else "nakedIdle");
 	    		}
 
 	    		acceleration.x = 0;
@@ -111,6 +130,8 @@ class Player extends Object {
 	    if(customAnimation != null) {
 	    	animation.play(customAnimation);
 	    }
+
+
 
 
 
