@@ -24,6 +24,8 @@ class Bartender extends Object {
 	}
 	override function use(){
 		var player:Player = room.get(Player);
+		var twink2:PTwink2 = room.get(PTwink2);
+		var twink3:PTwink3 = room.get(PTwink3);
 
 		var interact = [
 			{time:0.0,run:function(){
@@ -33,11 +35,40 @@ class Bartender extends Object {
 				player.say("...its Sir...", FlxColor.ORANGE, 3);
 			}},
 			{time:5.0,run:function(){
-				say("Whatever you say luv, need a drink?", FlxColor.PINK, 4);
+				say("Whatever you say luv, whatcha fancy?", FlxColor.PINK, 4);
 			}},
 			{time:8.0,run:function(){
-				player.say("No thanks.",FlxColor.ORANGE);
+				say("We are well stock in liqoure, poppers, uppers, downers...",FlxColor.ORANGE);
+			}},
+
+			{time:12,run:function(){
+				player.option("Poppers?", function(){
+					var PopperCon = [
+					{time:4.0,run:function(){
+						say("We have the latest line in Poppers aviable on the first floor.");
+					}},
+					{time:8.0,run:function(){
+						twink2.say("Man I miss my poppers");
+					}},		
+					{time:12.0,run:function(){
+						twink3.say("What happen?");
+					}},				
+					{time:16.0,run:function(){
+						twink2.say("Spilt them on the floor in the bathroom.");
+					}},	
+					{time:20.0,run:function(){
+						twink3.say("OH so thats why you have the faint smell of a norwegian lumberjack.");
+					}},	
+
+					];
+					Event.run(PopperCon);
+					
+			
+				});
 			}}
+
+
+
 			];
 			Event.run(interact);
 	}

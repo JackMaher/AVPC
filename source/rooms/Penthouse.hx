@@ -6,7 +6,7 @@ import rooms.*;
 
 class Penthouse extends Room {
     override public function create() {
-        scaleFactor = 8;
+       // scaleFactor = 8;
         objects = [
 					new RoomTrigger(6,PenthouseHallway,60,10),
 					//new Penlift(29,8),

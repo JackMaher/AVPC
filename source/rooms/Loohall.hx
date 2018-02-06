@@ -6,7 +6,7 @@ import rooms.*;
 
 class Loohall extends Room {
     override public function create() {
-        scaleFactor = 8;
+        //scaleFactor = 8;
         objects = [
 					new RoomTrigger(6,Bar,130,21),
 					new RoomTrigger(107,Hallwaybar,10,10),

@@ -6,7 +6,6 @@ import rooms.*;
 
 class Bar extends Room {
     override public function create() {
-        scaleFactor = 8;
         objects = [
         			new RoomTrigger(163,Loohall,10,10),
         			new PTwink1(69,40),

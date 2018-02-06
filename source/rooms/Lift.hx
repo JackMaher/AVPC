@@ -6,7 +6,7 @@ import rooms.*;
 
 class Lift extends Room {
     override public function create() {
-        scaleFactor = 8;
+        //scaleFactor = 8;
         objects = [
 					//new RoomTrigger(140,Bathroom,10,10),
 

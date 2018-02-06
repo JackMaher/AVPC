@@ -7,7 +7,7 @@ import flixel.util.FlxColor;
 
 class Docking extends Room {
     override public function create() {
-        scaleFactor = 8;
+       // scaleFactor = 8;
         objects = [
                                                 new Space(49,13),
                     //new Dockwindow(49,13),

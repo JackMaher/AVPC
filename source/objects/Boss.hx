@@ -6,14 +6,25 @@ import flixel.util.FlxColor;
 
 class Boss extends Object {
 
+	var floatTime:Float = 0;
+
 	public function new(x,y){
 		super (x,y);
 		customName = "Luthberge";
         loadGraphic("assets/images/boss.png", true,43,25);
-        animation.add("hover",[0,1,2,3,5],6,true);
-        animation.play("hover");
+        //animation.add("hover",[0,1,2,3,5],6,true);
+        //animation.play("hover");
 		layer=FORE;
 	}
+
+	override public function update(d) {
+		super.update(d);
+		offset.y -= Math.sin(floatTime)*room.scaleFactor;
+		floatTime += d;
+		floatTime %= Math.PI*2;
+		offset.y += Math.sin(floatTime)*room.scaleFactor;
+	}
+
 	override function look(){
 		var player:Player = room.get(Player);
 

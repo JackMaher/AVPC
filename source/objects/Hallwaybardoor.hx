@@ -66,6 +66,7 @@ var doorActive:Bool = false;
 				newRoom=MaxxCreamRoom;
 				newPlayerX = 20;
 				newPlayerY =10;
+
 				go();
 
 			}

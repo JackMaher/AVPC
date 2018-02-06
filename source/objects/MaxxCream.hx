@@ -6,6 +6,8 @@ import flixel.util.FlxColor;
 
 class MaxxCream extends Object {
 
+	public static var cutDone:Bool = false;
+
 	public function new(x,y){
 		super (x,y);
 		customName = "Maxx Cream";
@@ -83,13 +85,24 @@ class MaxxCream extends Object {
 				say("The only way we can talk privately is if you get into bed with me.", null, 3);
 			}},
 			{time:42.0,run:function(){
-				player.say("Get into bed with you?", null, 3);
+				player.say("I beg your pardon?", null, 3);
 			}},
 			{time:45.0,run:function(){
 				say("The boss is gonna get supisous if we just sit around talking.", null, 3);
 			}},
 			{time:47.0,run:function(){
 				player.say("Fine. Fine.", null, 3);
+			}},
+			{time:50.0,run:function(){
+				say("That did take much convincing.", null, 3);
+			}},
+			{time:53,run:function(){
+				flipX = true;
+				walkTo(roomPos(145,15).x, roomPos(145,15).y, function(){
+					say("come anf get it");
+					cutDone = true;
+				});
+
 			}},
 			];
 			Event.run(interact, false);
