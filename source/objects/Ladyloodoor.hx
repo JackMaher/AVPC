@@ -6,6 +6,8 @@ import flixel.util.FlxColor;
 
 class Ladyloodoor extends Object {
 
+	public static var open:Bool = false;
+
 	public function new(x,y){
 		super (x,y);
 		loadGraphic("assets/images/ladyloodoor.png", true,50,32);
@@ -22,6 +24,9 @@ class Ladyloodoor extends Object {
 	override function use(){
 
 		animation.play("open");
+		afterAnimation(function(){
+			open = true;
+		});
 
 	}
 }

@@ -17,5 +17,37 @@ class Loohall extends Room {
     }
 
 
+    override public function update(d){
+    	super.update(d);
+    	var player:Player = get(Player);
+    	var loo:Ladyloodoor = get(Ladyloodoor);
+    	if(Ladyloodoor.open == true){
+    		Global.canInteract = false;
+
+    		if(player.canControl) {
+		    	if(player.x + player.width/2  - player.offset.x < loo.x+loo.width/2){
+		    		player.x = player.x+550 * d;
+
+		    	}
+
+		    	else if(player.x + player.width/2  - player.offset.x > loo.x+loo.width/2){
+		    		player.x = player.x-550 * d;
+		    	}
+		    }
+
+    		if(Math.abs(player.x + player.width/2 - loo.x  - player.offset.x - loo.width/2) < 2000*d) {
+    			player.canControl = false;
+    			player.velocity.x = 0;
+    			player.width = player.frameWidth;
+    			player.height = player.frameHeight;
+    			player.centerOrigin();
+    			player.scale.set(player.scale.x * 0.99, player.scale.y * 0.99);
+    			player.angle+=0.5;
+    			player.y = loo.y + 15 * room.scaleFactor;
+    			player.x = loo.x + loo.width/2 - player.width/2 + player.offset.x;
+    		}
+	    }
+    }
+
 
 }

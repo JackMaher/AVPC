@@ -16,13 +16,15 @@ class Player extends Object {
     public static var poppersComplete = false;
     public static var condomOn = false;
     public static var maxxSex = false;
-    public static var std = true;
+    public static var std = false;
 
     public function new(x,y) {
         super(x,y);
         loadGraphic("assets/images/player.png", true,24,30);
 
         animation.add("lr",[0,1,2,3,4,5],6,true);
+        animation.add("std",[25,26,27,28,29,30,31],6,false);
+        animation.add("stdIdle",[31],0,false);
         animation.add("nakedLR",[19,20,21,22,23,24],6,true);
         animation.add("nakedIdle",[18],0,true);
         animation.add("undress",[10,11,12,13,14,15,16,17],8, false);
@@ -64,7 +66,9 @@ class Player extends Object {
     override public function update(d) {
     	super.update(d);
 
-        width=15*scale.x;
+        if(canControl) {
+            width=15*scale.x;
+        }
         // if normal way round
 		if(!flipX) {
         	offset.x=6*scale.x;

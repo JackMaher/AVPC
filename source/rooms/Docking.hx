@@ -15,6 +15,7 @@ class Docking extends Room {
                     //new Dockdoor(93,9),
                     //new Dockdoorfront(93,9),
                     new Block(151),
+                    //new DockingFore(0,0),
         			new Player(123,37),
                     new TwinkTrigger(20),
                     new Tele(105,28),

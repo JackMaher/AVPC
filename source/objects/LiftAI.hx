@@ -68,7 +68,7 @@ class LiftAI extends Object {
 				player.say("Hello Lift", FlxColor.WHITE, 2);
 			}},
 			{time:4.0,run:function(){
-				say("*I like it when you come inside me*", FlxColor.GREEN, 2);
+				say("I wish more people rode me like you do.", FlxColor.GREEN, 2);
 				animation.play("Talk");
 			}},
 			{time:6.0,run:function(){
@@ -84,17 +84,17 @@ class LiftAI extends Object {
 
 			{time:9.0,run:function(){
 
-				player.option("Maintenance", FlxColor.BLUE,function(){ 
+				player.option("Floor 1", FlxColor.BLUE,function(){ 
 					changeFloor(Hallway1, 39, 10);
 					say("Maintenance Floor! (please dont leave me)",FlxColor.GREEN);
 				});
-				player.option("Bar", FlxColor.BLUE,function(){ 
+				player.option("Bar Floor", FlxColor.BLUE,function(){ 
 					changeFloor(Bar, 140, 21);
-					say("I've been taking heavy loads all day",FlxColor.GREEN);
+					say("Bar Floor! (I cant remember the last time I had a drink)",FlxColor.GREEN);
 				});
-				player.option("Penthouse", FlxColor.BLUE,function(){ 
+				player.option("Penthouse Floor", FlxColor.BLUE,function(){ 
 					changeFloor(PenthouseHallway, 39, 10);
-					say("I've been taking heavy loads all day",FlxColor.GREEN);
+					say("Penhouse Floor! (Tell Luthberge I miss him)",FlxColor.GREEN);
 				});
 				player.endOptions();
 

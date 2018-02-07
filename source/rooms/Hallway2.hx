@@ -13,6 +13,8 @@ class Hallway2 extends Room {
 					new Hallwayfore(0,0),
 					new Drinktwink(102,34),
 					new Sofa(26,47),
+					new Floor1fan(76,34),
+					new Floor1fan(90,34),
         			new Player(10,10)];
     }
 

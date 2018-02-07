@@ -15,7 +15,7 @@ class Hallway1 extends Room {
 					new Poppers(84,7),
 					new Block(8),
         			new Player(10,10)];
-        			 FlxG.timeScale = 2;
+        			 
     }
 
 

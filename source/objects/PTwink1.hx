@@ -5,9 +5,11 @@ import flixel.util.FlxColor;
 
 
 class PTwink1 extends Object {
+		var floatTime:Float = 0;
 
 	public function new(x,y){
 		super (x,y);
+
 		customName = "Lance";
 		layer=FORE;
 	}
@@ -41,5 +43,13 @@ class PTwink1 extends Object {
 			player.flipX = false;
 			Event.run(interact, false);
 		});
+	}
+
+	override public function update(d) {
+		super.update(d);
+		offset.y -= Math.sin(floatTime)*room.scaleFactor/2;
+		floatTime += d;
+		floatTime %= Math.PI*2;
+		offset.y += Math.sin(floatTime)*room.scaleFactor/2;
 	}
 }

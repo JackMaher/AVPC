@@ -10,6 +10,7 @@ class Nathan extends Object {
 	public function new(x,y){
 		super (x,y);
 		customName = "Nathan";
+		speechColor = FlxColor.GREEN;
 	}
 
 	override function use(){
