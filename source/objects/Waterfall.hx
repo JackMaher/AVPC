@@ -15,10 +15,4 @@ class Waterfall extends Object {
 
 
 	}
-	override function look(){
-
-		say(" ");
-
-
-	}
 }

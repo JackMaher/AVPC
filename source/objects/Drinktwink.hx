@@ -19,7 +19,6 @@ class Drinktwink extends Object {
 	override function use(){
 		var player:Player = room.get(Player);
 
-		if(introDone) { return; }
 
 									//Intro Dialog
 		var interact = [
@@ -85,7 +84,105 @@ class Drinktwink extends Object {
 				
 		];
 		
-			Event.run(interact);
+		
+
+		if(introDone == true){
+		var information = [
+			{time:0.0,run:function(){
+				player.say("Hey Johnny", FlxColor.ORANGE, 3);
+			}},
+			{time:3.0,run:function(){
+				say("Hey, whats up?", 0xffAD2DA5, 4);
+			}},
+			{time:7.0,run:function(){
+				if (Player.poppersComplete == true) {
+
+					player.option("Maxx Cream?",function(){
+
+						var info1List = [
+							{time:0.0,run:function(){
+								player.say("I'm looking for Maxx Cream", FlxColor.ORANGE, 3);
+							}},			
+							{time:3.0,run:function(){
+								say("Everyone wants to see Maxx trust me", 0xffAD2DA5, 3);
+							}},	
+							{time:6.0,run:function(){
+								player.say("So do you know where he is?", FlxColor.ORANGE, 3);
+							}},	
+							{time:9.0,run:function(){
+								say("His private room is on the Bar level", 0xffAD2DA5, 3);
+							}},	
+							{time:12.0,run:function(){
+								say("But they dont let any old riff raff in there", 0xffAD2DA5, 3);
+							}},	
+							{time:15.0,run:function(){
+								say("No offence", 0xffAD2DA5, 2);
+							}},	
+						];
+						Event.run(info1List);
+
+					});
+
+				}
+
+				player.option("Luthberge?", function(){
+
+						var info2List = [
+							{time:0.0,run:function(){
+								player.say("What do you know about Luthberge", FlxColor.ORANGE, 4);
+							}},		
+							{time:4.0,run:function(){
+								say("Only meet him once, he rarely leaves his Penthouse Suite", 0xffAD2DA5, 4);
+							}},	
+							{time:8.0,run:function(){
+								say("He's a part-time loan shark, part-time pawn brokers, part-time traffic warden", 0xffAD2DA5, 5);
+							}},		
+							{time:13.0,run:function(){
+								say("He's the worse of the worse", 0xffAD2DA5, 4);
+							}},			
+						];
+						Event.run(info2List);
+
+					});
+
+				player.option("Yourself?",function(){
+
+						var info3List = [
+							{time:0.0,run:function(){
+								player.say("What are you doing on this ship?", FlxColor.ORANGE, 4);
+							}},		
+							{time:4.0,run:function(){
+								say("My parents was deeply debt to Luthberge", 0xffAD2DA5, 4);
+							}},	
+							{time:8.0,run:function(){
+								say("When it came time to pay him back, they didnt have the funds", 0xffAD2DA5, 5);
+							}},		
+							{time:13.0,run:function(){
+								say("So they offered me instead, a fair trade by today standards I guess", 0xffAD2DA5, 4);
+							}},		
+							{time:17.0,run:function(){
+								player.say("Thats awful", null, 4);
+							}},	
+							{time:17.0,run:function(){
+								say("Its not so bad, you learn to deal with it", 0xffAD2DA5, 4);
+							}},	
+						];
+						Event.run(info3List);
+
+					});
+
+
+			}}
+			];
+
+		Event.run(information);
+	}
+
+	else{
+		Event.run(interact);
+	}
+			
+			
 			
 
 		};

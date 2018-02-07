@@ -3,6 +3,7 @@ package rooms;
 import adventure.*;
 import objects.*;
 import rooms.*;
+import flixel.FlxG;
 
 class Bar extends Room {
     override public function create() {
@@ -19,6 +20,7 @@ class Bar extends Room {
         			new Waterfall(102,30),
                     new Block(5),
         			new Player(140, 21)];
+                   
     }
 
 

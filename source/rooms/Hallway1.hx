@@ -3,6 +3,8 @@ package rooms;
 import adventure.*;
 import objects.*;
 import rooms.*;
+import flixel.FlxG;
+
 
 class Hallway1 extends Room {
     override public function create() {
@@ -13,6 +15,7 @@ class Hallway1 extends Room {
 					new Poppers(84,7),
 					new Block(8),
         			new Player(10,10)];
+        			 FlxG.timeScale = 2;
     }
 
 

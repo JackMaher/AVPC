@@ -13,6 +13,10 @@ class Player extends Object {
 	public var customAnimation:String;
 	public static var passwordHeard = true;
 	public static var spoketoBoss = true;
+    public static var poppersComplete = false;
+    public static var condomOn = false;
+    public static var maxxSex = false;
+    public static var std = true;
 
     public function new(x,y) {
         super(x,y);
@@ -44,14 +48,16 @@ class Player extends Object {
     		clothed =false;
     		customAnimation = "undress";
     		canControl = false;
-    		afterAnimation(function(){customAnimation= null; canControl= true;});
+            Global.canInteract = false;
+    		afterAnimation(function(){customAnimation= null; canControl= true; Global.canInteract = true;});
     		
     	}
     	else{
     		clothed = true;
        		customAnimation = "redress";
+            Global.canInteract = false;
        		canControl = false;
-    		afterAnimation(function(){customAnimation= null; canControl= true;});
+    		afterAnimation(function(){customAnimation= null; canControl= true; Global.canInteract = true;});
     	}
     }
 
@@ -89,7 +95,6 @@ class Player extends Object {
 	    		animation.play(if(clothed) "idle" else "nakedIdle");
     		}
     	}
-
     	// Normal movement
     	else {
 	    	if(canControl) {

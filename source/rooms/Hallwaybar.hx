@@ -16,6 +16,18 @@ class Hallwaybar extends Room {
         			new Player(10,10)];
     }
 
-
-
-}
+    override public function update(d){
+ 		
+		   if(Player.std == true){
+		   var player:Player = get(Player);	
+		   
+		    var stdDeath = [
+				{time:2.0,run:function(){
+					player.say("Ow, something itches", null, 2);
+					trace(Player.std);
+				}},
+    		];
+    		Event.run(stdDeath);
+    }
+super.update(d);
+}}

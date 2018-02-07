@@ -18,7 +18,38 @@ class ReusableProphylactic extends Object {
 	var player:Player = room.get(Player);
 
 
-	trace(other.type);
+
+
+
+	if(other.name == "Rodger Packwood"){
+
+		if (Player.clothed == false){
+			var interact = [
+				{time:0.0,run:function(){
+					other.say("I'll just slip this on");
+				}},
+				{time:0.0,run:function(){
+					Player.condomOn = true;
+					visible = false;
+					hidden = true;
+				}},
+			];	
+			Event.run(interact, false);
+		}
+		else{
+
+			player.say("I dont think I need to add more layers on");
+
+		}
+
+	}
+
+
+
+
+
+
+	//trace(other.type);
 	  if(other.name == "Lance") {
 
 		var interact = [
@@ -37,5 +68,18 @@ class ReusableProphylactic extends Object {
 
 	override function look(){
 		say("johnnnnny");
+	}
+
+	override public function update(d){
+	var player:Player = room.get(Player);
+		super.update(d);
+		if(Player.condomOn && Player.clothed){
+            Player.condomOn = false;
+            visible = true;
+            hidden = false;
+            player.say("I'll put this back in my pocket");
+            
+        }
+
 	}
 }

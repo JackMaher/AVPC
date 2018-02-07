@@ -15,7 +15,7 @@ class Main extends Sprite
 	{
 		super();
 		Global.defaultScaleFactor = 8;
-        Global.startingRoom = MaxxCreamRoom;
+        Global.startingRoom = Bar;
 		addChild(new FlxGame(1920, 1080, Game));
 	}
 }
