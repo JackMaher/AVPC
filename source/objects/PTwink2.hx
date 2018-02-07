@@ -6,6 +6,7 @@ import flixel.util.FlxColor;
 
 class PTwink2 extends Object {
 			var floatTime:Float = 1000;
+		var done = false;
 
 	public function new(x,y){
 		super (x,y);
@@ -13,11 +14,49 @@ class PTwink2 extends Object {
 		layer=FORE;
 	}
 	override function look(){
-
-		say("PTwink2");
-
+		var player:Player = room.get(Player);
+		var interact = [
+			{time:0.0,run:function(){
+				player.say("He seems to have a runny nose.");
+			}},
+			{time:3.0,run:function(){
+				say("-SNIFF-");
+			}},
+			];
+			Event.run(interact);
 
 	}
+
+	override function use(){
+		if(done) return;
+        done = true;
+		var player:Player = room.get(Player);
+		var interact = [
+			{time:0.0,run:function(){
+				player.say("Hey do yo...");
+			}},
+			{time:3.0,run:function(){
+				say("-SNIFF- no.");
+			}},
+			{time:6.0,run:function(){
+				player.say("do... do you kno...");
+			}},
+			{time:9.0,run:function(){
+				say("NO! -SNIFF-");
+				done = false;
+				player.canControl = true;
+			}},
+
+			];
+		player.walkToObject(PTwink2, X, RIGHT, function(){
+			player.canControl = false;
+			player.flipX = false;
+			Event.run(interact, false);
+		});
+
+	}
+
+
 	override public function update(d) {
 		super.update(d);
 		offset.y -= Math.sin(floatTime)*room.scaleFactor/2;

@@ -11,7 +11,7 @@ class Player extends Object {
 	public var canControl:Bool = true;
 	public static var clothed:Bool = true;
 	public var customAnimation:String;
-	public static var passwordHeard = true;
+	public static var passwordHeard = false;
 	public static var spoketoBoss = true;
     public static var poppersComplete = false;
     public static var condomOn = false;

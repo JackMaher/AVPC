@@ -14,6 +14,7 @@ class Drinktwink extends Object {
         animation.add("move",[0,1,2,3,3,2,1,0,0,0,0,0,0,0,0,0,0,0,0],8,true);
         animation.play("move");
 		layer=FORE;
+		speechColor = 0xffAD2DA5;
 	}
 
 	override function use(){
@@ -50,6 +51,10 @@ class Drinktwink extends Object {
 			                say("Apperently Brit-Tron invited them backstage", 0xffAD2DA5, 3);
 			              	say("They've been insufferable since.", 0xffAD2DA5, 3);
 			            }},
+			            {time:9.0,run:function(){
+			                say("If you need anything just come asking.", 0xffAD2DA5, 3);
+			                player.canControl = true;
+			            }},
 		            ];
 					Event.run(opt1);
 
@@ -73,6 +78,7 @@ class Drinktwink extends Object {
 			            }},
 			        	{time:15.0,run:function(){
 			                say("If you need anything just come asking.", 0xffAD2DA5, 3);
+			                player.canControl = true;
 			            }},
 
 		            ];
@@ -117,6 +123,7 @@ class Drinktwink extends Object {
 							}},	
 							{time:15.0,run:function(){
 								say("No offence", 0xffAD2DA5, 2);
+								player.canControl = true;
 							}},	
 						];
 						Event.run(info1List);
@@ -139,6 +146,7 @@ class Drinktwink extends Object {
 							}},		
 							{time:13.0,run:function(){
 								say("He's the worse of the worse", 0xffAD2DA5, 4);
+								player.canControl = true;
 							}},			
 						];
 						Event.run(info2List);
@@ -165,6 +173,7 @@ class Drinktwink extends Object {
 							}},	
 							{time:17.0,run:function(){
 								say("Its not so bad, you learn to deal with it", 0xffAD2DA5, 4);
+								player.canControl = true;
 							}},	
 						];
 						Event.run(info3List);
@@ -181,6 +190,8 @@ class Drinktwink extends Object {
 	else{
 		Event.run(interact);
 	}
+	player.canControl = false;
+
 			
 			
 			

@@ -13,10 +13,25 @@ class Lift extends Room {
 					new LiftDoor(17,8),
 					new LiftAI(42,13),
 					new Block(7),
+					new LiftNudeTrigger(25),
 					new Block(52),
         			new Player(15,20)];
     }
 
+}
 
+class LiftNudeTrigger extends Trigger{
+    var done:Bool = false;
+
+    function trigger(){
+    var lift:LiftAI = room.get(LiftAI);
+        if (done){
+            return;
+        }
+        if(Player.clothed == false){
+            lift.say("Luthberge is bigger.");
+            done = true;
+        }
+    }
 
 }

@@ -5,6 +5,7 @@ import flixel.util.FlxColor;
 
 
 class Boss extends Object {
+	var done:Bool = false;
 
 	var floatTime:Float = 0;
 
@@ -35,9 +36,14 @@ class Boss extends Object {
 	override function use(){
 		var player:Player = room.get(Player);
 
+		 if (done){
+            return;
+        }
+
 
 		var interact = [
 			{time:0.0,run:function(){
+				done = true;
 				player.say("Mr Luthberge, I wasnt expecting to be docked by you today", FlxColor.WHITE, 4);
 			}},
 			{time:3.0,run:function(){
@@ -93,11 +99,14 @@ class Boss extends Object {
 			{time:45.0,run:function(){
 				player.say("Yes Sir! I'll bring you Lena",null,3);
 				Player.spoketoBoss = true;
+				player.canControl = true;
+
 			}},
 
 
 		];
 		Event.run(interact, false);
+		player.canControl = false;
 
 	}
 }

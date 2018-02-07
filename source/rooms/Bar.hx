@@ -4,6 +4,7 @@ import adventure.*;
 import objects.*;
 import rooms.*;
 import flixel.FlxG;
+import flixel.util.FlxColor;
 
 class Bar extends Room {
     override public function create() {
@@ -13,6 +14,7 @@ class Bar extends Room {
         			new PTwink2(93,41),
         			new PTwink3(111,42),
         			new Bartender(28,23),
+                    new NudeTrigger(120),
                     
                     new Barlift(135,19),
         			new Pool(66,40),
@@ -24,4 +26,28 @@ class Bar extends Room {
                    
     }
 
+
+
 }
+
+
+
+class NudeTrigger extends Trigger{
+    var done:Bool = false;
+
+    function trigger(){
+        if (done){
+            return;
+        }
+        if(Player.clothed == false){
+            var twink1:PTwink1 = room.get(PTwink1);
+           var twink3:PTwink3 = room.get(PTwink3);
+            twink1.say("Have some decenty man.");
+            twink3.say("*wolf whistle*");
+            done = true;
+        }
+    }
+
+}
+
+

@@ -12,7 +12,8 @@ class LiftAI extends Object {
 
 	public function new(x,y){
 		super (x,y);
-		customName = " ";
+		customName = "Lift";
+		speechColor = FlxColor.GREEN;
 		loadGraphic("assets/images/liftai.png", true,6,8);
 		animation.add("Talk",[0,1,2,3,4], 4, true);
 	}

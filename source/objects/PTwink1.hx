@@ -6,25 +6,30 @@ import flixel.util.FlxColor;
 
 class PTwink1 extends Object {
 		var floatTime:Float = 0;
+		var done = false;
 
 	public function new(x,y){
 		super (x,y);
 
 		customName = "Lance";
+		speechColor = FlxColor.CYAN;
 		layer=FORE;
 	}
 	override function look(){
+		var player:Player = room.get(Player);
 
-		say("PTwink1");
+		player.say("I wish I had his confindence, it's at least two inches longer than mine.");
 
 
 	}
 	override function use(){
 		var player:Player = room.get(Player);
-
+				if(done) return;
+        		done = true;
 
 		var interact = [
 			{time:2.0,run:function(){
+
 				say("Who are you staring at?", FlxColor.CYAN, 2);
 			}},
 			{time:4.0,run:function(){
@@ -35,6 +40,7 @@ class PTwink1 extends Object {
 			}},	
 			{time:7.0,run:function(){
 				player.say("(oh... ok)", null,3);
+				done = false;
 			}},	
 		];
 

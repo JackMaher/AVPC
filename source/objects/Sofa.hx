@@ -16,6 +16,11 @@ class Sofa extends Object {
         //animation.play("flash");
 		layer=BACK;
 	}
+	override function look(){
+		var player:Player = room.get(Player);
+				player.say("This has some questionable stains.");
+	}
+
 
 	override public function update(d) {
 		super.update(d);

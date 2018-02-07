@@ -6,7 +6,6 @@ import flixel.util.FlxColor;
 class H1Door extends Door {
 	public function new(x,y){
 		super(x,y,"door");
-		//color = FlxColor.RED;
 		newRoom=Lift;
 		newPlayerX = 15;
 		newPlayerY =10;
