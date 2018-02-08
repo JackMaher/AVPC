@@ -8,7 +8,8 @@ class OccupiedToilet extends Object {
 
 	public function new(x,y){
 		super (x,y);
-		customName = " ";
+		customName = "Stall";
+		speechColor = FlxColor.LIME;
 	}
 	override function look(){
 

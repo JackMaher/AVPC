@@ -7,6 +7,7 @@ import flixel.FlxG;
 
 
 class Hallway1 extends Room {
+    var nudedone = false;
     override public function create() {
         //scaleFactor = 8;
         objects = [
@@ -17,11 +18,26 @@ class Hallway1 extends Room {
 					new Poppers(84,7),
 					new Block(8),
                     new PopTrigger(110),
-                    new Hall1NudeTrigger (70),
+                    //new Hall1NudeTrigger (70),
                     new PopTrigger(35),
         			new Player(10,10)];
                     FlxG.timeScale = 2;
         			 
+    }
+
+    override public function update(d){
+        super.update(d);
+        var twink1:Poptwink = get(Poptwink);
+        var twink2:Poptwink1 = get(Poptwink1);
+            if (nudedone){
+                return;
+            }
+        if(Player.clothed == false){
+            twink1.say("Ooh Err.");
+            twink2.say("*SNIFF SUGGESTIVELY*");
+           nudedone = true;
+        }
+
     }
 
 }
@@ -36,25 +52,6 @@ class PopTrigger extends Trigger {
         var twink2:Poptwink1 = room.get(Poptwink1);
         twink1.say("-SNIFF-", null, 2);
         twink2.say("-SNIFF-", null, 1);
-    }
-
-}
-
-
-class Hall1NudeTrigger extends Trigger{
-    var done:Bool = false;
-
-    function trigger(){
-    var twink1:Poptwink = room.get(Poptwink);
-    var twink2:Poptwink1 = room.get(Poptwink1);
-        if (done){
-            return;
-        }
-        if(Player.clothed == false){
-            twink1.say("Ooh Err.");
-            twink2.say("*SNIFF SUGGESTIVELY*");
-            done = true;
-        }
     }
 
 }

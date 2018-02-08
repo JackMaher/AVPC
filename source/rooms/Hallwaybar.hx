@@ -8,8 +8,10 @@ import flixel.util.FlxColor;
 
 
 class Hallwaybar extends Room {
+	var nudedone = false;
 	var done = false;
     override public function create() {
+    	var nudedone = false;
         //scaleFactor = 8;
         objects = [
 					new RoomTrigger(6,Loohall,90,10),
@@ -17,10 +19,22 @@ class Hallwaybar extends Room {
 					new Nathan(107,11),
 					new Hallwaybardoor(45,8),
 					new Doorman(71,13),
+					new StdDeathTxt(17,6),
         			new Player(10,10)];
+
     }
 
     override public function update(d){
+
+
+    	if (nudedone){
+            return;
+        }
+        if(Player.clothed == false){
+            var twink:Nathan = get(Nathan);
+            twink.say("Mmmpph.");
+            nudedone = true;
+        }
 
 
 		   if(Player.std == true){
@@ -29,7 +43,7 @@ class Hallwaybar extends Room {
 		   	done = true;
 
 		   var player:Player = get(Player);	
-		   var nathan:Nathan = get(Nathan);	
+		   var nathan:Nathan = get(Nathan);
 
 		    var stdDeath = [
 				{time:0.0,run:function(){
@@ -80,6 +94,10 @@ class Hallwaybar extends Room {
 							player.customAnimation = "stdIdle";
 							player.say("Momma?",FlxColor.LIME, null);
 						});
+				}},
+				{time:27.0,run:function(){
+					var death:StdDeathTxt = get(StdDeathTxt);	
+					death.visible = true;
 				}},
     		];
 

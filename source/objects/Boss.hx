@@ -11,6 +11,7 @@ class Boss extends Object {
 
 	public function new(x,y){
 		super (x,y);
+		speechColor = FlxColor.GREEN;
 		customName = "Luthberge";
         loadGraphic("assets/images/boss.png", true,43,25);
         //animation.add("hover",[0,1,2,3,5],6,true);
@@ -44,7 +45,7 @@ class Boss extends Object {
 		var interact = [
 			{time:0.0,run:function(){
 				done = true;
-				player.say("Mr Luthberge, I wasnt expecting to be docked by you today", FlxColor.WHITE, 4);
+				player.say("Mr Luthberge, I wasnt expecting to be docked by you today", null, 4);
 			}},
 			{time:3.0,run:function(){
 				say("Let's dispense with the pleasantries shall we Rodger Packwood", FlxColor.GREEN,4);

@@ -5,6 +5,7 @@ import objects.*;
 import rooms.*;
 
 class Hallway2 extends Room {
+    var nudedone = false;
     override public function create() {
        // scaleFactor = 8;
         objects = [
@@ -15,24 +16,23 @@ class Hallway2 extends Room {
 					new Sofa(26,47),
 					new Floor1fan(76,34),
 					new Floor1fan(90,34),
-					new Hall2NudeTrigger (92),
+					//new Hall2NudeTrigger (92),
         			new Player(10,10)];
     }
 
-}
 
-class Hall2NudeTrigger extends Trigger{
-    var done:Bool = false;
-
-    function trigger(){
-        if (done){
+    override public function update(d){
+        super.update(d);
+        if (nudedone){
             return;
         }
         if(Player.clothed == false){
-            var twink:Drinktwink = room.get(Drinktwink);
+            var twink:Drinktwink = get(Drinktwink);
             twink.say("Hellloo Sailor.");
-            done = true;
+            nudedone = true;
         }
+
     }
 
 }
+

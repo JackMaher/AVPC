@@ -16,7 +16,7 @@ class Player extends Object {
     public static var poppersComplete = false;
     public static var condomOn = false;
     public static var maxxSex = false;
-    public static var std = false;
+    public static var std = true;
 
     public function new(x,y) {
         super(x,y);

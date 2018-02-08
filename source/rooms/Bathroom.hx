@@ -7,6 +7,7 @@ import rooms.*;
 import flixel.FlxG;
 
 class Bathroom extends Room {
+	   	var nudedone = false;
     override public function create() {
         //scaleFactor = 8;
         objects = [
@@ -17,7 +18,18 @@ class Bathroom extends Room {
         			new Player(10,10)];
     }
 
+        override public function update(d){
+        super.update(d);
+        if (nudedone){
+            return;
+        }
+        if(Player.clothed == false){
+            var twink:OccupiedToilet = get(OccupiedToilet);
+            twink.say("My twink senses are tingling.");
+            nudedone = true;
+        }
 
+    }
 
 
 }

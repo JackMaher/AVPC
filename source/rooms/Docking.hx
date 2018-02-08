@@ -6,16 +6,14 @@ import rooms.*;
 import flixel.util.FlxColor;
 
 class Docking extends Room {
+
+    var nudedone = false;
+    
     override public function create() {
-       // scaleFactor = 8;
         objects = [
-                                                new Space(49,13),
-                    //new Dockwindow(49,13),
+                    new Space(49,13),
                     new RoomTrigger(6,Hallway2,110,36),
-                    //new Dockdoor(93,9),
-                    //new Dockdoorfront(93,9),
                     new Block(151),
-                    //new DockingFore(0,0),
         			new Player(123,37),
                     new TwinkTrigger(20),
                     new Tele(105,28),
@@ -24,6 +22,19 @@ class Docking extends Room {
                     new Hal(75,14),
                     new Bookcase(18,27),
                     new HalTrigger(88),];
+    }
+
+    override public function update(d){
+        super.update(d);
+        if (nudedone){
+            return;
+        }
+        if(Player.clothed == false){
+            var twink:SitTwink = get(SitTwink);
+            twink.say("He dosen't even have one desirable feture.");
+            nudedone = true;
+        }
+
     }
 
 
@@ -38,8 +49,8 @@ class HalTrigger extends Trigger {
         done = true;
 
         var hal:Hal = room.get(Hal);
-        hal.say("Hello Packwood", FlxColor.RED);
-        hal.say("The Captin is waiting for you in his Penthouse", FlxColor.RED);
+        hal.say("Hello Packwood.", FlxColor.RED);
+        hal.say("The Captin is waiting for you in his Penthouse.", FlxColor.RED);
     }
 
 }
@@ -56,10 +67,10 @@ class TwinkTrigger extends Trigger{
 
         var interact = [
             {time:0.0,run:function(){
-                twink1.say("He doesnt even go here", null, 3);
+                twink1.say("He doesnt even go here.", null, 3);
             }},
             {time:1.0,run:function(){
-                twink2.say("I know right", 0xffFFC300,2);
+                twink2.say("I know right.", 0xffFFC300,2);
             }},
             {time:3.0,run:function(){
                 player.say("Excuse me?", null,3);

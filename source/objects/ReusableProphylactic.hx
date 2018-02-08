@@ -17,6 +17,12 @@ class ReusableProphylactic extends Object {
 	override function useOn ( other:Object ) {
 	var player:Player = room.get(Player);
 
+
+
+	if(other.name == "Luthberge"){
+		other.say("Maybe when you get me Lena I'll reward you.");
+	}
+
 	if(other.name == "Bookcase"){
 		player.say("I dont think I should make this bookcase anymore sticky.");
 	}
@@ -34,6 +40,9 @@ class ReusableProphylactic extends Object {
 
 	if(other.name == "Gayvin"){
 		player.say("Yeah... No.");
+	}
+	if(other.name == "Kurt"){
+		player.say("You and me? Really? Ha.");
 	}
 	if(other.name == "Guy"){
 		player.say("Best leave him.");
