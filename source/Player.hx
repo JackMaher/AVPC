@@ -36,9 +36,9 @@ class Player extends Object {
         customName="Rodger Packwood";
         speechColor = FlxColor.ORANGE;
 
-        maxVelocity.x = 500;
+        maxVelocity.x = 400;
         drag.x = 5000;
-        moveSpeed = 8;
+        moveSpeed = 480;
         layer=CHAR;
         pixelPerfect = false;
 

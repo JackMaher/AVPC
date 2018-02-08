@@ -17,12 +17,12 @@ class Poppers extends Object {
 
 
 		popperList = [ 
+			new GlitterPoppers(),
 			new PinefreshPoppers(),
 			new ApplePoppers(), 
 			new CherryPoppers(),
 			new SourcreamAndOnionPoppers(),
 			new OldspicePoppers(),
-			new GlitterPoppers(),
 		];
 
 	}
@@ -59,6 +59,7 @@ class Poppers extends Object {
 		Global.inventory.add(popperList[currentPopperNum]);
 		popperList[currentPopperNum].visible = true;
 		taken = true;
+		hidden = false;
 
 	}
 
@@ -67,6 +68,7 @@ class Poppers extends Object {
 
 class PopperPills extends Object {
 	function new() {
+		hidden = true;
 		super(-10000,0);
 		changeScale(4);
 		visible = false;
@@ -89,15 +91,150 @@ class PopperPills extends Object {
 }
 
 class ApplePoppers extends PopperPills {
+	function new (){
+		super();
+		customName = "Apple Poppers";
+	}
+	override public function useOn(o:Object){
+		super.useOn(o);
+		var player:Player = room.get(Player);
+
+		if(o.type == Poptwink){
+			var interact = [
+			{time:0.0,run:function(){
+				o.say("Take a huff, join us.", null, 4);
+			}},
+			];
+			Event.run(interact, false);
+		}
+
+			if(o.type == Poptwink1){
+			var interact = [
+			{time:0.0,run:function(){
+				player.say("Guy's eyes seem completely glazed over.", null, 4);
+			}},
+			];
+			Event.run(interact, false);
+		}
+			if(o.type == Drinktwink){
+			var interact = [
+			{time:0.0,run:function(){
+				o.say("Sorry Packwood, but I'm not into that sort of stuff.", null, 4);
+			}},
+			];
+			Event.run(interact, false);
+
+		}
+			if(o.type == LiftAI){
+			var interact = [
+			{time:0.0,run:function(){
+				o.say("You're just taunting me now, how do you expect me to sniff that.", null, 4);
+			}},
+			];
+			Event.run(interact, false);
+
+		}
+			if(o.type == SitTwink){
+			var interact = [
+			{time:0.0,run:function(){
+				player.say("I'd rather throw an apple at him.", null, 4);
+			}},
+			];
+			Event.run(interact, false);
+			
+		}
+			if(o.type == SitTwink2){
+			var interact = [
+			{time:0.0,run:function(){
+				player.say("He already reeks of his father disapointment already.", null, 4);
+			}},
+			];
+			Event.run(interact, false);
+			
+		}
+			if(o.type == PTwink1){
+			var interact = [
+			{time:0.0,run:function(){
+				o.say("Why are you even trying with me?", null, 4);
+			}},
+			];
+			Event.run(interact, false);
+			
+		}
+			if(o.type == PTwink2){
+			var interact = [
+			{time:0.0,run:function(){
+				o.say("Apple? too sour for me, I need something more rustic man.", null, 4);
+			}},
+			];
+			Event.run(interact, false);
+			
+		}
+			if(o.type == PTwink3){
+			var interact = [
+			{time:0.0,run:function(){
+				o.say("No chance in hell mate.", null, 4);
+			}},
+			];
+			Event.run(interact, false);
+			
+		}
+			if(o.type == Nathan){
+			var interact = [
+			{time:0.0,run:function(){
+				o.say("Mmmphhh.", null, 4);
+			}},
+			];
+			Event.run(interact, false);
+			
+		}
+			if(o.type == MaxxCream){
+			var interact = [
+			{time:0.0,run:function(){
+				o.say("I already have some.", null, 4);
+			}},
+			];
+			Event.run(interact, false);
+			
+		}
+			if(o.type == Boss){
+			var interact = [
+			{time:0.0,run:function(){
+				o.say("Why dont you use them Packwood, it might make you more of a barable person.", null, 4);
+			}},
+			];
+			Event.run(interact, false);
+			
+		}
+			if(o.type == Player){
+			var interact = [
+			{time:0.0,run:function(){
+				player.say("*SNIFF* Oh God. I dont feel good.", null, 4);
+				Global.inventory.remove(this);
+				Poppers.taken = false;
+			}},
+			];
+			Event.run(interact, false);
+			
+		}
+
+	}
 
 	override public function line() {
 		return "Ooh, the new apple flavour";
 	}
 
 
+
 }
 
 class CherryPoppers extends PopperPills {
+
+	function new (){
+		super();
+		customName = "Cherry Poppers";
+	}
+
 
 	override public function line() {
 		return "Cherry Flavoured Poppers - use this cherry to pop your cherry";
@@ -105,6 +242,10 @@ class CherryPoppers extends PopperPills {
 }
 
 class PinefreshPoppers extends PopperPills {
+	function new (){
+		super();
+		customName = "Pine Fresh Poppers";
+	}
 
 	override public function line() {
 		return "Ooh, piney";
@@ -113,6 +254,69 @@ class PinefreshPoppers extends PopperPills {
 		super.useOn(o);
 		var player:Player = room.get(Player);
 
+
+		if(o.type == Poptwink){
+			var interact = [
+			{time:0.0,run:function(){
+				player.say("Gayvin is full of this stuff already.", null, 4);
+			}},
+			];
+			Event.run(interact, false);
+		}
+
+			if(o.type == Poptwink1){
+			var interact = [
+			{time:0.0,run:function(){
+				player.say("I dont think he needs any more.", null, 4);
+			}},
+			];
+			Event.run(interact, false);
+		}
+			if(o.type == Drinktwink){
+			var interact = [
+			{time:0.0,run:function(){
+				o.say("Sorry Packwood, but I'm not into that sort of stuff.", null, 4);
+			}},
+			];
+			Event.run(interact, false);
+
+		}
+			if(o.type == LiftAI){
+			var interact = [
+			{time:0.0,run:function(){
+				o.say("You're just taunting me now, how do you expect me to sniff that.", null, 4);
+			}},
+			];
+			Event.run(interact, false);
+
+		}
+			if(o.type == SitTwink){
+			var interact = [
+			{time:0.0,run:function(){
+				player.say("Best not antagonize them anymore.", null, 4);
+			}},
+			];
+			Event.run(interact, false);
+			
+		}
+			if(o.type == SitTwink2){
+			var interact = [
+			{time:0.0,run:function(){
+				player.say("He already reeks of his father disapointment already.", null, 4);
+			}},
+			];
+			Event.run(interact, false);
+			
+		}
+			if(o.type == PTwink1){
+			var interact = [
+			{time:0.0,run:function(){
+				o.say("Why are you even trying with me?", null, 4);
+			}},
+			];
+			Event.run(interact, false);
+			
+		}
 		if(o.type == PTwink2){
 		var interact = [
 			{time:0.0,run:function(){
@@ -176,6 +380,53 @@ class PinefreshPoppers extends PopperPills {
 		});
 
 	  }
+	  			if(o.type == PTwink3){
+			var interact = [
+			{time:0.0,run:function(){
+				o.say("No chance in hell mate.", null, 4);
+			}},
+			];
+			Event.run(interact, false);
+			
+		}
+			if(o.type == Nathan){
+			var interact = [
+			{time:0.0,run:function(){
+				o.say("Mmmmphhh.", null, 4);
+			}},
+			];
+			Event.run(interact, false);
+			
+		}
+			if(o.type == MaxxCream){
+			var interact = [
+			{time:0.0,run:function(){
+				o.say("I already have some.", null, 4);
+			}},
+			];
+			Event.run(interact, false);
+			
+		}
+			if(o.type == Boss){
+			var interact = [
+			{time:0.0,run:function(){
+				o.say("Why dont you use them Packwood, it might make you more of a barable person.", null, 4);
+			}},
+			];
+			Event.run(interact, false);
+			
+		}
+			if(o.type == Player){
+			var interact = [
+			{time:0.0,run:function(){
+				player.say("*SNIFF* Oh God. I dont feel good.", null, 4);
+				Global.inventory.remove(this);
+				Poppers.taken = false;
+			}},
+			];
+			Event.run(interact, false);
+			
+		}
 
 	}
 
@@ -183,6 +434,135 @@ class PinefreshPoppers extends PopperPills {
 }
 
 class SourcreamAndOnionPoppers extends PopperPills {
+
+	function new (){
+		super();
+		customName = "Sour Cream and Onion Poppers";
+	}
+	override public function useOn(o:Object){
+		super.useOn(o);
+		var player:Player = room.get(Player);
+
+		if(o.type == Poptwink){
+			var interact = [
+			{time:0.0,run:function(){
+				player.say("Gayvin is full of this stuff already.", null, 4);
+			}},
+			];
+			Event.run(interact, false);
+		}
+
+			if(o.type == Poptwink1){
+			var interact = [
+			{time:0.0,run:function(){
+				player.say("I dont think he needs any more.", null, 4);
+			}},
+			];
+			Event.run(interact, false);
+		}
+			if(o.type == Drinktwink){
+			var interact = [
+			{time:0.0,run:function(){
+				o.say("Sorry Packwood, but I'm not into that sort of stuff.", null, 4);
+			}},
+			];
+			Event.run(interact, false);
+
+		}
+			if(o.type == LiftAI){
+			var interact = [
+			{time:0.0,run:function(){
+				o.say("You're just taunting me now, how do you expect me to sniff that.", null, 4);
+			}},
+			];
+			Event.run(interact, false);
+
+		}
+			if(o.type == SitTwink){
+			var interact = [
+			{time:0.0,run:function(){
+				player.say("Best not antagonize them anymore.", null, 4);
+			}},
+			];
+			Event.run(interact, false);
+			
+		}
+			if(o.type == SitTwink2){
+			var interact = [
+			{time:0.0,run:function(){
+				player.say("He already reeks of his father disapointment already.", null, 4);
+			}},
+			];
+			Event.run(interact, false);
+			
+		}
+			if(o.type == PTwink1){
+			var interact = [
+			{time:0.0,run:function(){
+				o.say("Why are you even trying with me?", null, 4);
+			}},
+			];
+			Event.run(interact, false);
+			
+		}
+			if(o.type == PTwink2){
+			var interact = [
+			{time:0.0,run:function(){
+				o.say("I had this flavour last week, it left me with a rash, or was that Steve?", null, 4);
+			}},
+			];
+			Event.run(interact, false);
+			
+		}
+			if(o.type == PTwink3){
+			var interact = [
+			{time:0.0,run:function(){
+				o.say("No chance in hell mate.", null, 4);
+			}},
+			];
+			Event.run(interact, false);
+			
+		}
+			if(o.type == Nathan){
+			var interact = [
+			{time:0.0,run:function(){
+				o.say("Mmmmphhh.", null, 4);
+			}},
+			];
+			Event.run(interact, false);
+			
+		}
+			if(o.type == MaxxCream){
+			var interact = [
+			{time:0.0,run:function(){
+				o.say("I already have some.", null, 4);
+			}},
+			];
+			Event.run(interact, false);
+			
+		}
+			if(o.type == Boss){
+			var interact = [
+			{time:0.0,run:function(){
+				o.say("Why dont you use them Packwood, it might make you more of a barable person.", null, 4);
+			}},
+			];
+			Event.run(interact, false);
+			
+		}
+			if(o.type == Player){
+			var interact = [
+			{time:0.0,run:function(){
+				player.say("*SNIFF* Oh God. I dont feel good.", null, 4);
+				Global.inventory.remove(this);
+				Poppers.taken = false;
+			}},
+			];
+			Event.run(interact, false);
+			
+		}
+
+	}
 
 	override public function line() {
 		return "Sour cream and Onion Poppers - Once you pop, you just can't stop.";
@@ -192,6 +572,135 @@ class SourcreamAndOnionPoppers extends PopperPills {
 
 class OldspicePoppers extends PopperPills {
 
+	function new (){
+		super();
+		customName = "Oldspice Poppers";
+	}
+	override public function useOn(o:Object){
+		super.useOn(o);
+		var player:Player = room.get(Player);
+
+		if(o.type == Poptwink){
+			var interact = [
+			{time:0.0,run:function(){
+				player.say("Gayvin is full of this stuff already.", null, 4);
+			}},
+			];
+			Event.run(interact, false);
+		}
+
+			if(o.type == Poptwink1){
+			var interact = [
+			{time:0.0,run:function(){
+				player.say("I dont think he needs any more.", null, 4);
+			}},
+			];
+			Event.run(interact, false);
+		}
+			if(o.type == Drinktwink){
+			var interact = [
+			{time:0.0,run:function(){
+				o.say("Sorry Packwood, but I'm not into that sort of stuff.", null, 4);
+			}},
+			];
+			Event.run(interact, false);
+
+		}
+			if(o.type == LiftAI){
+			var interact = [
+			{time:0.0,run:function(){
+				o.say("You're just taunting me now, how do you expect me to sniff that.", null, 4);
+			}},
+			];
+			Event.run(interact, false);
+
+		}
+			if(o.type == SitTwink){
+			var interact = [
+			{time:0.0,run:function(){
+				player.say("Best not antagonize them anymore.", null, 4);
+			}},
+			];
+			Event.run(interact, false);
+			
+		}
+			if(o.type == SitTwink2){
+			var interact = [
+			{time:0.0,run:function(){
+				player.say("He already reeks of his father disapointment already.", null, 4);
+			}},
+			];
+			Event.run(interact, false);
+			
+		}
+			if(o.type == PTwink1){
+			var interact = [
+			{time:0.0,run:function(){
+				o.say("Why are you even trying with me?", null, 4);
+			}},
+			];
+			Event.run(interact, false);
+			
+		}
+			if(o.type == PTwink2){
+			var interact = [
+			{time:0.0,run:function(){
+				o.say("I had this flavour last week, it left me with a rash, or was that Steve?", null, 4);
+			}},
+			];
+			Event.run(interact, false);
+			
+		}
+			if(o.type == PTwink3){
+			var interact = [
+			{time:0.0,run:function(){
+				o.say("No chance in hell mate.", null, 4);
+			}},
+			];
+			Event.run(interact, false);
+			
+		}
+			if(o.type == Nathan){
+			var interact = [
+			{time:0.0,run:function(){
+				o.say("Mmmmphhh.", null, 4);
+			}},
+			];
+			Event.run(interact, false);
+			
+		}
+			if(o.type == MaxxCream){
+			var interact = [
+			{time:0.0,run:function(){
+				o.say("I already have some.", null, 4);
+			}},
+			];
+			Event.run(interact, false);
+			
+		}
+			if(o.type == Boss){
+			var interact = [
+			{time:0.0,run:function(){
+				o.say("Why dont you use them Packwood, it might make you more of a barable person.", null, 4);
+			}},
+			];
+			Event.run(interact, false);
+			
+		}
+			if(o.type == Player){
+			var interact = [
+			{time:0.0,run:function(){
+				player.say("*SNIFF* Oh God. I dont feel good.", null, 4);
+				Global.inventory.remove(this);
+				Poppers.taken = false;
+			}},
+			];
+			Event.run(interact, false);
+			
+		}
+
+	}
+
 	override public function line() {
 		return "Old Spice, for when you want the smell of a 14 year old up your nose";
 	}
@@ -199,6 +708,135 @@ class OldspicePoppers extends PopperPills {
 }
 
 class GlitterPoppers extends PopperPills {
+
+	function new (){
+		super();
+		customName = "Glitter Poppers";
+	}
+	override public function useOn(o:Object){
+		super.useOn(o);
+		var player:Player = room.get(Player);
+
+		if(o.type == Poptwink){
+			var interact = [
+			{time:0.0,run:function(){
+				o.say("Drop poppers not bombs.", null, 4);
+			}},
+			];
+			Event.run(interact, false);
+		}
+
+			if(o.type == Poptwink1){
+			var interact = [
+			{time:0.0,run:function(){
+				player.say("I dont think he needs any more.", null, 4);
+			}},
+			];
+			Event.run(interact, false);
+		}
+			if(o.type == Drinktwink){
+			var interact = [
+			{time:0.0,run:function(){
+				o.say("Sorry Packwood, but I'm not into that sort of stuff.", null, 4);
+			}},
+			];
+			Event.run(interact, false);
+
+		}
+			if(o.type == LiftAI){
+			var interact = [
+			{time:0.0,run:function(){
+				o.say("You're just taunting me now, how do you expect me to sniff that.", null, 4);
+			}},
+			];
+			Event.run(interact, false);
+
+		}
+			if(o.type == SitTwink){
+			var interact = [
+			{time:0.0,run:function(){
+				player.say("Best not antagonize them anymore.", null, 4);
+			}},
+			];
+			Event.run(interact, false);
+			
+		}
+			if(o.type == SitTwink2){
+			var interact = [
+			{time:0.0,run:function(){
+				player.say("He already reeks of his father disapointment already.", null, 4);
+			}},
+			];
+			Event.run(interact, false);
+			
+		}
+			if(o.type == PTwink1){
+			var interact = [
+			{time:0.0,run:function(){
+				o.say("Why are you even trying with me?", null, 4);
+			}},
+			];
+			Event.run(interact, false);
+			
+		}
+			if(o.type == PTwink2){
+			var interact = [
+			{time:0.0,run:function(){
+				o.say("I had this flavour last week, it left me with a rash, or was that Steve?", null, 4);
+			}},
+			];
+			Event.run(interact, false);
+			
+		}
+			if(o.type == PTwink3){
+			var interact = [
+			{time:0.0,run:function(){
+				o.say("No chance in hell mate.", null, 4);
+			}},
+			];
+			Event.run(interact, false);
+			
+		}
+			if(o.type == Nathan){
+			var interact = [
+			{time:0.0,run:function(){
+				o.say("Mmmmphhh.", null, 4);
+			}},
+			];
+			Event.run(interact, false);
+			
+		}
+			if(o.type == MaxxCream){
+			var interact = [
+			{time:0.0,run:function(){
+				o.say("I already have some.", null, 4);
+			}},
+			];
+			Event.run(interact, false);
+			
+		}
+			if(o.type == Boss){
+			var interact = [
+			{time:0.0,run:function(){
+				o.say("Why dont you use them Packwood, it might make you more of a barable person.", null, 4);
+			}},
+			];
+			Event.run(interact, false);
+			
+		}
+			if(o.type == Player){
+			var interact = [
+			{time:0.0,run:function(){
+				player.say("*SNIFF* Oh God. I dont feel good.", null, 4);
+				Global.inventory.remove(this);
+				Poppers.taken = false;
+			}},
+			];
+			Event.run(interact, false);
+			
+		}
+
+	}
 
 	override public function line() {
 		return "For the smell of your fathers disapoint try Glitter Poppers.";

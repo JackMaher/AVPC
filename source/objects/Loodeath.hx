@@ -7,7 +7,7 @@ import flixel.FlxG;
 
 
 
-class StdDeathTxt extends Object {
+class Loodeath extends Object {
 
     var diedText:FlxText;
     var diedPara:FlxText;
@@ -15,12 +15,13 @@ class StdDeathTxt extends Object {
     public function new(x,y){
         super (x,y);
         customName = " ";
-        loadGraphic("assets/images/stddeathtxt.png", true,85,32);
+        loadGraphic("assets/images/loodeath.png", true,85,32);
         layer=FORE;
         visible = false;
+        hidden = true;
 
         diedText = new FlxText(0,0,500);
-        diedText.text = "You should've worn protection";
+        diedText.text = "Guess they havent added that.";
         diedText.setFormat(null, 18, FlxColor.WHITE,LEFT);
         diedText.visible = false;
         FlxG.state.add(diedText);

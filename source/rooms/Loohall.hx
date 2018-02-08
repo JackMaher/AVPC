@@ -9,6 +9,7 @@ class Loohall extends Room {
         //scaleFactor = 8;
         objects = [
 					new RoomTrigger(6,Bar,130,21),
+                    new Loodeath(17,6),
 					new RoomTrigger(107,Hallwaybar,10,10),
 					new MenLooDoor(24,8),
 					new Ladyloo(66,10),
@@ -45,6 +46,14 @@ class Loohall extends Room {
     			player.angle+=0.5;
     			player.y = loo.y + 15 * room.scaleFactor;
     			player.x = loo.x + loo.width/2 - player.width/2 + player.offset.x;
+
+                var wait = [
+                {time:6.0,run:function(){
+                var death:Loodeath = get(Loodeath);  
+                 death.activate();
+                }}
+                ];
+                Event.run(wait);
     		}
 	    }
     }

@@ -5,8 +5,8 @@ import rooms.*;
 class LiftDoor extends Door {
 	public function new(x,y){
 		super(x,y);
-		newRoom=Lift;
-		newPlayerX = 30;
+		newRoom=Hallway1;
+		newPlayerX = 39;
 		newPlayerY =10;
 	}
 
