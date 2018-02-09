@@ -63,6 +63,7 @@ class Planthall extends Object {
         var tree = [
             {time:0.0,run:function(){
                 player.walkToObject(Planthall, X, LEFT, function(){
+                    Global.canInteract = false;
                     player.flipX = true;
                     player.say("A rather short and stubby Morning Glory plant.");
                 });
@@ -88,6 +89,7 @@ class Planthall extends Object {
                 johnny.say("See he agrees.");
                 nameHeard = true;
                 player.canControl = true;
+                Global.canInteract = true;
             }},
         ];
         Event.run(tree);
