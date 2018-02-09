@@ -22,7 +22,7 @@ class Hallway1 extends Room {
                     new PopTrigger(35),
                     new Poptable(83,28),
         			new Player(10,10)];
-                    //FlxG.timeScale = 2;
+                    FlxG.timeScale = 2;
         			 
     }
 
