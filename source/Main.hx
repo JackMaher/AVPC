@@ -10,13 +10,13 @@ import rooms.*;
 
 class Main extends Sprite
 {
-	public function new()
+    public function new()
 
-	{
-		super();
-		Global.defaultScaleFactor = 8;
+    {
+        super();
+        Global.defaultScaleFactor = 8;
         Global.startingRoom = Hallway1;
-		addChild(new FlxGame(1920, 1080, Game));
-	}
+        addChild(new FlxGame(1920, 1080, OpeningScene));
+    }
 }
 
