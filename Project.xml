@@ -33,7 +33,7 @@
 
 	<!-- _______________________________ Libraries ______________________________ -->
 
-	<set name="next" />
+	<setd name="next" />
 	<haxelib name="flixel" />
         <haxelib name="advengine" />
 

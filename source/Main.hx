@@ -15,7 +15,7 @@ class Main extends Sprite
     {
         super();
         Global.defaultScaleFactor = 8;
-        Global.startingRoom = Hallway1;
+        Global.startingRoom = Cutscene;
         addChild(new FlxGame(1920, 1080, OpeningScene));
     }
 }
