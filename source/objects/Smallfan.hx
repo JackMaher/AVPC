@@ -11,7 +11,7 @@ class Smallfan extends Object {
         loadGraphic("assets/images/smallfan.png", true,6,6);
         animation.add("spin",[0,1,2],12,true);
         animation.play("spin");
-		customName = " ";
+		customName = "Fan";
 		layer=BACK;
 	}
 }

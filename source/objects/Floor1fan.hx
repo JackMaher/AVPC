@@ -11,7 +11,7 @@ class Floor1fan extends Object {
         loadGraphic("assets/images/floor1fan.png", true,12,12);
         animation.add("spin",[0,1,2,3],16,true);
         animation.play("spin");
-		customName = " ";
+		customName = "Fan";
 		layer=BACK;
 	}
 }
