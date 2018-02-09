@@ -1,0 +1,18 @@
+#!/bin/bash
+
+echo "<style>*{font-family:sans-serif;}</style>" > a.md
+
+ag "(say ?\(|option ?\()(\".*\")" -o source --group \
+    | sed \
+        -e 's/^source/### source/' \
+        -e 's/^/\
+/' \
+        -e 's/^\(.+\)/Line \1/' \
+        -e 's/(/ /' -e 's/:/: /' \
+        >> a.md
+
+pandoc -i a.md -f markdown_phpextra -o a.html
+/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome  --headless --print-to-pdf=proof.pdf a.html
+
+#rm a.md
+rm a.html
