@@ -16,7 +16,11 @@ class Penthouse extends Room {
 					new Boss(84,15),
 					new Curtine(76,1),
 					new Block(75),
-
+                    new Dispendershead(67,26),
+                    new Dispendersbody(66,30),
+                    new Shagrug(25,39),
+                    new Plant(58,5),
+                    new Dvd(16,15),
         			new Player(10,10)];
     }
 
@@ -33,4 +37,51 @@ class Penthouse extends Room {
 
     }
 
+}
+
+
+class Shagrug extends Object {
+
+    public function new(x,y){
+        super (x,y);
+        customName = "Shag Carpet";
+        layer=FORE;
+    }
+    override function look(){
+        var player:Player = room.get(Player);
+        player.say("Nothing says class more than a shag carpet.");
+    }
+}
+class Plant extends Object {
+
+    public function new(x,y){
+        super (x,y);
+        customName = "Potted Plant";
+        layer=BACK;
+    }
+    override function look(){
+        var player:Player = room.get(Player);
+        player.say("Tall and proud Morning Glory Tree.");
+    }
+}
+class Dvd extends Object {
+
+    public function new(x,y){
+        super (x,y);
+        customName = "Shelf";
+        layer=BACK;
+    }
+    override function look(){
+        var player:Player = room.get(Player);
+        player.say("This shelf is filled with porno's, none of my work though.");
+    }
+}
+
+class Curtine extends Object {
+
+    public function new(x,y){
+        super (x,y);
+        customName = " ";
+        layer=FORE;
+    }
 }
