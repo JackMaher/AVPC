@@ -67,6 +67,7 @@ class TwinkTrigger extends Trigger{
 
         var interact = [
             {time:0.0,run:function(){
+                Global.canInteract = false;
                 twink1.say("He doesnt even go here.", null, 3);
             }},
             {time:1.0,run:function(){
@@ -83,6 +84,7 @@ class TwinkTrigger extends Trigger{
             }},
             {time:7.0,run:function(){
                 player.canControl = true;
+                Global.canInteract = true;
             }}
             ];
 

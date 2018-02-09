@@ -28,7 +28,7 @@ class Loodeath extends Object {
 
 
         diedPara = new FlxText(0,0,400);
-        diedPara.text = "Didn't your mother warn you to wear protections when sleeping with a prostitute to get information on a space adventuerer?";
+        diedPara.text = "Due to building regulations Luthberge had to put in a ladies loo, but the regulations didnt state it had to lead anywhere.";
         diedPara.setFormat(null, 18, FlxColor.BLACK,LEFT);
         diedPara.visible = false;
         FlxG.state.add(diedPara);

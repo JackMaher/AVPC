@@ -20,8 +20,9 @@ class Hallway1 extends Room {
                     new PopTrigger(110),
                     //new Hall1NudeTrigger (70),
                     new PopTrigger(35),
+                    new Poptable(83,28),
         			new Player(10,10)];
-                    FlxG.timeScale = 2;
+                    //FlxG.timeScale = 2;
         			 
     }
 
@@ -40,6 +41,18 @@ class Hallway1 extends Room {
 
     }
 
+}
+class Poptable extends Object {
+
+    public function new(x,y){
+        super (x,y);
+        customName = "Table";
+        layer=BACK;
+    }
+    override function look(){
+        var player:Player = room.get(Player);
+        player.say("Cover in poppers and popper related paraphernalia.");
+    }
 }
 class PopTrigger extends Trigger {
 
