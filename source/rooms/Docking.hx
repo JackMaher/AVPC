@@ -22,6 +22,8 @@ class Docking extends Room {
                     new Hal(75,14),
                     new Bookcase(18,27),
                     new HalTrigger(88),];
+        Global.fader.alpha = 1;
+        Global.fader.fadeIn();
     }
 
     override public function update(d){
