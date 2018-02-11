@@ -3,8 +3,9 @@ package;
 
 import openfl.display.Shader;
 
-class Water extends Shader
+class Taper extends Shader
 {
+
     @fragment var code = '
 
         void main() {
