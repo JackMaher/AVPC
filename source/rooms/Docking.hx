@@ -8,6 +8,7 @@ import flixel.util.FlxColor;
 class Docking extends Room {
 
     var nudedone = false;
+    var introdone = false;
     
     override public function create() {
         objects = [
@@ -36,6 +37,23 @@ class Docking extends Room {
             twink.say("He dosen't even have one desirable feture.");
             nudedone = true;
         }
+
+        if(introdone) return;
+        introdone = true;
+
+        var player:Player = room.get(Player);
+
+        var intro = [
+            {time:0.0,run:function(){
+                Global.canInteract = false;
+                player.say("OWWWWWWWWWWWWWW", null, 3);
+            }},
+            {time:4.0,run:function(){
+                Global.canInteract = true;
+            }},
+
+        ];
+        Event.run(intro, false);
 
     }
 

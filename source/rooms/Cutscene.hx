@@ -15,10 +15,11 @@ class Cutscene extends Room {
 
         objects = [
                 new Spacestation(124,52),
-        		new CutsceneFore(1,0),
-                new Rodgerseat(32,25),
+
+                new Rodgerseat(72,48),
                 new CutsceneAI(45,10),
-                new Sodsbury(25,32),
+                new Sodsbury(71,54),
+                new CutsceneFore(1,0),
                 new CutsceneWindow(1,0)
                 
         ];
@@ -95,10 +96,15 @@ class Cutscene extends Room {
         }},
        {time:59.0,run:function(){
             sodsbury.say("I should really fix that.");
+            rod.say("OWWWWWWWWWWW");
+            rod.animation.play("teley");
+            rod.afterAnimation (function(){
+                         game.switchRoom(Docking);
+                     });
         
         }},
-       {time:62.0,run:function(){
-            game.switchRoom(Docking);
+       {time:63.0,run:function(){
+            sodsbury.say("Duuh duuh da da da duuh");
         
         }},
         ];
@@ -125,15 +131,7 @@ class CutsceneWindow extends Object {
     }
 }
 
-class Rodgerseat extends Object {
 
-    public function new(x,y){
-        super (x,y);
-        customName = "Rodger Packwood";
-        layer=FORE;
-        speechColor = FlxColor.ORANGE;
-    }
-}
 
 class CutsceneAI extends Object {
 
