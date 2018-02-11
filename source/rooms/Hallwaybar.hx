@@ -14,7 +14,7 @@ class Hallwaybar extends Room {
     override public function create() {
         var nudedone = false;
         //scaleFactor = 8;
-        FlxG.timeScale = 2;
+        //FlxG.timeScale = 2;
         objects = [
             new RoomTrigger(6,Loohall,90,10),
             new Block(109),

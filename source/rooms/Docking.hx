@@ -15,15 +15,15 @@ class Docking extends Room {
         objects = [
                     new Space(49,13),
                     new RoomTrigger(6,Hallway2,110,36),
-                    new Block(151),
-        			new Player(123,37),
+                    new Block(134),
+        			new Player(118,37),
                     new TwinkTrigger(20),
-                    new Tele(105,28),
+                    //new Tele(105,28),
                     new SitTwink2(50,41),
                     new SitTwink(83,41),
                     new Hal(75,14),
-                    new Bookcase(18,27),
-                    new HalTrigger(88),];
+                    new Bookcase(19,24),
+                    ];
                     //FlxG.timeScale = 2;
         Global.fader.alpha = 1;
         Global.fader.fadeIn();
@@ -45,10 +45,12 @@ class Docking extends Room {
 
         var player:Player = room.get(Player);
         var twink:SitTwink = get(SitTwink);
+        var hal:Hal = get(Hal);
 
         var intro = [
             {time:0.0,run:function(){
                 Global.canInteract = false;
+                player.canControl = false;
 
                  player.customAnimation = "teleyIn";
                  player.afterAnimation (function(){
@@ -63,11 +65,15 @@ class Docking extends Room {
             }},
             
             {time:4.0,run:function(){
-                twink.say("Looks like Lutheberge has called in the riff-raff.");
+                twink.say("Smells like Lutheberge has called in the riff-raff.");
+            }},
+            {time:8.0,run:function(){
+                hal.say("Hello Packwood, the Captin is waiting for you in his Penthouse.", FlxColor.RED);
             }},
 
-            {time:4.0,run:function(){
+            {time:9.0,run:function(){
                 Global.canInteract = true;
+                player.canControl = true;
             }},
 
         ];
@@ -76,20 +82,6 @@ class Docking extends Room {
     }
 
 
-
-}
-
-class HalTrigger extends Trigger {
-
-    var done = false;
-    function trigger (){
-        if(done) return;
-        done = true;
-
-        var hal:Hal = room.get(Hal);
-        hal.say("Hello Packwood.", FlxColor.RED);
-        hal.say("The Captin is waiting for you in his Penthouse.", FlxColor.RED);
-    }
 
 }
 

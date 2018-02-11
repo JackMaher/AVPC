@@ -51,7 +51,7 @@ class LiftAI extends Object {
 			}},			
 			{time:4.0,run:function(){
 				say("Mr Luthberge asked me to send you straight to him.", FlxColor.GREEN, 2);
-				changeFloor(PenthouseHallway, 39, 10);
+				changeFloor(PenthouseHallway, 43, 10);
 			}},
 		];
 
@@ -94,7 +94,7 @@ class LiftAI extends Object {
 					say("Bar Floor! (I cant remember the last time I had a drink)",FlxColor.GREEN);
 				});
 				player.option("Penthouse Floor", FlxColor.BLUE,function(){ 
-					changeFloor(PenthouseHallway, 39, 10);
+					changeFloor(PenthouseHallway, 43, 10);
 					say("Penhouse Floor! (Tell Luthberge I miss him)",FlxColor.GREEN);
 				});
 				player.endOptions();

@@ -12,7 +12,7 @@ class Player extends Object {
 	public static var clothed:Bool = true;
 	public var customAnimation:String;
 	public static var passwordHeard = false;
-	public static var spoketoBoss = true;
+	public static var spoketoBoss = false;
     public static var poppersComplete = false;
     public static var condomOn = false;
     public static var maxxSex = false;
@@ -42,6 +42,7 @@ class Player extends Object {
         moveSpeed = 480;
         layer=CHAR;
         pixelPerfect = true;
+
 
         update(0);
     }
@@ -73,9 +74,8 @@ class Player extends Object {
     override public function update(d) {
     	super.update(d);
 
-        if(canControl) {
-            width=7*scale.x;
-        }
+        width=7*scale.x;
+        
         // if normal way round
 		if(!flipX) {
         	offset.x=6*scale.x;
