@@ -14,7 +14,7 @@ class Ladyloodoor extends Object {
         animation.add("closed",[0],0,false);
         animation.add("open",[0,1,2,3,4],10,false);
         animation.play("closed");
-		customName = " ";
+		hidden = true;
 	}
 	override function look(){
 		say("Ladies Loo");

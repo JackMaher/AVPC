@@ -14,7 +14,7 @@ class Loodeath extends Object {
 
     public function new(x,y){
         super (x,y);
-        customName = " ";
+        hidden = true;
         loadGraphic("assets/images/loodeath.png", true,85,32);
         layer=FORE;
         visible = false;

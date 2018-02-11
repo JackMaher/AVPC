@@ -24,7 +24,7 @@ class Docking extends Room {
                     new Hal(75,14),
                     new Bookcase(18,27),
                     new HalTrigger(88),];
-                    FlxG.timeScale = 2;
+                    //FlxG.timeScale = 2;
         Global.fader.alpha = 1;
         Global.fader.fadeIn();
     }
@@ -101,7 +101,7 @@ class TwinkTrigger extends Trigger{
         done = true;
         var player:Player = room.get(Player);
         var twink1:SitTwink = room.get(SitTwink);
-        var twink2:SitTwink = room.get(SitTwink2);
+        var twink2:SitTwink2 = room.get(SitTwink2);
 
         var interact = [
             {time:0.0,run:function(){

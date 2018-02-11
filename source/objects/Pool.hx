@@ -11,7 +11,7 @@ class Pool extends Object {
 
 	public function new(x,y){
 		super (x,y);
-		customName = " ";
+		hidden = true;
 
         for(i in 0...20) {
             var s = new Steam(); 

@@ -56,6 +56,9 @@ class Planthall extends Object {
             }
 
     }
+    override function use(){
+        look();
+    }
     override function look(){
         var player:Player = room.get(Player);
         var johnny:Drinktwink = room.get(Drinktwink);

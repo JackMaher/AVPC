@@ -8,7 +8,7 @@ class Dockdoor extends Object {
 
 	public function new(x,y){
 		super (x,y);
-		customName = " ";
+		hidden = true;
 		layer=BACK;
 	}
 }

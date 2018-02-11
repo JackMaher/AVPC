@@ -41,7 +41,7 @@ class Player extends Object {
         drag.x = 5000;
         moveSpeed = 480;
         layer=CHAR;
-        pixelPerfect = false;
+        pixelPerfect = true;
 
         update(0);
     }
@@ -64,11 +64,17 @@ class Player extends Object {
     	}
     }
 
+    override public function walkTo(rawX, rawY, ?then:Null<Void->Void>) {
+        velocity.x = 0;
+        acceleration.x = 0;
+        super.walkTo(rawX,rawY,then);
+    }
+
     override public function update(d) {
     	super.update(d);
 
         if(canControl) {
-            width=15*scale.x;
+            width=7*scale.x;
         }
         // if normal way round
 		if(!flipX) {
@@ -76,7 +82,7 @@ class Player extends Object {
 		}
 		// if other way round
 		else {
-			offset.x = 3*scale.x;
+			offset.x = 10*scale.x;
 		}
 
 
