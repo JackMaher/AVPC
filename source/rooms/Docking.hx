@@ -4,6 +4,7 @@ import adventure.*;
 import objects.*;
 import rooms.*;
 import flixel.util.FlxColor;
+import flixel.FlxG;
 
 class Docking extends Room {
 
@@ -23,6 +24,7 @@ class Docking extends Room {
                     new Hal(75,14),
                     new Bookcase(18,27),
                     new HalTrigger(88),];
+                    FlxG.timeScale = 2;
         Global.fader.alpha = 1;
         Global.fader.fadeIn();
     }
@@ -42,12 +44,28 @@ class Docking extends Room {
         introdone = true;
 
         var player:Player = room.get(Player);
+        var twink:SitTwink = get(SitTwink);
 
         var intro = [
             {time:0.0,run:function(){
                 Global.canInteract = false;
-                player.say("OWWWWWWWWWWWWWW", null, 3);
+
+                 player.customAnimation = "teleyIn";
+                 player.afterAnimation (function(){
+                     player.customAnimation = null;
+                 });
+
             }},
+            {time:1.0,run:function(){
+
+                player.say("OWWWWWWWWWWWWWW", null, 3);
+
+            }},
+            
+            {time:4.0,run:function(){
+                twink.say("Looks like Lutheberge has called in the riff-raff.");
+            }},
+
             {time:4.0,run:function(){
                 Global.canInteract = true;
             }},
@@ -91,7 +109,7 @@ class TwinkTrigger extends Trigger{
                 twink1.say("He doesnt even go here.", null, 3);
             }},
             {time:1.0,run:function(){
-                twink2.say("I know right.", 0xffFFC300,2);
+                twink2.say("I know right.", null,2);
             }},
             {time:3.0,run:function(){
                 player.say("Excuse me?", null,3);

@@ -14,14 +14,17 @@ class Hallwaybar extends Room {
     override public function create() {
         var nudedone = false;
         //scaleFactor = 8;
-        //FlxG.timeScale = 2;
+        FlxG.timeScale = 2;
         objects = [
             new RoomTrigger(6,Loohall,90,10),
             new Block(109),
             new Nathan(107,11),
             new Hallwaybardoor(45,8),
+            new Vase(69,24),
             new Doorman(71,13),
             new StdDeathTxt(17,6),
+            new Arcade(18,1),
+            new HallwaybarFore(0,0),
             new Player(10,10)];
 
     }
@@ -106,3 +109,41 @@ class Hallwaybar extends Room {
         }
         super.update(d);
     }}
+
+
+
+class Arcade extends Object {
+
+    public function new(x,y){
+        super (x,y);
+        customName = "Broken Arcade";
+        layer=BACK;
+    }
+    override function look(){
+        var player:Player = room.get(Player);
+        player.say("Broken down arcade that once was deicated to Glide.");
+    }
+}
+
+
+class HallwaybarFore extends Object {
+
+    public function new(x,y){
+        super (x,y);
+        customName = " ";
+        layer=FORE;
+    }
+}
+
+class Vase extends Object {
+
+    public function new(x,y){
+        super (x,y);
+        customName = "Vase";
+        layer=BACK;
+    }
+    override function look(){
+        var player:Player = room.get(Player);
+        player.say("What a colourful selection of... toys.");
+    }
+}

@@ -70,7 +70,7 @@ class PopperPills extends Object {
 	function new() {
 		hidden = true;
 		super(-10000,0);
-		changeScale(4);
+		changeScale(3);
 		visible = false;
 	}
 

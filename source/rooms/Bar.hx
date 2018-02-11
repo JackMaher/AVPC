@@ -20,6 +20,7 @@ class Bar extends Room {
         			new Waterfall(80,30),
         			new Waterfall(102,30),
                     new Block(5),
+                    new LBSign(70,13),
         			new Player(140, 21)];
                     //FlxG.timeScale = 2;
                    
@@ -44,5 +45,16 @@ class Bar extends Room {
 
 
 
+class LBSign extends Object {
 
+    public function new(x,y){
+        super (x,y);
+        customName = "Sign";
+        layer=BACK;
+    }
+    override function look(){
+        var player:Player = room.get(Player);
+        player.say("Luthberge's infamous sign.");
+    }
+}
 

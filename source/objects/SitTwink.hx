@@ -14,7 +14,7 @@ class SitTwink extends Object {
         animation.add("move",[0,1,2,3,4,4,4,4,4],5,true);
         animation.play("move");
 		layer=BACK;
-		speechColor = 0xff90678c;
+		speechColor = 0xffEF626C;
 	}
 	override function use(){
 		var player:Player = room.get(Player);
