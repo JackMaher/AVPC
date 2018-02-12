@@ -18,13 +18,13 @@ class Docking extends Room {
                     new Block(134),
         			new Player(118,37),
                     new TwinkTrigger(20),
-                    //new Tele(105,28),
                     new SitTwink2(50,41),
                     new SitTwink(83,41),
                     new Hal(75,14),
                     new Bookcase(19,24),
+                    new Tele(114,14)
                     ];
-                    //FlxG.timeScale = 2;
+                    FlxG.timeScale = 2;
         Global.fader.alpha = 1;
         Global.fader.fadeIn();
     }
@@ -125,4 +125,37 @@ class TwinkTrigger extends Trigger{
         player.canControl = false;
     }
 
+}
+
+class Tele extends Object {
+
+    public function new(x,y){
+        super (x,y);
+        customName = "Teleporter";
+        layer=BACK;
+    }
+    override function look(){
+        var player:Player = room.get(Player);
+        player.say("The only way on and off this ship.");
+    }
+
+    override function use(){
+        var player:Player = room.get(Player);
+        if(Player.complete == true){
+            var outTro = [
+            {time:0.0,run:function(){
+                player.say("Here goes nothing.");
+            }},
+            {time:3.0,run:function(){
+            player.customAnimation = "teleyOut";
+                player.afterAnimation (function(){
+                    game.switchRoom(EndCutscene);
+                });
+            }}
+            ];
+            Event.run(outTro, false);
+
+        }
+        
+    }
 }

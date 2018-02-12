@@ -11,12 +11,13 @@ class Player extends Object {
 	public var canControl:Bool = true;
 	public static var clothed:Bool = true;
 	public var customAnimation:String;
-	public static var passwordHeard = false;
-	public static var spoketoBoss = false;
+	public static var passwordHeard = true;
+	public static var spoketoBoss = true;
     public static var poppersComplete = false;
     public static var condomOn = false;
-    public static var maxxSex = false;
+    public static var maxxSex = true;
     public static var std = false;
+    public static var complete = true;
 
     public function new(x,y) {
         super(x,y);
@@ -25,6 +26,7 @@ class Player extends Object {
         animation.add("lr",[0,1,2,3,4,5],6,true);
         animation.add("std",[25,26,27,28,29,30,31],6,false);
         animation.add("teleyIn",[38,38,38,38,38,32,33,34,35,36,37],6,false);
+        animation.add("teleyOut",[37,36,35,34,33,32,38,38,38,38],6,false);
         animation.add("stdIdle",[31],0,false);
         animation.add("nakedLR",[19,20,21,22,23,24],6,true);
         animation.add("nakedIdle",[18],0,true);

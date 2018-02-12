@@ -18,7 +18,6 @@ class Loodeath extends Object {
         loadGraphic("assets/images/loodeath.png", true,85,32);
         layer=FORE;
         visible = false;
-        hidden = true;
 
         diedText = new FlxText(0,0,500);
         diedText.text = "Guess they havent added that.";

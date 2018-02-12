@@ -37,7 +37,47 @@ class Boss extends Object {
 	override function use(){
 		var player:Player = room.get(Player);
 
-		 if (done){
+		if(Player.maxxSex == true){
+			var endingCut = [
+			{time:0.0,run:function(){
+				player.say("Mr Luthberge, I know of a lead to Lucas Lena.", null, 4);
+			}},
+			{time:4.0,run:function(){
+				player.say("I'm going to need my ship to follow this lead.", null, 4);
+			}},
+			{time:8.0,run:function(){
+				say("You think I'm gonna let you run away in your ship?", null, 4);
+			}},
+			{time:12.0,run:function(){
+				say("No, you can take one of my discountiued crusing ships.", null, 4);
+			}},
+			{time:16.0,run:function(){
+				say("I'll keep your ship for insurance.", null, 4);
+			}},
+			{time:20.0,run:function(){
+				say("I hope you dont mind stains Packwood.", null, 4);
+			}},
+			{time:24.0,run:function(){
+				player.say("What about Sodsbur... I mean my Drone?", null, 4);
+			}},
+			{time:28.0,run:function(){
+				say("Its been humming the Death March for the past 30 minutes.", null, 4);
+			}},
+			{time:32.0,run:function(){
+				say("You can take it.", null, 4);
+			}},
+			{time:36.0,run:function(){
+				say("The teleporter is ready when you are.", null, 4);
+			}},
+			{time:40.0,run:function(){
+				say("Don't dissapoint me Packwood.", null, 4);
+				Player.complete = true;
+			}},
+			];
+			Event.run(endingCut, false);
+		}
+
+		 if (Player.spoketoBoss){
             return;
         }
 
