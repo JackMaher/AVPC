@@ -52,7 +52,7 @@ class EndCutscene extends Room {
                 sodsbury.say("What happen to our ship, and why are we on this floating STD?");
             }},
             {time:18.0,run:function(){
-                rod.say("I'll tell you on the way, set fly path to 'Gomorrah 9' we have someone to meet.");
+                rod.say("I'll tell you on the way, set fly path to 'Gomorrah 9' we have someone to meet.",null,6);
             }},
 
         ];
