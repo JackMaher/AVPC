@@ -16,7 +16,19 @@ class SitTwink2 extends Object {
         animation.play("move");
 		layer=BACK;
 		speechColor = 0xff84DCCF;
+        ticks = [
+            {word:"LOOK", callback:function(){
+                look(); 
+            }},
+            {word:"TALK", callback:function(){
+                use(); 
+            }},
+        ];
 	}
+    override function look(){
+        var player:Player = room.get(Player);
+        player.say("Seems quite.");
+    }
 	override function use(){
 
 		var player:Player = room.get(Player);
@@ -39,11 +51,13 @@ class SitTwink2 extends Object {
 			{time:9.0,run:function(){
 				twink2.say("You dont know where hes been.");
 				player.canControl = true;
+				Global.canInteract = true;
 			}},
 			];
 		player.walkToObject(SitTwink2, X, RIGHT, function(){
 			player.flipX = false;
 			player.canControl = false;
+			Global.canInteract = false;
 			Event.run(interact, false);
 		});
 

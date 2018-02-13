@@ -44,6 +44,14 @@ class Player extends Object {
         moveSpeed = 480;
         layer=CHAR;
         pixelPerfect = true;
+        ticks = [
+                {word:"LOOK", callback:function(){
+                    look(); 
+                }},
+                {word:"UNDRESS", callback:function(){
+                    use(); 
+                }},
+            ];
 
 
         update(0);

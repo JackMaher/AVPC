@@ -45,6 +45,11 @@ class Planthall extends Object {
         super (x,y);
         speechColor = FlxColor.GREEN;
         layer=BACK;
+                ticks = [
+            {word:"LOOK", callback:function(){
+                look(); 
+            }},
+        ];
     }
     override public function update(d){
         super.update(d);

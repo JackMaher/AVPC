@@ -27,6 +27,7 @@ class Docking extends Room {
                     FlxG.timeScale = 2;
         Global.fader.alpha = 1;
         Global.fader.fadeIn();
+
     }
 
     override public function update(d){
@@ -131,6 +132,7 @@ class Tele extends Object {
 
     public function new(x,y){
         super (x,y);
+        speechColor = FlxColor.RED;
         customName = "Teleporter";
         layer=BACK;
     }
@@ -156,6 +158,9 @@ class Tele extends Object {
             Event.run(outTro, false);
 
         }
+            else{
+                say("ACCESS DENINED");
+            }
         
     }
 }

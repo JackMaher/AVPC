@@ -12,6 +12,14 @@ class PTwink2 extends Object {
 		super (x,y);
 		customName = "Bruce";
 		layer=FORE;
+			ticks = [
+				{word:"LOOK", callback:function(){
+	                look(); 
+	            }},
+	            {word:"TALK", callback:function(){
+	                use(); 
+	            }},
+            ];
 	}
 	override function look(){
 		var player:Player = room.get(Player);

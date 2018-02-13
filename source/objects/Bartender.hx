@@ -13,6 +13,14 @@ class Bartender extends Object {
         animation.play("hover");
         speechColor = FlxColor.PINK;
         customName="Bar-Bot 2300";
+       			ticks = [
+				{word:"LOOK", callback:function(){
+	                look(); 
+	            }},
+	            {word:"TALK", callback:function(){
+	                use(); 
+	            }},
+            ];
 
 
 	}

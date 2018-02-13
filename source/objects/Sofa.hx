@@ -15,6 +15,11 @@ class Sofa extends Object {
         //animation.add("flash",[0,1,2,3],4,true);
         //animation.play("flash");
 		layer=BACK;
+		        ticks = [
+            {word:"LOOK", callback:function(){
+                look(); 
+            }},
+        ];
 	}
 	override function look(){
 		var player:Player = room.get(Player);

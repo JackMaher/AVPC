@@ -16,6 +16,11 @@ class LiftAI extends Object {
 		speechColor = FlxColor.GREEN;
 		loadGraphic("assets/images/liftai.png", true,6,8);
 		animation.add("Talk",[0,1,2,3,4], 4, true);
+		ticks = [
+	            {word:"TALK", callback:function(){
+	                use(); 
+	            }},
+            ];
 	}
 
 	override function use(){

@@ -15,7 +15,20 @@ class Drinktwink extends Object {
         animation.play("move");
 		layer=FORE;
 		speechColor = 0xff448FA3;
+        ticks = [
+            {word:"LOOK", callback:function(){
+                look(); 
+            }},
+            {word:"TALK", callback:function(){
+                use(); 
+            }},
+        ];
 	}
+
+    override function look(){
+        var player:Player = room.get(Player);
+        player.say("What is he drinking?");
+    }
 
 	override function use(){
 		var player:Player = room.get(Player);
@@ -54,6 +67,7 @@ class Drinktwink extends Object {
 			            {time:9.0,run:function(){
 			                say("If you need anything just come asking.", null, 3);
 			                player.canControl = true;
+			                Global.canInteract = true;
 			            }},
 		            ];
 					Event.run(opt1);
@@ -79,6 +93,7 @@ class Drinktwink extends Object {
 			        	{time:15.0,run:function(){
 			                say("If you need anything just come asking.", null, 3);
 			                player.canControl = true;
+			                Global.canInteract = true;
 			            }},
 
 		            ];
@@ -124,6 +139,7 @@ class Drinktwink extends Object {
 							{time:15.0,run:function(){
 								say("No offence", null, 2);
 								player.canControl = true;
+								Global.canInteract = true;
 							}},	
 						];
 						Event.run(info1List);
@@ -147,6 +163,7 @@ class Drinktwink extends Object {
 							{time:13.0,run:function(){
 								say("He's the worse of the worse", null, 4);
 								player.canControl = true;
+								Global.canInteract = true;
 							}},			
 						];
 						Event.run(info2List);
@@ -174,6 +191,7 @@ class Drinktwink extends Object {
 							{time:17.0,run:function(){
 								say("Its not so bad, you learn to deal with it", null, 4);
 								player.canControl = true;
+								Global.canInteract = true;
 							}},	
 						];
 						Event.run(info3List);
@@ -190,7 +208,9 @@ class Drinktwink extends Object {
 	else{
 		Event.run(interact);
 	}
+	Global.canInteract = false;
 	player.canControl = false;
+	
 
 			
 			
