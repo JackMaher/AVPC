@@ -10,7 +10,7 @@ class Docking extends Room {
 
     var nudedone = false;
     var introdone = false;
-    
+
     override public function create() {
         objects = [
                     new Space(49,13),
@@ -24,7 +24,6 @@ class Docking extends Room {
                     new Bookcase(19,24),
                     new Tele(114,14)
                     ];
-                    FlxG.timeScale = 2;
         Global.fader.alpha = 1;
         Global.fader.fadeIn();
 
@@ -64,7 +63,7 @@ class Docking extends Room {
                 player.say("OWWWWWWWWWWWWWW", null, 3);
 
             }},
-            
+
             {time:4.0,run:function(){
                 twink.say("Smells like Lutheberge has called in the riff-raff.");
             }},
@@ -161,6 +160,6 @@ class Tele extends Object {
             else{
                 say("ACCESS DENINED");
             }
-        
+
     }
 }

@@ -15,14 +15,14 @@ class Main extends Sprite
     {
         super();
         Global.defaultScaleFactor = 8;
-#if true
+#if false
         Global.startingRoom = Docking;
         Player.spoketoBoss = true;
         Player.passwordHeard = true;
         addChild(new FlxGame(1920, 1080, Game));
 #else
         Global.startingRoom = Cutscene;
-        addChild(new FlxGame(1920, 1080, OpeningScene));
+        addChild(new FlxGame(1920, 1080, MenuState));
 #end
     }
 }
