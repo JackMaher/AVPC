@@ -24,6 +24,7 @@ class Docking extends Room {
                     new Bookcase(19,24),
                     new Tele(114,14)
                     ];
+                    //FlxG.timeScale = 2;
         Global.fader.alpha = 1;
         Global.fader.fadeIn();
 
@@ -160,6 +161,6 @@ class Tele extends Object {
             else{
                 say("ACCESS DENINED");
             }
-
+        
     }
 }
