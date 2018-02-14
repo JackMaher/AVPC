@@ -51,6 +51,11 @@ class LBSign extends Object {
         super (x,y);
         customName = "Sign";
         layer=BACK;
+        ticks = [
+                {word:"LOOK", callback:function(){
+                    look(); 
+                }},
+            ];
     }
     override function look(){
         var player:Player = room.get(Player);

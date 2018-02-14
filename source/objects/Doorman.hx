@@ -8,7 +8,7 @@ class Doorman extends Object {
 
 	public function new(x,y){
 		super (x,y);
-		customName = " ";
+		hidden = true;
         loadGraphic("assets/images/doorman.png", true,11,6);
         animation.add("open",[0,1,2,3,4],5,false);
         animation.add("closed",[4,3,2,1,0],5,false);

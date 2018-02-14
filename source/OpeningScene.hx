@@ -14,7 +14,7 @@ import flixel.system.FlxSound;
 
 class OpeningScene extends FlxState {
 
-    var waterShader:Water;
+    var waterShader:Taper;
     var t1:FlxText;
     var t2:FlxText;
     var t:Float = 4.3;
@@ -36,7 +36,7 @@ class OpeningScene extends FlxState {
 
         s = FlxG.sound.play("assets/music/sw.ogg");
 
-        waterShader = new Water();
+        waterShader = new Taper();
         FlxG.camera.setFilters([new ShaderFilter(waterShader)]);
 
     }

@@ -15,7 +15,21 @@ class SitTwink extends Object {
         animation.play("move");
 		layer=BACK;
 		speechColor = 0xffEF626C;
+        ticks = [
+            {word:"LOOK", callback:function(){
+                look(); 
+            }},
+            {word:"TALK", callback:function(){
+                use(); 
+            }},
+        ];
 	}
+
+    override function look(){
+        var player:Player = room.get(Player);
+        player.say("He has a smug vibe about him.");
+    }
+
 	override function use(){
 		var player:Player = room.get(Player);
 			if(introDone == true){
@@ -35,6 +49,7 @@ class SitTwink extends Object {
 			{time:9.0,run:function(){
 				say("Just not.");
 				player.canControl = true;
+				Global.cutscene = false;
 
 			}},
 			];
@@ -43,6 +58,7 @@ class SitTwink extends Object {
 		player.walkToObject(SitTwink, X, LEFT, function(){
 			player.flipX = true;
 			player.canControl = false;
+			Global.cutscene = true;
 			Event.run(interact, false);
 		});
 

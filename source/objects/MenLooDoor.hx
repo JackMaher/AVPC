@@ -8,7 +8,12 @@ class MenLooDoor extends Door {
 		newRoom=Bathroom;
 		newPlayerX = 10;
 		newPlayerY =10;
-		customName = "Male";
+		customName = "Men's Loo";
+		ticks = [
+	            {word:"ENTER", callback:function(){
+	                use(); 
+	            }},
+            ];
 	}
 
 	override public function use(){

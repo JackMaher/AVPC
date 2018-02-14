@@ -48,6 +48,12 @@ class Poptable extends Object {
         super (x,y);
         customName = "Table";
         layer=BACK;
+
+        ticks = [
+            {word:"LOOK", callback:function(){
+                look(); 
+            }},
+        ];
     }
     override function look(){
         var player:Player = room.get(Player);

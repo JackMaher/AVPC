@@ -8,7 +8,7 @@ class Space extends Object {
 
 	public function new(x,y){
 		super (x,y);
-		customName = " ";
+		hidden = true;
         loadGraphic("assets/images/space.png", true,57,57);
         animation.add("flash",[0,1,2,3],5,true);
         animation.play("flash");

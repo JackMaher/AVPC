@@ -15,7 +15,7 @@ class Penthouse extends Room {
 					new Waterfall(90,11),
 					new Boss(84,15),
 					new Curtine(76,1),
-					new Block(75),
+					new Block(85),
                     new Dispendershead(67,26),
                     new Dispendersbody(66,30),
                     new Shagrug(25,39),
@@ -81,7 +81,7 @@ class Curtine extends Object {
 
     public function new(x,y){
         super (x,y);
-        customName = " ";
+        hidden = true;
         layer=FORE;
     }
 }

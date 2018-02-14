@@ -9,8 +9,8 @@ class PenthouseHallway extends Room {
         //scaleFactor = 8;
         objects = [
 					new RoomTrigger(78,Penthouse,10,10),
-					new Penlift(29,8),
-					new Block(30),
+					new Penlift(31,8),
+					new Block(29),
 					new MaxLight(21,1),
 					new Crate(10,16),
         			new Player(10,10)];

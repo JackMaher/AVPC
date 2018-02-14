@@ -72,7 +72,7 @@ class CutTrigger extends Trigger{
 
 		var player:Player = room.get(Player);
 		player.canControl = false;
-		Global.canInteract = false;
+		Global.cutscene = true;
 		done = true;
 
 		var scene:SexScene = room.get(SexScene);
@@ -159,7 +159,7 @@ class CutTrigger extends Trigger{
 					{time:88.0,run:function(){
 						max.say("if you ever need another servicing you know where to go",null, 4);
 						player.canControl = true;
-						Global.canInteract = true;
+						Global.cutscene = false;
 					}},	
 				];
 

@@ -14,7 +14,7 @@ class Hallwaybar extends Room {
     override public function create() {
         var nudedone = false;
         //scaleFactor = 8;
-        FlxG.timeScale = 2;
+        //FlxG.timeScale = 2;
         objects = [
             new RoomTrigger(6,Loohall,90,10),
             new Block(109),
@@ -53,7 +53,7 @@ class Hallwaybar extends Room {
             {time:0.0,run:function(){
                 player.say("Ow, something itches.", null, 2);
                 player.canControl = false;
-                Global.canInteract = false;
+                Global.cutscene = true;
                 trace(Player.std);
             }},
 
@@ -130,7 +130,7 @@ class HallwaybarFore extends Object {
 
     public function new(x,y){
         super (x,y);
-        customName = " ";
+        hidden = true;
         layer=FORE;
     }
 }

@@ -1,8 +1,6 @@
 package objects;
 import adventure.*;
-import flixel.util.FlxColor;
-
-
+import flixel.FlxG;
 
 class Sofa extends Object {
 
@@ -15,10 +13,16 @@ class Sofa extends Object {
         //animation.add("flash",[0,1,2,3],4,true);
         //animation.play("flash");
 		layer=BACK;
+		        ticks = [
+            {word:"LOOK", callback:function(){
+                look(); 
+            }},
+        ];
 	}
 	override function look(){
 		var player:Player = room.get(Player);
-				player.say("This has some questionable stains.");
+		player.say("This sofa has some questionable stains.");
+		FlxG.sound.play("assets/voices/hallway2/rodger/stains.ogg");
 	}
 
 

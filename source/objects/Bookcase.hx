@@ -1,8 +1,7 @@
 package objects;
 import adventure.*;
 import flixel.util.FlxColor;
-
-
+import flixel.FlxG;
 
 class Bookcase extends Object {
 
@@ -13,10 +12,12 @@ class Bookcase extends Object {
 	}
 	override function look(){
 		var player:Player = room.get(Player);
-				player.say("Bookcase seems full of Mucky magazine.");
+		player.say("Bookcase seems full of Mucky magazine.");
+		FlxG.sound.play("assets/voices/docking/rodger/bookcase.ogg");
 	}
 	override function use(){
 		var player:Player = room.get(Player);
-				player.say("I dont fancy getting my hands sticky.");
+		player.say("I dont fancy getting my hands sticky.");
+		FlxG.sound.play("assets/voices/docking/rodger/sticky.ogg");
 	}
 }

@@ -14,10 +14,10 @@ class StdDeathTxt extends Object {
 
     public function new(x,y){
         super (x,y);
-        customName = " ";
         loadGraphic("assets/images/stddeathtxt.png", true,85,32);
         layer=FORE;
         visible = false;
+        hidden = true;
 
         diedText = new FlxText(0,0,500);
         diedText.text = "You should've worn protection";

@@ -117,7 +117,7 @@ class CutsceneFore extends Object {
 
     public function new(x,y){
         super (x,y);
-        customName = " ";
+        hidden = true;
         layer=FORE;
     }
 }
@@ -126,7 +126,7 @@ class CutsceneWindow extends Object {
 
     public function new(x,y){
         super (x,y);
-        customName = " ";
+        hidden = true;
         layer=FORE;
     }
 }
@@ -137,7 +137,7 @@ class CutsceneAI extends Object {
 
     public function new(x,y){
         super (x,y);
-        customName = " ";
+        hidden = true;
         layer=FORE;
         speechColor = FlxColor.RED;
     }

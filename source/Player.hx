@@ -12,11 +12,12 @@ class Player extends Object {
 	public static var clothed:Bool = true;
 	public var customAnimation:String;
 	public static var passwordHeard = false;
-	public static var spoketoBoss = true;
+	public static var spoketoBoss = false;
     public static var poppersComplete = false;
     public static var condomOn = false;
     public static var maxxSex = false;
     public static var std = false;
+    public static var complete = false;
 
     public function new(x,y) {
         super(x,y);
@@ -25,6 +26,7 @@ class Player extends Object {
         animation.add("lr",[0,1,2,3,4,5],6,true);
         animation.add("std",[25,26,27,28,29,30,31],6,false);
         animation.add("teleyIn",[38,38,38,38,38,32,33,34,35,36,37],6,false);
+        animation.add("teleyOut",[37,36,35,34,33,32,38,38,38,38],6,false);
         animation.add("stdIdle",[31],0,false);
         animation.add("nakedLR",[19,20,21,22,23,24],6,true);
         animation.add("nakedIdle",[18],0,true);
@@ -41,7 +43,13 @@ class Player extends Object {
         drag.x = 5000;
         moveSpeed = 480;
         layer=CHAR;
-        pixelPerfect = false;
+        pixelPerfect = true;
+        ticks = [
+                {word:"UNDRESS", callback:function(){
+                    use(); 
+                }},
+            ];
+
 
         update(0);
     }
@@ -51,32 +59,55 @@ class Player extends Object {
     		clothed =false;
     		customAnimation = "undress";
     		canControl = false;
-            Global.canInteract = false;
-    		afterAnimation(function(){customAnimation= null; canControl= true; Global.canInteract = true;});
+            Global.cutscene = true;
+    		afterAnimation(function(){
+                customAnimation= null; 
+                canControl= true; 
+                Global.cutscene = false;
+                ticks = [
+                        {word:"DRESS", callback:function(){
+                            use(); 
+                        }},
+                    ];
+                });
     		
     	}
     	else{
     		clothed = true;
        		customAnimation = "redress";
-            Global.canInteract = false;
+            Global.cutscene = true;
        		canControl = false;
-    		afterAnimation(function(){customAnimation= null; canControl= true; Global.canInteract = true;});
+    		afterAnimation(function(){
+                customAnimation= null; 
+                canControl= true; 
+                Global.cutscene = false;
+                ticks = [
+                        {word:"UNDRESS", callback:function(){
+                            use(); 
+                        }},
+                    ];
+                });
     	}
+    }
+
+    override public function walkTo(rawX, rawY, ?then:Null<Void->Void>) {
+        velocity.x = 0;
+        acceleration.x = 0;
+        super.walkTo(rawX,rawY,then);
     }
 
     override public function update(d) {
     	super.update(d);
 
-        if(canControl) {
-            width=15*scale.x;
-        }
+        width=7*scale.x;
+        
         // if normal way round
 		if(!flipX) {
         	offset.x=6*scale.x;
 		}
 		// if other way round
 		else {
-			offset.x = 3*scale.x;
+			offset.x = 10*scale.x;
 		}
 
 

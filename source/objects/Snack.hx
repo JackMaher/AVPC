@@ -8,7 +8,7 @@ class Snack extends Object {
 
 	public function new(x,y){
 		super (x,y);
-		customName = " ";
+		hidden = true;
 		loadGraphic("assets/images/snack.png", true,20,42);
 		layer=BACK;
 	}

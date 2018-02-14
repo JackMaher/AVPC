@@ -8,7 +8,7 @@ class DockingFore extends Object {
 
 	public function new(x,y){
 		super (x,y);
-		customName = " ";
+		hidden = true;
 		layer=FORE;
 	}
 }

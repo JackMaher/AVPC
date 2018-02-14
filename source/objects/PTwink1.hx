@@ -14,6 +14,14 @@ class PTwink1 extends Object {
 		customName = "Lance";
 		speechColor = FlxColor.CYAN;
 		layer=FORE;
+			ticks = [
+				{word:"LOOK", callback:function(){
+	                look(); 
+	            }},
+	            {word:"TALK", callback:function(){
+	                use(); 
+	            }},
+            ];
 	}
 	override function look(){
 		var player:Player = room.get(Player);

@@ -23,7 +23,7 @@ class Loohall extends Room {
     	var player:Player = get(Player);
     	var loo:Ladyloodoor = get(Ladyloodoor);
     	if(Ladyloodoor.open == true){
-    		Global.canInteract = false;
+    		Global.cutscene = true;
 
     		if(player.canControl) {
 		    	if(player.x + player.width/2  - player.offset.x < loo.x+loo.width/2){
