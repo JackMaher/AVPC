@@ -3,6 +3,7 @@ package rooms;
 import adventure.*;
 import objects.*;
 import rooms.*;
+import flixel.FlxG;
 import flixel.util.FlxColor;
 
 class Hallway2 extends Room {
@@ -20,7 +21,7 @@ class Hallway2 extends Room {
 					new Floor1fan(90,34),
 					//new Hall2NudeTrigger (92),
 
-        			new Player(10,10)];
+        			new Player(10,37)];
     }
 
 
@@ -30,8 +31,14 @@ class Hallway2 extends Room {
             return;
         }
         if(Player.clothed == false){
-            var twink:Drinktwink = get(Drinktwink);
-            twink.say("Hellloo Sailor.");
+            var hello = [
+                {time:1.0, run:function() {
+                    var twink:Drinktwink = get(Drinktwink);
+                    twink.say("Hellloo Sailor.",null,2.5);
+                    FlxG.sound.play("assets/voices/hallway2/johnny/hello-sailor.ogg");
+                }}
+            ];
+            Event.run(hello);
             nudedone = true;
         }
 
@@ -71,35 +78,52 @@ class Planthall extends Object {
         var tree = [
             {time:0.0,run:function(){
                 player.walkToObject(Planthall, X, LEFT, function(){
-                    Global.canInteract = false;
+                    Global.cutscene = true;
                     player.flipX = true;
                     player.say("A rather short and stubby Morning Glory plant.");
+                    FlxG.sound.play("assets/voices/hallway2/rodger/morning-glory.ogg");
                 });
 
                 player.canControl = false;
             }},
             {time:4.0,run:function(){
                 johnny.say("Don't talk to Albert like that he can hear you.");
+                FlxG.sound.play("assets/voices/hallway2/johnny/dont-talk.ogg");
             }},
-            {time:8.0,run:function(){
-                player.say("Albert?");
+            {time:7.5,run:function(){
+                player.say("Albert?",null,2);
+                FlxG.sound.play("assets/voices/hallway2/rodger/albert.ogg");
             }},
-            {time:12.0,run:function(){
+            {time:9.0,run:function(){
                 johnny.say("Yes Albert, hes a grower not a shower.");
+                FlxG.sound.play("assets/voices/hallway2/johnny/grower.ogg");
             }},
-            {time:16.0,run:function(){
-                johnny.say("Isn't that right Albert?");
+            {time:13.0,run:function(){
+                johnny.say("Isn't that right Albert?",null,2);
             }},
-            {time:20.0,run:function(){
+            {time:17.0,run:function(){
                 albert.say("-silence-");
             }},
-            {time:24.0,run:function(){
+            {time:21.0,run:function(){
                 johnny.say("See he agrees.");
+                FlxG.sound.play("assets/voices/hallway2/johnny/agrees.ogg");
                 nameHeard = true;
                 player.canControl = true;
-                Global.canInteract = true;
+                Global.cutscene = false;
             }},
         ];
-        Event.run(tree);
+        if(customName == "Potted Plant") {
+            Event.run(tree);
+        }
+        else {
+            player.say("Hello, Albert.",null,1.5);
+            FlxG.sound.play("assets/voices/hallway2/rodger/hello-albert.ogg");
+
+            Event.run([
+            {time:1.5,run:function(){
+                albert.say("-silence-");
+            }},
+            ]);
+        }
     }
 }

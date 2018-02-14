@@ -45,9 +45,6 @@ class Player extends Object {
         layer=CHAR;
         pixelPerfect = true;
         ticks = [
-                {word:"LOOK", callback:function(){
-                    look(); 
-                }},
                 {word:"UNDRESS", callback:function(){
                     use(); 
                 }},
@@ -62,16 +59,34 @@ class Player extends Object {
     		clothed =false;
     		customAnimation = "undress";
     		canControl = false;
-            Global.canInteract = false;
-    		afterAnimation(function(){customAnimation= null; canControl= true; Global.canInteract = true;});
+            Global.cutscene = true;
+    		afterAnimation(function(){
+                customAnimation= null; 
+                canControl= true; 
+                Global.cutscene = false;
+                ticks = [
+                        {word:"DRESS", callback:function(){
+                            use(); 
+                        }},
+                    ];
+                });
     		
     	}
     	else{
     		clothed = true;
        		customAnimation = "redress";
-            Global.canInteract = false;
+            Global.cutscene = true;
        		canControl = false;
-    		afterAnimation(function(){customAnimation= null; canControl= true; Global.canInteract = true;});
+    		afterAnimation(function(){
+                customAnimation= null; 
+                canControl= true; 
+                Global.cutscene = false;
+                ticks = [
+                        {word:"UNDRESS", callback:function(){
+                            use(); 
+                        }},
+                    ];
+                });
     	}
     }
 

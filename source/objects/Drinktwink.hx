@@ -67,7 +67,7 @@ class Drinktwink extends Object {
 			            {time:9.0,run:function(){
 			                say("If you need anything just come asking.", null, 3);
 			                player.canControl = true;
-			                Global.canInteract = true;
+			                Global.cutscene = false;
 			            }},
 		            ];
 					Event.run(opt1);
@@ -93,7 +93,7 @@ class Drinktwink extends Object {
 			        	{time:15.0,run:function(){
 			                say("If you need anything just come asking.", null, 3);
 			                player.canControl = true;
-			                Global.canInteract = true;
+			                Global.cutscene = false;
 			            }},
 
 		            ];
@@ -139,7 +139,7 @@ class Drinktwink extends Object {
 							{time:15.0,run:function(){
 								say("No offence", null, 2);
 								player.canControl = true;
-								Global.canInteract = true;
+								Global.cutscene = false;
 							}},	
 						];
 						Event.run(info1List);
@@ -163,7 +163,7 @@ class Drinktwink extends Object {
 							{time:13.0,run:function(){
 								say("He's the worse of the worse", null, 4);
 								player.canControl = true;
-								Global.canInteract = true;
+								Global.cutscene = false;
 							}},			
 						];
 						Event.run(info2List);
@@ -191,7 +191,7 @@ class Drinktwink extends Object {
 							{time:17.0,run:function(){
 								say("Its not so bad, you learn to deal with it", null, 4);
 								player.canControl = true;
-								Global.canInteract = true;
+								Global.cutscene = false;
 							}},	
 						];
 						Event.run(info3List);
@@ -208,7 +208,7 @@ class Drinktwink extends Object {
 	else{
 		Event.run(interact);
 	}
-	Global.canInteract = false;
+	Global.cutscene = true;
 	player.canControl = false;
 	
 

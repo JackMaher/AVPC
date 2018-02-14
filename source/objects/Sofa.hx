@@ -1,8 +1,6 @@
 package objects;
 import adventure.*;
-import flixel.util.FlxColor;
-
-
+import flixel.FlxG;
 
 class Sofa extends Object {
 
@@ -23,7 +21,8 @@ class Sofa extends Object {
 	}
 	override function look(){
 		var player:Player = room.get(Player);
-				player.say("This has some questionable stains.");
+		player.say("This sofa has some questionable stains.");
+		FlxG.sound.play("assets/voices/hallway2/rodger/stains.ogg");
 	}
 
 

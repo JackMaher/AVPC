@@ -51,13 +51,13 @@ class SitTwink2 extends Object {
 			{time:9.0,run:function(){
 				twink2.say("You dont know where hes been.");
 				player.canControl = true;
-				Global.canInteract = true;
+				Global.cutscene = false;
 			}},
 			];
 		player.walkToObject(SitTwink2, X, RIGHT, function(){
 			player.flipX = false;
 			player.canControl = false;
-			Global.canInteract = false;
+			Global.cutscene = true;
 			Event.run(interact, false);
 		});
 

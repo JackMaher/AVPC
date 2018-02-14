@@ -53,7 +53,7 @@ class Hallwaybar extends Room {
             {time:0.0,run:function(){
                 player.say("Ow, something itches.", null, 2);
                 player.canControl = false;
-                Global.canInteract = false;
+                Global.cutscene = true;
                 trace(Player.std);
             }},
 

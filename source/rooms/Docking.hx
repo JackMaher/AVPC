@@ -9,7 +9,7 @@ import flixel.FlxG;
 class Docking extends Room {
 
     var nudedone = false;
-    var introdone = false;
+    var introdone = true;
 
     override public function create() {
         objects = [
@@ -50,7 +50,7 @@ class Docking extends Room {
 
         var intro = [
             {time:0.0,run:function(){
-                Global.canInteract = false;
+                Global.cutscene = true;
                 player.canControl = false;
 
                  player.customAnimation = "teleyIn";
@@ -73,7 +73,7 @@ class Docking extends Room {
             }},
 
             {time:9.0,run:function(){
-                Global.canInteract = true;
+                Global.cutscene = false;
                 player.canControl = true;
             }},
 
@@ -98,32 +98,36 @@ class TwinkTrigger extends Trigger{
 
         var interact = [
             {time:0.0,run:function(){
-                Global.canInteract = false;
-                twink1.say("He doesnt even go here.", null, 3);
+                Global.cutscene = true;
+                twink1.say("He doesnt even go here.", null, 2.5);
+                FlxG.sound.play("assets/voices/docking/steve/go-here.ogg");
             }},
-            {time:1.0,run:function(){
+            {time:2.5,run:function(){
                 twink2.say("I know right.", null,2);
+                FlxG.sound.play("assets/voices/docking/adam/i-know-right.ogg");
             }},
-            {time:3.0,run:function(){
-                player.say("Excuse me?", null,3);
+            {time:4.5,run:function() { 
+                player.flipX = true;
             }},
-            {time:4.0,run:function(){
-                twink1.say("Nothing, nothing.", null,2);
+            {time:4.7,run:function(){
+                player.say("Excuse me, what was that?", null,2.5);
+                FlxG.sound.play("assets/voices/docking/rodger/excuse-me.ogg");
             }},
-            {time:6.0,run:function(){
-                twink1.say("Skank.", null,1);
+            {time:8.2,run:function(){
+                twink1.say("Nothing, nothing.", null,2.5);
+                FlxG.sound.play("assets/voices/docking/steve/nothing-skank.ogg");
             }},
-            {time:7.0,run:function(){
+            {time:10.2,run:function(){
+                twink1.say("(Skank.)", null,1.5);
+            }},
+            {time:11.2,run:function(){
                 player.canControl = true;
-                Global.canInteract = true;
+                Global.cutscene = false;
             }}
             ];
 
-
-
-        player.flipX = true;
-        Event.run(interact, false);
-        player.canControl = false;
+            Event.run(interact, false);
+            player.canControl = false;
     }
 
 }

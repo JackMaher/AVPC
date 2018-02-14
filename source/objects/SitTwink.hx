@@ -49,7 +49,7 @@ class SitTwink extends Object {
 			{time:9.0,run:function(){
 				say("Just not.");
 				player.canControl = true;
-				Global.canInteract = true;
+				Global.cutscene = false;
 
 			}},
 			];
@@ -58,7 +58,7 @@ class SitTwink extends Object {
 		player.walkToObject(SitTwink, X, LEFT, function(){
 			player.flipX = true;
 			player.canControl = false;
-			Global.canInteract = false;
+			Global.cutscene = true;
 			Event.run(interact, false);
 		});
 
