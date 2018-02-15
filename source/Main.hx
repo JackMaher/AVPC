@@ -19,7 +19,7 @@ class Main extends Sprite
         Global.startingRoom = Cutscene;
 =======
 #if true
-        Global.startingRoom = Hallway2;
+        Global.startingRoom = Docking;
         Player.spoketoBoss = true;
         Player.passwordHeard = true;
 >>>>>>> origin/master
