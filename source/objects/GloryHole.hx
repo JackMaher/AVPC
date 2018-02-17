@@ -9,10 +9,19 @@ class GloryHole extends Object {
 	public function new(x,y){
 		super (x,y);
 		customName = "Small hole";
+		ticks = [
+	            {word:"LOOK", callback:function(){
+	                look(); 
+	            }},
+	            {word:"LISTEN", callback:function(){
+	                use(); 
+	            }},
+            ];
 	}
 
 	override function look(){
-		say("A small hole has seem to be drilled between the stalls");
+		var player:Player = room.get(Player);
+		player.say("A small hole has seem to be drilled between the stalls");
 	}
 
 	override function use(){

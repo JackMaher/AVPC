@@ -8,6 +8,7 @@ class LiftDoor extends Door {
 		newRoom=Hallway1;
 		newPlayerX = 39;
 		newPlayerY =10;
+		customName = "Floor 1";
 	}
 
 	override function use() {

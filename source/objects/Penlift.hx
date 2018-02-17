@@ -8,6 +8,7 @@ class Penlift extends Door {
 		newRoom=Lift;
 		newPlayerX = 30;
 		newPlayerY =10;
+		customName = "Penthouse";
 	}
 
 }

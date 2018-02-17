@@ -50,13 +50,13 @@ class Cutscene extends Room {
             sodsbury.say("dun-dun-dun-duuuuh");
         }},
         {time:13.0,run:function(){
-            rod.say("For the love that is all and holy Sodsbury shut up.");
+            rod.say("SHUT UP! just please shut up Sodsbury.");
         }},
         {time:17.0,run:function(){
-            sodsbury.say("Who oiled in your cornflakes?");
+            sodsbury.say("Who shoved a probe up your arse?");
         }},
         {time:21.0,run:function(){
-            rod.say("You know what day it is, Luthbergeis ");
+            rod.say("I'm sorry but, you know what day it is, Luthbergeis ");
             rod.say("coming to collect our debt.");
         }},
        {time:25.0,run:function(){
@@ -67,15 +67,15 @@ class Cutscene extends Room {
             rod.say("NOTHING!");
         }},
        {time:32.0,run:function(){
-            rod.say("And I dont want to have to give him");
-            rod.say("another sponge bath again for payment.");
+            rod.say("I dont fancy having to give him");
+            rod.say("another sponge bath again to postpone payment.");
         }},
        {time:37.0,run:function(){
             ai.say("Incoming Teleportation Request from...");
         
         }},
        {time:40.0,run:function(){
-            ai.say("Leonard Luthberg");
+            ai.say("Leonard Luthberg.");
         
         }},
        {time:44.0,run:function(){
@@ -87,7 +87,7 @@ class Cutscene extends Room {
         
         }},
        {time:52.0,run:function(){
-            ai.say("sarcasm test fail, accepting postative response");
+            ai.say("Sarcasm test fail, accepting postative response.");
         
         }},
        {time:55.0,run:function(){
@@ -95,7 +95,7 @@ class Cutscene extends Room {
         
         }},
        {time:59.0,run:function(){
-            sodsbury.say("I should really fix that.");
+            sodsbury.say("I should really get round to fixing that.");
             rod.say("OWWWWWWWWWWW");
             rod.animation.play("teley");
             rod.afterAnimation (function(){

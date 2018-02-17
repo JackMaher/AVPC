@@ -9,7 +9,7 @@ import flixel.FlxG;
 class Docking extends Room {
 
     var nudedone = false;
-    var introdone = true;
+    var introdone = false;
 
     override public function create() {
         objects = [
@@ -37,7 +37,7 @@ class Docking extends Room {
         }
         if(Player.clothed == false){
             var twink:SitTwink = get(SitTwink);
-            twink.say("He dosen't even have one desirable feture.");
+            twink.say("Has it become unseasionable warm all of a sudden?");
             nudedone = true;
         }
 
@@ -46,6 +46,7 @@ class Docking extends Room {
 
         var player:Player = room.get(Player);
         var twink:SitTwink = get(SitTwink);
+        var twink1:SitTwink2 = get(SitTwink2);
         var hal:Hal = get(Hal);
 
         var intro = [
@@ -60,19 +61,25 @@ class Docking extends Room {
 
             }},
             {time:1.0,run:function(){
-
                 player.say("OWWWWWWWWWWWWWW", null, 3);
-
             }},
 
             {time:4.0,run:function(){
-                twink.say("Smells like Lutheberge has called in the riff-raff.");
+                twink.say("Another one of Luthsberge investments has come to kiss his feet.");
             }},
             {time:8.0,run:function(){
-                hal.say("Hello Packwood, the Captin is waiting for you in his Penthouse.", FlxColor.RED);
+                twink1.say("Huh yeah and he looks like...");
             }},
 
-            {time:9.0,run:function(){
+            {time:11.0,run:function(){
+                twink.say("What have I told you about speaking in",null,5);
+                twink.say("sentances longer than three words Steve?",null,5);
+            }},
+            {time:16.0,run:function(){
+                twink1.say("Sorry Adam.");
+            }},
+
+            {time:16.0,run:function(){
                 Global.cutscene = false;
                 player.canControl = true;
             }},

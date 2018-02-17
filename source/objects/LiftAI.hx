@@ -26,6 +26,7 @@ class LiftAI extends Object {
 	override function use(){
 
 		var player:Player = room.get(Player);
+		var door:LiftDoor = room.get(LiftDoor);
 
 		player.canControl = false;
 
@@ -56,6 +57,7 @@ class LiftAI extends Object {
 			}},			
 			{time:4.0,run:function(){
 				say("Mr Luthberge asked me to send you straight to him.", FlxColor.GREEN, 2);
+				door.customName = "Penthouse";
 				changeFloor(PenthouseHallway, 43, 10);
 			}},
 		];
@@ -91,14 +93,17 @@ class LiftAI extends Object {
 			{time:9.0,run:function(){
 
 				player.option("Floor 1", FlxColor.BLUE,function(){ 
+					door.customName = "Floor 1";
 					changeFloor(Hallway1, 39, 10);
 					say("Maintenance Floor! (please dont leave me)",FlxColor.GREEN);
 				});
 				player.option("Bar Floor", FlxColor.BLUE,function(){ 
+					door.customName = "Bar";
 					changeFloor(Bar, 140, 21);
 					say("Bar Floor! (I cant remember the last time I had a drink)",FlxColor.GREEN);
 				});
 				player.option("Penthouse Floor", FlxColor.BLUE,function(){ 
+					door.customName = "Penthouse";
 					changeFloor(PenthouseHallway, 43, 10);
 					say("Penhouse Floor! (Tell Luthberge I miss him)",FlxColor.GREEN);
 				});
