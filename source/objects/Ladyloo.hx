@@ -13,6 +13,11 @@ class Ladyloo extends Object {
         animation.add("flash",[0,1,2,3,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19],10,true);
         animation.play("flash");
 		layer=BACK;
+                ticks = [
+            {word:"LOOK", callback:function(){
+                look(); 
+            }},
+        ];
 	}
     override function look(){
         var player:Player = room.get(Player);

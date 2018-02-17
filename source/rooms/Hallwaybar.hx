@@ -118,6 +118,11 @@ class Arcade extends Object {
         super (x,y);
         customName = "Broken Arcade";
         layer=BACK;
+                ticks = [
+            {word:"LOOK", callback:function(){
+                look(); 
+            }},
+        ];
     }
     override function look(){
         var player:Player = room.get(Player);
@@ -141,6 +146,11 @@ class Vase extends Object {
         super (x,y);
         customName = "Vase";
         layer=BACK;
+                ticks = [
+            {word:"LOOK", callback:function(){
+                look(); 
+            }},
+        ];
     }
     override function look(){
         var player:Player = room.get(Player);

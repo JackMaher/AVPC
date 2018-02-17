@@ -9,6 +9,11 @@ class Crate extends Object {
 	public function new(x,y){
 		super (x,y);
 		customName = "Crates";
+                ticks = [
+            {word:"LOOK", callback:function(){
+                look(); 
+            }},
+        ];
 		layer=FORE;
 	}
 	

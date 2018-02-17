@@ -17,9 +17,6 @@ class Hallway1 extends Room {
                     new Poptwink(62,16),
 					new Poppers(84,7),
 					new Block(8),
-                    new PopTrigger(110),
-                    //new Hall1NudeTrigger (70),
-                    new PopTrigger(35),
                     new Poptable(83,28),
         			new Player(10,10)];
                     //FlxG.timeScale = 2;
@@ -59,18 +56,4 @@ class Poptable extends Object {
         var player:Player = room.get(Player);
         player.say("Cover in poppers and popper related paraphernalia.");
     }
-}
-class PopTrigger extends Trigger {
-
-    var done = false;
-    function trigger (){
-        if(done) return;
-        done = true;
-
-        var twink1:Poptwink = room.get(Poptwink);
-        var twink2:Poptwink1 = room.get(Poptwink1);
-        twink1.say("-SNIFF-", null, 2);
-        twink2.say("-SNIFF-", null, 1);
-    }
-
 }

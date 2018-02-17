@@ -14,6 +14,14 @@ class Poppers extends Object {
 		super (x,y);
 		customName = "Shelf";
 		layer=BACK;
+		ticks = [
+	            {word:"SEARCH", callback:function(){
+	                look(); 
+	            }},
+	            {word:"TAKE", callback:function(){
+	                use(); 
+	            }},
+            ];
 
 
 		popperList = [ 
