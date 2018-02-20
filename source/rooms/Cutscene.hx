@@ -50,31 +50,34 @@ class Cutscene extends Room {
             sodsbury.say("dun-dun-dun-duuuuh");
         }},
         {time:13.0,run:function(){
-            rod.say("SHUT UP! just please shut up Sodsbury.");
+            rod.say("Give it a rest Sodsbury.");
         }},
         {time:17.0,run:function(){
-            sodsbury.say("Who shoved a probe up your arse?");
+            sodsbury.say("Sorry."); //CHANGE
         }},
         {time:21.0,run:function(){
-            rod.say("I'm sorry but, you know what day it is, Luthbergeis ");
+            rod.say("You know what day it is, Luthberge is ");
             rod.say("coming to collect our debt.");
         }},
        {time:25.0,run:function(){
-            rod.say("Since our last shipment of Porno got busted by");
-            rod.say("the Police, we have nothing.");
+            rod.say("Since our last shipment of top shelf magazinges got busted by");
+            rod.say("the Space Police, we have nothing left.");
         }},
        {time:29.0,run:function(){
-            rod.say("NOTHING!");
+            rod.say("Well expect for the shirt on my back, and Luthberge would have that too if he could.");
         }},
        {time:32.0,run:function(){
             rod.say("I dont fancy having to give him");
-            rod.say("another sponge bath again to postpone payment.");
+            rod.say("an sponge bath to postpone payment...");
         }},
        {time:37.0,run:function(){
+            rod.say("...again.");
+        }},
+       {time:39.0,run:function(){
             ai.say("Incoming Teleportation Request from...");
         
         }},
-       {time:40.0,run:function(){
+       {time:42.0,run:function(){
             ai.say("Leonard Luthberg.");
         
         }},
@@ -96,7 +99,7 @@ class Cutscene extends Room {
         }},
        {time:59.0,run:function(){
             sodsbury.say("I should really get round to fixing that.");
-            rod.say("OWWWWWWWWWWW");
+            rod.say("Oh bollocks.");
             rod.animation.play("teley");
             rod.afterAnimation (function(){
                          game.switchRoom(Docking);

@@ -5,7 +5,6 @@ import flixel.util.FlxColor;
 
 
 class SitTwink extends Object {
-	var introDone = false;
 
 	public function new(x,y){
 		super (x,y);
@@ -27,30 +26,19 @@ class SitTwink extends Object {
 
     override function look(){
         var player:Player = room.get(Player);
-        player.say("He has a smug vibe about him.");
+        player.say("He has a smug vibe about him."); //CHANGE
     }
 
 	override function use(){
 		var player:Player = room.get(Player);
-			if(introDone == true){
-				return;
-			}
 		var interact = [
 			{time:0.0,run:function(){
-				introDone = true;
-				player.say("Hey!");
+				player.say("Hello.");
 			}},
 			{time:3.0,run:function(){
 				say("Could you not?");
-			}},
-			{time:6.0,run:function(){
-				player.say("Could I not do what?");
-			}},
-			{time:9.0,run:function(){
-				say("Just not.");
 				player.canControl = true;
 				Global.cutscene = false;
-
 			}},
 			];
 
