@@ -4,13 +4,21 @@ import adventure.*;
 import objects.*;
 import rooms.*;
 import flixel.util.FlxColor;
+import flash.filters.*;
+import flixel.FlxG;
+import openfl.display.Shader;
 
 class Cutscene extends Room {
     var done = false;
+    var floatTime:Float = 0;
+    var runTime:Float = 0;
+    var toon:Toon;
+
+
     override public function create() {
         x=0;
         y=0;
-        
+
 
 
         objects = [
@@ -21,15 +29,30 @@ class Cutscene extends Room {
                 new Sodsbury(71,54),
                 new CutsceneFore(1,0),
                 new CutsceneWindow(1,0)
-                
         ];
 
     	Global.fader.alpha = 1;
     	Global.fader.fadeIn();
 
+        //FlxG.camera.setFilters([new ShaderFilter(toon=new Toon())]);
+
     }
+
     override public function update(d){
         super.update(d);
+
+        for(i in 1 ... 6) {
+            var obj = objects[i];
+            obj.offset.y -= Math.sin(floatTime )* room.scaleFactor;
+        }
+        floatTime += d/2;
+        floatTime %= 2*Math.PI;
+        for(i in 1 ... 6) {
+            var obj = objects[i];
+            obj.offset.y += Math.sin(floatTime) * room.scaleFactor;
+            obj.x += room.scaleFactor*d/2;
+        }
+
         var sodsbury:Sodsbury = get(Sodsbury);
         var rod:Rodgerseat = get(Rodgerseat);
         var ai:CutsceneAI = get(CutsceneAI);
@@ -75,27 +98,27 @@ class Cutscene extends Room {
         }},
        {time:39.0,run:function(){
             ai.say("Incoming Teleportation Request from...");
-        
+
         }},
        {time:42.0,run:function(){
             ai.say("Leonard Luthberg.");
-        
+
         }},
        {time:44.0,run:function(){
             ai.say("Do you accept the request?");
-        
+
         }},
        {time:48.0,run:function(){
             rod.say("Fan-fucking-tastic.");
-        
+
         }},
        {time:52.0,run:function(){
             ai.say("Sarcasm test fail, accepting postative response.");
-        
+
         }},
        {time:55.0,run:function(){
             rod.say("no, no, no, NO.");
-        
+
         }},
        {time:59.0,run:function(){
             sodsbury.say("I should really get round to fixing that.");
@@ -104,11 +127,11 @@ class Cutscene extends Room {
             rod.afterAnimation (function(){
                          game.switchRoom(Docking);
                      });
-        
+
         }},
        {time:63.0,run:function(){
             sodsbury.say("Duuh duuh da da da duuh");
-        
+
         }},
         ];
         Event.run(intro, false);
