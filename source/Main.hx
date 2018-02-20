@@ -16,7 +16,7 @@ class Main extends Sprite
         super();
         Global.defaultScaleFactor = 8;
 #if false
-        Global.startingRoom = Docking;
+        Global.startingRoom = Cutscene;
         Player.spoketoBoss = true;
         Player.passwordHeard = true;
         addChild(new FlxGame(1920, 1080, Game));
