@@ -15,7 +15,7 @@ class Main extends Sprite
     {
         super();
         Global.defaultScaleFactor = 8;
-#if false
+#if true
         Global.startingRoom = Cutscene;
         Player.spoketoBoss = true;
         Player.passwordHeard = true;

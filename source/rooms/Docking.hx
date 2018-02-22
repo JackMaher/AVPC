@@ -67,14 +67,14 @@ class Docking extends Room {
                 player.say("Oh I'm here..", null, 4);
             }},
             {time:13.0,run:function(){
-                hal.say("Welcome abord Mr Packqood, Lendord is waiting for you in the Penthouse.");
+                hal.say("Welcome abord Mr Packwood, Luthsberge is waiting for you in the Penthouse.", FlxColor.RED);
             }},
 
             {time:17.0,run:function(){
-                twink.say("Another one of Luthsberge investments has come to kiss his feet.");
+                twink.say("Ooh look, another one of Luthsberge investments...");
             }},
             {time:21.0,run:function(){
-                twink1.say("Huh yeah and he looks like...");
+                twink1.say("Huh yeah and he looks like -");
             }},
 
             {time:23.0,run:function(){
