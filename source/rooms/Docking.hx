@@ -37,7 +37,7 @@ class Docking extends Room {
         }
         if(Player.clothed == false){
             var twink:SitTwink = get(SitTwink);
-            twink.say("Has it become unseasionable warm all of a sudden?");
+            twink.say("Has it become unseasionable warm all of a sudden?"); ///CHANGE
             nudedone = true;
         }
 
@@ -61,25 +61,30 @@ class Docking extends Room {
 
             }},
             {time:1.0,run:function(){
-                player.say("OWWWWWWWWWWWWWW", null, 3);
+                player.say("Ahhhhhhhhhhhhhhhhhhhhhh.", null, 6);
+            }},
+            {time:7.0,run:function(){
+                player.say("Oh I'm here..", null, 4);
+            }},
+            {time:13.0,run:function(){
+                hal.say("Welcome abord Mr Packqood, Lendord is waiting for you in the Penthouse.");
             }},
 
-            {time:4.0,run:function(){
+            {time:17.0,run:function(){
                 twink.say("Another one of Luthsberge investments has come to kiss his feet.");
             }},
-            {time:8.0,run:function(){
+            {time:21.0,run:function(){
                 twink1.say("Huh yeah and he looks like...");
             }},
 
-            {time:11.0,run:function(){
-                twink.say("What have I told you about speaking in",null,5);
-                twink.say("sentances longer than three words Steve?",null,5);
+            {time:23.0,run:function(){
+                twink.say("Thats enough Steve.",null,5);
             }},
-            {time:16.0,run:function(){
+            {time:26.0,run:function(){
                 twink1.say("Sorry Adam.");
             }},
 
-            {time:16.0,run:function(){
+            {time:28.0,run:function(){
                 Global.cutscene = false;
                 player.canControl = true;
             }},
@@ -149,7 +154,7 @@ class Tele extends Object {
     }
     override function look(){
         var player:Player = room.get(Player);
-        player.say("The only way on and off this ship.");
+        player.say("The only way off this ship.");
     }
 
     override function use(){
@@ -170,7 +175,7 @@ class Tele extends Object {
 
         }
             else{
-                say("ACCESS DENINED");
+                say("ACCESS DENINED"); //CHANGE - ADD WALKTO
             }
         
     }
