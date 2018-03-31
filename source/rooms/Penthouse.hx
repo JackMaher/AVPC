@@ -46,6 +46,10 @@ class Shagrug extends Object {
         super (x,y);
         customName = "Shag Carpet";
         layer=FORE;
+        ticks = [
+            {word:"LOOK", callback:function(){
+                look(); 
+            }},];
     }
     override function look(){
         var player:Player = room.get(Player);
@@ -58,6 +62,10 @@ class Plant extends Object {
         super (x,y);
         customName = "Potted Plant";
         layer=BACK;
+        ticks = [
+            {word:"LOOK", callback:function(){
+                look(); 
+            }},];
     }
     override function look(){
         var player:Player = room.get(Player);
@@ -70,6 +78,11 @@ class Dvd extends Object {
         super (x,y);
         customName = "Shelf";
         layer=BACK;
+        ticks = [
+            {word:"LOOK", callback:function(){
+                look(); 
+            }},];
+
     }
     override function look(){
         var player:Player = room.get(Player);

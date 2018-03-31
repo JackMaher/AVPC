@@ -10,6 +10,10 @@ class Crate extends Object {
 		super (x,y);
 		customName = "Crates";
 		layer=FORE;
+        ticks = [
+            {word:"LOOK", callback:function(){
+                look(); 
+            }},];
 	}
 	
 	override function look(){

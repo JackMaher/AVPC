@@ -17,6 +17,14 @@ class Boss extends Object {
         //animation.add("hover",[0,1,2,3,5],6,true);
         //animation.play("hover");
 		layer=FORE;
+        ticks = [
+            {word:"LOOK", callback:function(){
+                look(); 
+            }},
+            {word:"TALK", callback:function(){
+                use(); 
+            }},
+        ];
 	}
 
 	override public function update(d) {
