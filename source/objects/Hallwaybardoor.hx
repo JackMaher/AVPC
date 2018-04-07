@@ -8,6 +8,7 @@ class Hallwaybardoor extends Door {
 var doorActive:Bool = false;
 	public function new(x,y){
 		super(x,y);
+		customName = "Maxx Cream's Room";
 	}
 
 	override function use(){

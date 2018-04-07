@@ -27,7 +27,7 @@ class SitTwink2 extends Object {
 	}
     override function look(){
         var player:Player = room.get(Player);
-        player.say("Seems quite.");
+        player.say("Seems quite.");				//CHANGE
     }
 	override function use(){
 

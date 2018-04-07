@@ -12,6 +12,14 @@ class Bog extends Object {
 		super (x,y);
 		customName = "Bog";
 		layer=BACK;
+		ticks = [
+	            {word:"USE", callback:function(){
+	                look(); 
+	            }},
+	            {word:"SEARCH", callback:function(){
+	                use(); 
+	            }},
+            ];
 	}
 	
 	override function use(){
@@ -20,11 +28,16 @@ class Bog extends Object {
 		}
 		var player:Player = room.get(Player);
 		conDone = true;
+						ticks = [
+	            {word:"USE", callback:function(){
+	                look(); 
+	            }}
+            ];
 		//player.say("sure why not");
 
 		var interact = [
 		{time:0.0,run:function(){
-			player.say("gross");
+			player.say("What has my life become?");
 			player.customAnimation="standup";
 			player.afterAnimation(function(){
 				player.customAnimation = null;
@@ -33,11 +46,6 @@ class Bog extends Object {
 		}}
 
 		];
-
-
-
-
-
 
 		player.walkTo(x - 50,player.y,function(){
 			player.flipX = true;
@@ -50,6 +58,11 @@ class Bog extends Object {
 
 		});
 
+	}
+
+	override function look(){
+		var player:Player = room.get(Player);
+		player.say("I dont need to go.");
 	}
 
 

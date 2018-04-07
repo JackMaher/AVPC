@@ -49,7 +49,8 @@ class Shagrug extends Object {
         ticks = [
             {word:"LOOK", callback:function(){
                 look(); 
-            }},];
+            }},
+        ];
     }
     override function look(){
         var player:Player = room.get(Player);
@@ -65,7 +66,8 @@ class Plant extends Object {
         ticks = [
             {word:"LOOK", callback:function(){
                 look(); 
-            }},];
+            }},
+        ];
     }
     override function look(){
         var player:Player = room.get(Player);
@@ -81,8 +83,8 @@ class Dvd extends Object {
         ticks = [
             {word:"LOOK", callback:function(){
                 look(); 
-            }},];
-
+            }},
+        ];
     }
     override function look(){
         var player:Player = room.get(Player);

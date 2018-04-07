@@ -16,6 +16,14 @@ class Boss extends Object {
         loadGraphic("assets/images/boss.png", true,43,25);
         //animation.add("hover",[0,1,2,3,5],6,true);
         //animation.play("hover");
+                ticks = [
+            {word:"LOOK", callback:function(){
+                look(); 
+            }},
+            {word:"TALK", callback:function(){
+                use(); 
+            }},
+        ];
 		layer=FORE;
         ticks = [
             {word:"LOOK", callback:function(){

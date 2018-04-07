@@ -37,7 +37,7 @@ class Drinktwink extends Object {
 									//Intro Dialog
 		var interact = [
 			{time:0.0,run:function(){
-				player.say("Umm...", FlxColor.ORANGE, 1);
+				player.say("Hello", FlxColor.ORANGE, 1);
 			}},
 			{time:1.0,run:function(){
 				say("Hey! Youre Rodger Packwood right?", null,4);

@@ -15,7 +15,6 @@ class Main extends Sprite
     {
         super();
         Global.defaultScaleFactor = 8;
-
 #if true
         Global.startingRoom = Docking;
         Player.spoketoBoss = true;
