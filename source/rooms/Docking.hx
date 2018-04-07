@@ -17,7 +17,7 @@ class Docking extends Room {
                     new RoomTrigger(6,Hallway2,110,36),
                     new Block(134),
         			new Player(118,37),
-                    new TwinkTrigger(20),
+                    //new TwinkTrigger(20),
                     new SitTwink2(50,41),
                     new SitTwink(83,41),
                     new Hal(75,14),

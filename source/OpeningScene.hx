@@ -45,6 +45,7 @@ class OpeningScene extends FlxState {
         waterShader.data["iResolution"] = param;
 
         FlxG.camera.setFilters([new ShaderFilter(waterShader)]);
+        //a.shader = waterShader;
         //FlxG.scaleMode = new flixel.system.scaleModes.FillScaleMode();
 
         onResize(FlxG.stage.stageWidth,FlxG.stage.stageHeight);

@@ -15,6 +15,10 @@ class Crate extends Object {
             }},
         ];
 		layer=FORE;
+        ticks = [
+            {word:"LOOK", callback:function(){
+                look(); 
+            }},];
 	}
 	
 	override function look(){

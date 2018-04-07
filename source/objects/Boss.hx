@@ -25,6 +25,14 @@ class Boss extends Object {
             }},
         ];
 		layer=FORE;
+        ticks = [
+            {word:"LOOK", callback:function(){
+                look(); 
+            }},
+            {word:"TALK", callback:function(){
+                use(); 
+            }},
+        ];
 	}
 
 	override public function update(d) {
