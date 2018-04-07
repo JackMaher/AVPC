@@ -40,19 +40,19 @@ class EndCutscene extends Room {
 
             }},          
             {time:1.0,run:function(){
-                rod.say("owwww");
+                rod.say("Owwww.");
             }},
             {time:5.0,run:function(){
                 sodsbury.say("Where the hell have you been?");
             }},
             {time:9.0,run:function(){
-                sodsbury.say("I've been man-handled, pushed about, and dumped on this dump of a ship.",null, 5);
+                sodsbury.say("I've been man-handled, pushed about, and dumped on this ship.",null, 5);
             }},
             {time:14.0,run:function(){
-                sodsbury.say("What happen to our ship, and why are we on this floating STD?");
+                sodsbury.say("What happen to our ship? and why are we on this floating STD?");
             }},
             {time:18.0,run:function(){
-                rod.say("I'll tell you on the way, set fly path to 'Gomorrah 9' we have someone to meet.",null,6);
+                rod.say("I'll tell you on the way, set a flight path to 'Gomorrah 9' we have someone to meet.",null,6);
             }},
 
         ];

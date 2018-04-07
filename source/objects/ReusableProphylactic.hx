@@ -39,10 +39,10 @@ class ReusableProphylactic extends Object {
 	}
 
 	if(other.name == "Gayvin"){
-		player.say("Yeah... No.");
+		other.say("Yeah... No.");
 	}
 	if(other.name == "Kurt"){
-		player.say("You and me? Really? Ha.");
+		other.say("You and me? Really? Ha.");
 	}
 	if(other.name == "Guy"){
 		player.say("Best leave him.");
@@ -71,6 +71,10 @@ class ReusableProphylactic extends Object {
 		other.say("Well, maybe after a drink.");
 	}
 
+	if(other.name == "Nathan"){
+		other.say("Mhhhppp.");
+	}
+
 
 	if(other.name == "Rodger Packwood"){
 
@@ -89,7 +93,7 @@ class ReusableProphylactic extends Object {
 		}
 		else{
 
-			player.say("I dont think I need to add more layers on");
+			player.say("I dont think I need to add more layers on.");
 
 		}
 

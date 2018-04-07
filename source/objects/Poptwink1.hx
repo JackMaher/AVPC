@@ -24,7 +24,7 @@ class Poptwink1 extends Object {
 	override function look(){
 		var player:Player = room.get(Player);
 
-		player.say("He seems to be having a good time.");
+		player.say("Looks like he's having a good time.");
 
 
 	}

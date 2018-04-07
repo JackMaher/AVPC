@@ -8,6 +8,7 @@ class MaxDoor extends Door {
 		super(x,y,"door");
 		//color = FlxColor.RED;
 		newRoom=Hallwaybar;
+		customName="Bar";
 		newPlayerX = 50;
 		newPlayerY =10;
 	}

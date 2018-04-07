@@ -84,7 +84,7 @@ class CutTrigger extends Trigger{
 
 				var sexTalk = [
 					{time:0.0,run:function(){
-						max.say("So you want to know about Lena.", null, 3);
+						max.say("So you want to know about Lena?", null, 3);
 						Player.maxxSex = true;
 						if (Player.condomOn == false){
 							Player.std = true;
@@ -107,7 +107,7 @@ class CutTrigger extends Trigger{
 						max.say("Yes, he was an space adventure much like yourself.", null, 5);
 					}},
 					{time:20.0,run:function(){
-						max.say("who also fell into debt with Luthberge", null, 5);
+						max.say("Who also fell into debt with Luthberge.", null, 5);
 					}},
 					{time:25.0,run:function(){
 						max.say("*POP*", null, 2);
@@ -116,19 +116,19 @@ class CutTrigger extends Trigger{
 						player.say("I didnt say stop!", null, 3);
 					}},		
 					{time:30.0,run:function(){
-						max.say("He ended up doing Luthberge's dirty work", null, 4);
+						max.say("He ended up doing Luthberge's dirty work.", null, 4);
 					}},		
 					{time:34.0,run:function(){
-						max.say("He... he found out something, something big", null, 4);
+						max.say("He... he found out something, something big.", null, 4);
 					}},	
 					{time:38.0,run:function(){
 						player.say("Thats not the only thing... fu...", null, 4);
 					}},		
 					{time:42.0,run:function(){
-						max.say("I can give you his location, but not for Luthberge", null, 4);
+						max.say("I can give you his location, but not for Luthberge.", null, 4);
 					}},	
 					{time:46.0,run:function(){
-						max.say("I need you to give him this floopy disk, I cant leave",null,5);
+						max.say("I need you to give him this floopy disk, I cant leave.",null,5);
 					}},	
 					{time:51.0,run:function(){
 						player.say("Whyyy... Who... Huh... Wow...",null,5);
@@ -141,7 +141,7 @@ class CutTrigger extends Trigger{
 						max.say("Can you do that for me?",null, 5);
 					}},	
 					{time:67.0,run:function(){
-						player.say("Yea... yeah... fu... yeah I can do it", null, 4);
+						player.say("Yea... yeah... fu... yeah I can do it.", null, 4);
 					}},	
 					{time:71.0,run:function(){
 						max.say("Good, get off me.", null, 4);
@@ -154,10 +154,10 @@ class CutTrigger extends Trigger{
 						max.say("Max looks directly at the camera", FlxColor.WHITE, 5);
 					}},	
 					{time:84.0,run:function(){
-						max.say("Thank you for your business", null, 4);
+						max.say("Thank you for your business.", null, 4);
 					}},	
 					{time:88.0,run:function(){
-						max.say("if you ever need another servicing you know where to go",null, 4);
+						max.say("If you ever need another servicing you know where to go.",null, 4);
 						player.canControl = true;
 						Global.cutscene = false;
 					}},	

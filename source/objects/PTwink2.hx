@@ -25,7 +25,7 @@ class PTwink2 extends Object {
 		var player:Player = room.get(Player);
 		var interact = [
 			{time:0.0,run:function(){
-				player.say("He seems to have a runny nose.");
+				player.say("Sounds like hes got a runny nose.");
 			}},
 			{time:3.0,run:function(){
 				say("-SNIFF-");

@@ -11,6 +11,14 @@ class Nathan extends Object {
 		super (x,y);
 		customName = "Nathan";
 		speechColor = FlxColor.GREEN;
+		ticks = [
+		            {word:"LOOK", callback:function(){
+		                look(); 
+		            }},
+		            {word:"TALK", callback:function(){
+		                use(); 
+		            }},
+		        ];
 	}
 
 	override function use(){

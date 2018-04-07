@@ -17,6 +17,14 @@ class MaxxCream extends Object {
 		animation.add("idle",[5],0,false);
 		speechColor = 0xffcccccc;
 		layer=BACK;
+		ticks = [
+		            {word:"LOOK", callback:function(){
+		                look(); 
+		            }},
+		            {word:"TALK", callback:function(){
+		                use(); 
+		            }},
+		        ];
 	}
 		override function look(){
 			var player:Player = room.get(Player);
@@ -62,7 +70,7 @@ class MaxxCream extends Object {
 				player.say("WILL YOU LISTEN TO ME!", null, 3);
 			}},
 			{time:18.0,run:function(){
-				say("Keep your voice down, what the hell is your problem", null, 3);
+				say("Keep your voice down, what the hell is your problem?", null, 3);
 			}},
 			{time:21.0,run:function(){
 				camera.say("Do we have a problem Mr Cream?", null, 3);
@@ -77,7 +85,7 @@ class MaxxCream extends Object {
 				say("Look, my Boss is watching, what do you want?", null, 3);
 			}},
 			{time:30.0,run:function(){
-				player.say("Information, the boys at the Bar said you have information on Lena", null, 3);
+				player.say("Information, the boys at the Bar said you have information on Lena.", null, 3);
 			}},
 			{time:33.0,run:function(){
 				say("Jesus Christ Ok, but we have todo this my way.", null, 3);
@@ -106,7 +114,7 @@ class MaxxCream extends Object {
 					animation.play("lr");
 					flipX = true;
 					walkTo(roomPos(145,15).x, y, function(){
-						say("come anf get it");
+						say("Come and get it.");
 						cutDone = true;
 						animation.play("idle");
 						flipX = false;
