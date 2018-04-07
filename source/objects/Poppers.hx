@@ -125,14 +125,24 @@ class PopperPills extends Object {
 
 		}
 			if(o.type == SitTwink){
+			if(type ==ApplePoppers){
+				var interact = [
+				{time:0.0,run:function(){
+					player.say("I'd rather throw an apple at him.", null, 4);
+				}},
+				];
+				Event.run(interact, false);
+			}
+			
+		}else { if(o.type == SitTwink){
 			var interact = [
 			{time:0.0,run:function(){
-				player.say("I'd rather throw an apple at him.", null, 4);
+				o.say("Can't you take a hint? LEAVE. US. ALONE.", null, 4);
 			}},
 			];
 			Event.run(interact, false);
 			
-		}
+		}}
 			if(o.type == SitTwink2){
 			var interact = [
 			{time:0.0,run:function(){

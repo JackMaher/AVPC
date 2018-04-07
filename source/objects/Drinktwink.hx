@@ -38,19 +38,33 @@ class Drinktwink extends Object {
 		var interact = [
 			{time:0.0,run:function(){
 				player.say("Hello", FlxColor.ORANGE, 1);
+
 			}},
+
 			{time:1.0,run:function(){
-				say("Hey! Youre Rodger Packwood right?", null,4);
+
+				say("Hey! You're Rodger Packwood right?", null,4);
+
 				say("I heard you teleport in.", null,4);
+
 			}},		
+
 			{time:5.0,run:function(){
+
 				player.say("Yeah, I'm Rodger, but people just call me Packwood.", FlxColor.ORANGE, 3);
+
 			}},
+
 			{time:8.0,run:function(){
-				say("Well its nice to meet you Packwood, I'm Johnny.", null,4);
+
+				say("Well its nice to meet you, Packwood, I'm Johnny.", null,4);
+
 			}},	
+
 			{time:12.0,run:function(){
-				say("I hope Adam and Steve didnt cause any troubles when you came in", null,4);
+
+				say("I hope Adam and Steve didn't cause any troubles when you came in", null,4);
+
 			}},	
 
 					//Intro Dialog Tree
@@ -61,7 +75,7 @@ class Drinktwink extends Object {
 			                say("Glad to hear, they've had a stick up their arse since Pride.", null, 3);
 			            }},
 			            {time:6.0,run:function(){
-			                say("Apperently Brit-Tron invited them backstage", null, 3);
+			                say("Apparently Brit-Tron invited them backstage", null, 3);
 			              	say("They've been insufferable since.", null, 3);
 			            }},
 			            {time:9.0,run:function(){
