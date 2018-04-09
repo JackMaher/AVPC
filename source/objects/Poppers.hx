@@ -132,26 +132,37 @@ class PopperPills extends Object {
 				}},
 				];
 				Event.run(interact, false);
-			}
-			
-		}else { if(o.type == SitTwink){
-			var interact = [
+			}else {
+			var interact1 = [
 			{time:0.0,run:function(){
 				o.say("Can't you take a hint? LEAVE. US. ALONE.", null, 4);
 			}},
 			];
-			Event.run(interact, false);
+			Event.run(interact1, false);
 			
-		}}
+		}
+			
+		}
 			if(o.type == SitTwink2){
+				if(type == GlitterPoppers){
+				var interact = [
+				{time:0.0,run:function(){
+					player.say("He already reeks of his father disapointment already.", null, 4);
+				}},
+				];
+				Event.run(interact, false);		
+		}else{
 			var interact = [
 			{time:0.0,run:function(){
-				player.say("He already reeks of his father disapointment already.", null, 4);
+				player.say("He must be on something much stronger than this to be able to next to him.", null, 4);
 			}},
 			];
 			Event.run(interact, false);
-			
-		}
+		}}
+
+
+
+
 			if(o.type == PTwink1){
 			var interact = [
 			{time:0.0,run:function(){
@@ -227,7 +238,7 @@ class PopperPills extends Object {
 	  }else{
 			var interact = [
 			{time:0.0,run:function(){
-				o.say("Apple? too sour for me, I need something more rustic man.", null, 4);
+				o.say("I need something more rustic.", null, 4);
 			}},
 			];
 			Event.run(interact, false);
@@ -308,7 +319,7 @@ class ApplePoppers extends PopperPills {
 	}
 
 	override public function line() {
-		return "Ooh, the new apple flavour";
+		return "Ooh, the new apple flavour.";
 	}
 
 
@@ -324,7 +335,7 @@ class CherryPoppers extends PopperPills {
 
 
 	override public function line() {
-		return "Cherry Flavoured Poppers - use this cherry to pop your cherry";
+		return "Cherry Flavoured Poppers - use this cherry to pop your cherry.";
 	}
 }
 
@@ -335,7 +346,7 @@ class PinefreshPoppers extends PopperPills {
 	}
 
 	override public function line() {
-		return "Ooh, piney";
+		return "Ooh, piney.";
 	}
 	
 
@@ -365,7 +376,7 @@ class OldspicePoppers extends PopperPills {
 	
 
 	override public function line() {
-		return "Old Spice, for when you want the smell of a 14 year old up your nose";
+		return "Old Spice, for when you want the smell of a 14 year old up your nose.";
 	}
 
 }
