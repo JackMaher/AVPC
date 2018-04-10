@@ -13,5 +13,16 @@ class Smallfan extends Object {
         animation.play("spin");
 		customName = "Fan";
 		layer=BACK;
+		        ticks = [
+            {word:"LOOK", callback:function(){
+                look(); 
+            }},
+        ];
+	}
+
+	override public function look(){
+		var player:Player = room.get(Player);
+		player.say("You spin me right round, baby right round.");
+
 	}
 }

@@ -25,7 +25,7 @@ class Cutscene extends Room {
                 new Spacestation(124,52),
 
                 new Rodgerseat(72,48),
-                new CutsceneAI(45,10),
+                new CutsceneAI(85,33),
                 new Sodsbury(71,54),
                 new CutsceneFore(1,0),
                 new CutsceneWindow(1,0)

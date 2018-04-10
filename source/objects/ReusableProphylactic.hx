@@ -74,7 +74,12 @@ class ReusableProphylactic extends Object {
 	if(other.name == "Nathan"){
 		other.say("Mhhhppp.");
 	}
-
+	if(other.name == "Maxx Cream"){
+		other.say("Thats for you not me darling.");
+	}
+	if (other.name == "Bar-Bot 2300"){
+		other.say("Mate, are you taking the piss?");
+	}
 
 	if(other.name == "Rodger Packwood"){
 

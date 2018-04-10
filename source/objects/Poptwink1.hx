@@ -10,6 +10,9 @@ class Poptwink1 extends Object {
 		super (x,y);
 		speechColor = 0xfff1eada;
 		customName = "Guy";
+        loadGraphic("assets/images/poptwink1.png", true,21,26);
+        animation.add("move",[0,1,2,3,4,4,4,4,4,4,4,4,4,4],8,true);
+        animation.play("move");
 		layer=BACK;
 		ticks = [
 	            {word:"LOOK", callback:function(){
