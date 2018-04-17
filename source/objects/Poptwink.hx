@@ -35,7 +35,7 @@ class Poptwink extends Object {
 
 		var talk = [
 		{time:0.0,run:function(){
-			player.say("Hello",null, 2);
+			player.say("Hello.",null, 2);
 		}},
 		{time:2.0,run:function(){
 			say("*SNIFF* Ride that wave man.",null, 2);

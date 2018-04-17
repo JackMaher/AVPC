@@ -27,7 +27,7 @@ class Bartender extends Object {
 	override function look(){
 		var player:Player = room.get(Player);
 
-		player.say("Smells like a well used barbot");
+		player.say("Smells like a well used bar-bot.");
 
 
 	}
@@ -47,26 +47,26 @@ class Bartender extends Object {
 				say("Whatever you say luv, whatcha fancy?", FlxColor.PINK, 4);
 			}},
 			{time:8.0,run:function(){
-				say("We are well stock in liqoure, poppers, uppers, downers...",FlxColor.PINK);
+				say("We are well stock in liqour, poppers, uppers, downers...",FlxColor.PINK);
 			}},
 
 			{time:12,run:function(){
 				player.option("Poppers?", function(){
 					var PopperCon = [
 					{time:4.0,run:function(){
-						say("We have the latest line in Poppers aviable on the first floor.");
+						say("We have the latest line in Poppers available on the first floor.");
 					}},
 					{time:8.0,run:function(){
-						twink2.say("Man I miss my poppers");
+						twink2.say("Man, I miss my poppers'");
 					}},		
 					{time:12.0,run:function(){
-						twink3.say("What happen?");
+						twink3.say("What happened?");
 					}},				
 					{time:16.0,run:function(){
 						twink2.say("Spilt them on the floor in the bathroom.");
 					}},	
 					{time:20.0,run:function(){
-						twink3.say("OH so thats why you have the faint smell of a norwegian lumberjack.");
+						twink3.say("Oh, so thats why you have the faint smell of a Norwegian lumberjack.");
 						player.canControl = true;
 					}},	
 
@@ -74,7 +74,7 @@ class Bartender extends Object {
 					Event.run(PopperCon);
 			
 				});
-				player.option("Liquore?", function(){
+				player.option("Liquor?", function(){
 					var DrinkCon = [
 					{time:4.0,run:function(){
 						say("How old are you?");
@@ -83,13 +83,13 @@ class Bartender extends Object {
 
 						var drink21 = [
 							{time:4.0,run:function(){
-								say("Sorry luv, you gotta be twenty one to order a pint.");
+								say("Sorry luv, you gotta be twenty-one to order a pint.");
 							}},
 							{time:8.0,run:function(){
 								player.say("But I can get poppers?");
 							}},
 							{time:12.0,run:function(){
-								say("We are anti undersage drinking, not anti fun.");
+								say("We are anti underage drinking, not anti fun.");
 								player.canControl = true;
 							}},
 
@@ -103,7 +103,7 @@ class Bartender extends Object {
 						player.option("Ahhh Twenty?", function(){
 							Event.run(drink21);
 						});
-						player.option("Ninete... I mean Twenty", function(){
+						player.option("Ninete... I mean Twenty...", function(){
 							Event.run(drink21);
 							
 						});

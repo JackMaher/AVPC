@@ -114,7 +114,7 @@ class ReusableProphylactic extends Object {
 
 		var interact = [
 			{time:0.0,run:function(){
-				other.say("Not bloody likely mate", FlxColor.CYAN, 2);
+				other.say("Not bloody likely mate.", FlxColor.CYAN, 2);
 					}},
 			];
 
@@ -127,7 +127,7 @@ class ReusableProphylactic extends Object {
 	}
 
 	override function look(){
-		say("johnnnnny");
+		say("Johnnnnny...");
 	}
 
 	override public function update(d){
@@ -137,7 +137,7 @@ class ReusableProphylactic extends Object {
             Player.condomOn = false;
             visible = true;
             hidden = false;
-            player.say("I'll put this back in my pocket");
+            player.say("I'll put this back in my pocket.");
             
         }
 

@@ -27,10 +27,10 @@ class PTwink3 extends Object {
 		var player:Player = room.get(Player);
 		var interact = [
 			{time:0.0,run:function(){
-				player.say("Generic Looking Twink #143");
+				player.say("Generic Looking Twink #143'");
 			}},
 			{time:3.0,run:function(){
-				say("I can hear you, dickward, you're not so dymanic yourself");
+				say("I can hear you, dickward, you're not so dymanic yourself'");
 			}},
 			];
 			Event.run(interact);
@@ -44,7 +44,7 @@ class PTwink3 extends Object {
 		var player:Player = room.get(Player);
 		var interact = [
 			{time:0.0,run:function(){
-				player.say("I'm looking for Lena, do you know anything about him");
+				player.say("I'm looking for Lena, do you know anything about him?");
 			}},
 			{time:3.0,run:function(){
 				say("Go suck an egg.");

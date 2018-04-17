@@ -47,7 +47,7 @@ class PTwink2 extends Object {
 				say("-SNIFF- no.");
 			}},
 			{time:6.0,run:function(){
-				player.say("do... do you kno...");
+				player.say("Do... Do you kno...");
 			}},
 			{time:9.0,run:function(){
 				say("NO! -SNIFF-");

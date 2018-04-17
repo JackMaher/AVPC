@@ -49,7 +49,7 @@ class Nathan extends Object {
 	
 	override function look(){
 		var player:Player = room.get(Player);
-		player.say("How does he breath with that covering his mouth?");
+		player.say("How does he breathe with that covering his mouth?");
 	}
 
 

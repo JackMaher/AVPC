@@ -25,11 +25,11 @@ class OccupiedToilet extends Object {
 		var interact = [
 
 			{time:0.0,run:function(){
-					say("Mate it's occupied", FlxColor.GREEN, 2);
+					say("Mate, it's occupied.", FlxColor.GREEN, 2);
 				
 			}},
 			{time:2.0,run:function(){
-				say("Yeah bugger off", FlxColor.WHITE,2);
+				say("Yeah, bugger off!", FlxColor.WHITE,2);
 			}}
 		];
 

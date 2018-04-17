@@ -21,6 +21,6 @@ class Ladyloo extends Object {
 	}
     override function look(){
         var player:Player = room.get(Player);
-        player.say("Broken flashing sign.");
+        player.say("A broken flashing sign.");
     }
 }

@@ -46,7 +46,7 @@ class Boss extends Object {
 	override function look(){
 		var player:Player = room.get(Player);
 
-		player.say("Thats Leonard Luthberge, captin of this ship");
+		player.say("Thats Leonard Luthberge, captain of this ship.");
 
 	}
 
@@ -65,19 +65,19 @@ class Boss extends Object {
 				say("You think I'm gonna let you run away in your ship?", null, 4);
 			}},
 			{time:12.0,run:function(){
-				say("No, you can take one of my discountiued crusing ships.", null, 4);
+				say("No, you can take one of my discontiued cruising ships.", null, 4);
 			}},
 			{time:16.0,run:function(){
 				say("I'll keep your ship for insurance.", null, 4);
 			}},
 			{time:20.0,run:function(){
-				say("I hope you dont mind stains Packwood.", null, 4);
+				say("I hope you dont mind stains, Packwood.", null, 4);
 			}},
 			{time:24.0,run:function(){
 				player.say("What about Sodsbur... I mean my Drone?", null, 4);
 			}},
 			{time:28.0,run:function(){
-				say("Its been humming the Death March for the past 30 minutes.", null, 4);
+				say("It's been humming the Death March for the past 30 minutes.", null, 4);
 			}},
 			{time:32.0,run:function(){
 				say("You can take it.", null, 4);
@@ -86,7 +86,7 @@ class Boss extends Object {
 				say("The teleporter is ready when you are.", null, 4);
 			}},
 			{time:40.0,run:function(){
-				say("Don't dissapoint me Packwood.", null, 4);
+				say("Don't disappoint me, Packwood.", null, 4);
 				Player.complete = true;
 			}},
 			];
@@ -101,13 +101,13 @@ class Boss extends Object {
 		var interact = [
 			{time:0.0,run:function(){
 				done = true;
-				player.say("Mr Luthberge, I wasnt expecting to be docked by you today", null, 4);
+				player.say("Mr Luthberge I wasnt expecting to be docked by you today", null, 4);
 			}},
 			{time:3.0,run:function(){
-				say("Let's dispense with the pleasantries shall we Rodger Packwood", FlxColor.GREEN,4);
+				say("Let's dispense with the pleasantries, shall we Rodger Packwood?", FlxColor.GREEN,4);
 			}},
 			{time:7.0,run:function(){
-				say("Where is my money, its time to pay your debts.",FlxColor.GREEN, 3);
+				say("Where is my money? It's time to pay your debts.",FlxColor.GREEN, 3);
 
 			}},			
 			{time:10.0,run:function(){
@@ -120,41 +120,41 @@ class Boss extends Object {
 				player.say("The funny thing about my debt is...",null,2);
 			}},
 			{time:13.0,run:function(){
-				say("Enough! I'm sick of having to deal with you",FlxColor.GREEN,4);
+				say("Enough! I'm sick of having to deal with you.",FlxColor.GREEN,4);
 			}},
 			{time:17.0,run:function(){
-				say("You know how this is gonna end, I will liquidate your ship",FlxColor.GREEN,4);
+				say("You know how this is gonna end. I will liquidate your ship...",FlxColor.GREEN,4);
 			}},
 			{time:21.0,run:function(){
-				say("and I'll throw you to The Bear",FlxColor.GREEN,2);
+				say("...and I'll throw you to The Bear.",FlxColor.GREEN,2);
 			}},
 			{time:24.0,run:function(){
-				player.say("Please anything but The Bear",null,3);
+				player.say("Please! Anything but The Bear!",null,3);
 			}},
 			{time:25.0,run:function(){
-				player.say("(he never washes)",null,2);
+				player.say("He never washes!",null,2);
 			}},
 			{time:27.0,run:function(){
-				player.say("I'll get you your money, I just need more time",null,3);
+				player.say("I'll get you your money, I just need more time.",null,3);
 			}},
 			{time:29.0,run:function(){
-				say("Enough enough, quite your whinning, howabout I cut you a deal",FlxColor.GREEN,4);
+				say("Enough enough, quite your whinning. How about I cut you a deal.",FlxColor.GREEN,4);
 			}},
 			{time:33.0,run:function(){
-				player.say("Anything Mr Luthberge! Anything",null,3);
+				player.say("Anything Mr Luthberge! Anything!",null,3);
 			}},
 			{time:35.0,run:function(){
-				say("Let me finish! I need someone to return some stolen property",FlxColor.GREEN,4);
+				say("Let me finish! I need someone to return some stolen property.",FlxColor.GREEN,4);
 			}},
 
 			{time:39.0,run:function(){
-				say("Go down to the bar, and ask my boys about Lena",FlxColor.GREEN,3);
+				say("Go down to the bar, and ask my boys about Lena.",FlxColor.GREEN,3);
 			}},
 			{time:42.0,run:function(){
-				say("You have 3 days Dick, dont dissapoint me",FlxColor.GREEN,3);
+				say("You have 3 days Dick, dont dissapoint me.",FlxColor.GREEN,3);
 			}},
 			{time:45.0,run:function(){
-				player.say("Yes Sir! I'll bring you Lena",null,3);
+				player.say("Yes Sir! I'll bring you Lena, don't you worry.",null,3);
 				Player.spoketoBoss = true;
 				player.canControl = true;
 
