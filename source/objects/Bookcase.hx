@@ -12,7 +12,7 @@ class Bookcase extends Object {
 	}
 	override function look(){
 		var player:Player = room.get(Player);
-		player.say("This Bookcase is full of Mucky magazines.");
+		player.say("This Bookcase is full of mucky magazines.");
 		//FlxG.sound.play("assets/voices/docking/rodger/bookcase.ogg");
 	}
 	override function use(){
