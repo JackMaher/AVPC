@@ -1,6 +1,8 @@
 package;
 
 import adventure.*;
+import rooms.*;
+import objects.*;
 import flixel.FlxObject;
 import flixel.util.FlxColor;
 
@@ -52,6 +54,19 @@ class Player extends Object {
 
 
         update(0);
+    }
+
+    public static function resetVars() {
+	clothed = true;
+	passwordHeard = false;
+	spoketoBoss = false;
+        poppersComplete = false;
+        condomOn = false;
+        maxxSex = false;
+        std = false;
+        complete = false;
+        Poppers.taken = false;
+        MaxxCream.cutDone = false;
     }
 
     override public function use(){

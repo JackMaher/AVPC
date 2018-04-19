@@ -5,7 +5,9 @@ import objects.*;
 import rooms.*;
 import flixel.util.FlxColor;
 import flash.filters.*;
+import flixel.text.FlxText;
 import flixel.FlxG;
+import flixel.util.FlxTimer;
 import openfl.display.Shader;
 
 class Cutscene extends Room {
@@ -13,6 +15,9 @@ class Cutscene extends Room {
     var floatTime:Float = 0;
     var runTime:Float = 0;
     var toon:Toon;
+
+    var clickToSkip:FlxText;
+    public static var alreadySeen:Bool = true;
 
 
     override public function create() {
@@ -29,10 +34,25 @@ class Cutscene extends Room {
             new CutsceneWindow(1,0)
         ];
 
+        if(Cutscene.alreadySeen) {
+            clickToSkip = new FlxText(0,0,FlxG.width - 30);
+            clickToSkip.text = "[ CLICK TO SKIP ]";
+            clickToSkip.setFormat("assets/fonts/pixelade.ttf", 40, FlxColor.YELLOW, RIGHT);
+            clickToSkip.setBorderStyle(OUTLINE, 0xff000000, 2);
+            clickToSkip.y = FlxG.height - 100;
+            FlxG.state.add(clickToSkip);
+        }
+
         Global.fader.alpha = 1;
         Global.fader.fadeIn();
 
         //FlxG.camera.setFilters([new ShaderFilter(toon=new Toon())]);
+    }
+
+    function leave() {
+        if(clickToSkip != null) {
+            FlxG.state.remove(clickToSkip);
+        }
     }
 
     override public function update(d){
@@ -49,6 +69,18 @@ class Cutscene extends Room {
             var obj = objects[i];
             obj.offset.y += Math.sin(floatTime) * room.scaleFactor;
             obj.x += room.scaleFactor*d/2;
+        }
+
+        if(Cutscene.alreadySeen) {
+            if(FlxG.mouse.justReleased) {
+                Global.fader.fadeOut(1);
+                // Switch to midstate 
+                new FlxTimer().start(1,function(t) {
+                    FlxG.state.remove(clickToSkip);
+                    game.switchRoom(Docking); 
+                    Global.fader.fadeIn(1);
+                });
+            } 
         }
 
         var sodsbury:Sodsbury = get(Sodsbury);
