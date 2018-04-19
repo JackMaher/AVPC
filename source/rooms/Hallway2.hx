@@ -35,7 +35,6 @@ class Hallway2 extends Room {
                 {time:1.0, run:function() {
                     var twink:Drinktwink = get(Drinktwink);
                     twink.say("Hellloo Sailor.",null,2.5);
-                    FlxG.sound.play("assets/voices/hallway2/johnny/hello-sailor.ogg");
                 }}
             ];
             Event.run(hello);
@@ -81,22 +80,18 @@ class Planthall extends Object {
                     Global.cutscene = true;
                     player.flipX = true;
                     player.say("A rather short and stubby Morning Glory plant.");
-                    FlxG.sound.play("assets/voices/hallway2/rodger/morning-glory.ogg");
                 });
 
                 player.canControl = false;
             }},
             {time:4.0,run:function(){
                 johnny.say("Don't talk to Albert like that he can hear you.");
-                FlxG.sound.play("assets/voices/hallway2/johnny/dont-talk.ogg");
             }},
             {time:7.5,run:function(){
                 player.say("Albert?",null,2);
-                FlxG.sound.play("assets/voices/hallway2/rodger/albert.ogg");
             }},
             {time:9.0,run:function(){
                 johnny.say("Yes Albert, hes a grower not a shower.");
-                FlxG.sound.play("assets/voices/hallway2/johnny/grower.ogg");
             }},
             {time:13.0,run:function(){
                 johnny.say("Isn't that right Albert?",null,2);
@@ -106,7 +101,6 @@ class Planthall extends Object {
             }},
             {time:21.0,run:function(){
                 johnny.say("See he agrees.");
-                FlxG.sound.play("assets/voices/hallway2/johnny/agrees.ogg");
                 nameHeard = true;
                 player.canControl = true;
                 Global.cutscene = false;
@@ -117,7 +111,6 @@ class Planthall extends Object {
         }
         else {
             player.say("Hello, Albert.",null,1.5);
-            FlxG.sound.play("assets/voices/hallway2/rodger/hello-albert.ogg");
 
             Event.run([
             {time:1.5,run:function(){

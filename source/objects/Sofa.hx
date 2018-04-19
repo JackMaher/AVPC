@@ -22,7 +22,6 @@ class Sofa extends Object {
 	override function look(){
 		var player:Player = room.get(Player);
 		player.say("This sofa has some questionable stains.");
-		FlxG.sound.play("assets/voices/hallway2/rodger/stains.ogg");
 	}
 
 
