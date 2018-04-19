@@ -17,7 +17,7 @@ class Cutscene extends Room {
     var toon:Toon;
 
     var clickToSkip:FlxText;
-    public static var alreadySeen:Bool = true;
+    public static var alreadySeen:Bool = false;
 
 
     override public function create() {
