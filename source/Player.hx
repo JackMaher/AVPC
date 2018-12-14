@@ -20,7 +20,13 @@ class Player extends Object {
     public static var maxxSex = false;
     public static var std = false;
     public static var complete = false;
-    public var intro = true;
+    public var intro = false;
+    public var GiftQuest = false;
+    public var TreeQuest = false;
+    public var LightsQuest = false;
+    public var KittyQuest = false;
+    public var CookieQuest = false;
+    public var TwinkBotQuest = false;
 
     public function new(x,y) {
         super(x,y);

@@ -27,6 +27,23 @@ class LightsInv extends Object {
 			{time:3.0,run:function(){
 				visible = true;
 				room.addObject(new LightsRoom(0,0));
+				Global.inventory.remove(this);
+				player.LightsQuest = true;
+			}},
+			];
+			Event.run(interact);
+			
+		}
+		if(other.name == "Festive Albert"){
+
+		var interact = [
+			{time:0.0,run:function(){
+				player.say("Lets Deck these halls boiiiiiiiiiiiiiiii");
+			}},
+			{time:3.0,run:function(){
+				visible = true;
+				room.addObject(new LightsRoom(0,0));
+				Global.inventory.remove(this);
 			}},
 			];
 			Event.run(interact);

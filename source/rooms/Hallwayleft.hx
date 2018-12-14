@@ -13,7 +13,8 @@ class Hallwayleft extends Room {
         objects = [
         			new Player(10,10),
                     new RoomTrigger(125,Room1,10,17),
-                    new Decobox(28,38),
+                    new Decobox(38,38),
+                    new Storage1(8,49),
                     new Doorkitchen(78,34)];
                     //FlxG.timeScale = 2;
         			 

@@ -3,18 +3,18 @@ import adventure.*;
 import flixel.util.FlxColor;
 import flixel.FlxG;
 
-class Kcupboard extends Object {
+class Alcohol extends Object {
 
     var taken : Bool = false;
 
     public function new(x,y){
         super (x,y);
-        customName = "Cupboard";
-        loadGraphic("assets/images/kcupboard.png", true,11,7);
+        customName = "Assorted Alcohol";
+        loadGraphic("assets/images/alcohol.png", true,12,9);
         layer=BACK;
 
         ticks = [
-        {word:"SEARCH", callback:use},
+        {word:"TAKE", callback:use},
         {word:"LOOK",callback:look}
         ];
     }
@@ -22,16 +22,16 @@ class Kcupboard extends Object {
     override function use(){
         var player:Player = room.get(Player);
         if (taken == false){
-        Global.inventory.add(new Screwdriver(-1000,20) );
+        Global.inventory.add(new Wine(-1000,20) );
         taken = true;
         }
         else{
-            player.say("Just asorted spices and poppers.");
+            player.say("Just your typical booze selection");
         }
     }
     override function look(){
         var player:Player = room.get(Player);
-        player.say("Authentic Wooden Cupboard made from Wood from Semga9.");
+        player.say("Alcohol from all across the galaxy.");
     }
 
 

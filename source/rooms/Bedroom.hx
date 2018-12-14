@@ -11,7 +11,7 @@ class Bedroom extends Room {
     override public function create() {
         //scaleFactor = 8;
         objects = [
-        			new Player(10,10),
+        			new Player(33,17),
                     new Doorbedroom1(28,15),
                     new Albertdeco(70,34),
                     new Underthebed(99,45),
@@ -19,7 +19,7 @@ class Bedroom extends Room {
                     new Pictures(50,10),
                     new Window(82,8),
                     new Twinkbot(11,14)];
-                    //FlxG.timeScale = 2;
+                    FlxG.timeScale = 2;
         			 
     }
 }

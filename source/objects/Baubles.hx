@@ -28,7 +28,7 @@ class Baubles extends Object {
 				other.customName = "Festive Albert";
 				other.say("-Festive Silence-");
 				Global.inventory.remove(this);
-
+				player.TreeQuest = true;
 				cast(other,Albert).festive = true;
 			}},
 			];

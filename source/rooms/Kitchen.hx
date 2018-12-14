@@ -18,7 +18,9 @@ class Kitchen extends Room {
                     new Curtin(21,4),
                     new Krug(11,46),
                     new Tea(38,23),
+                    new Touchpad(86,24),
                     new Plate(16,24),
+                    new Alcohol(62,21),
                     new Kcupboard(20,34)];
                     
         			 

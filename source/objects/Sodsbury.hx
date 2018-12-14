@@ -6,8 +6,8 @@ import flixel.util.FlxColor;
 
 class Sodsbury extends Object {
 	public static var CatCome:Bool = false;
-	var SodSpoke:Bool = false;
-	var CatQuest: Bool = false;
+	public static var SodSpoke:Bool = false;
+	public static var CatQuest: Bool = false;
 
 	public function new(x,y){
 		super (x,y);
@@ -37,7 +37,7 @@ class Sodsbury extends Object {
 
 	override public function use(){
 		var player:Player = room.get(Player);
-		if (SodSpoke == true && CatQuest == false){
+		if (Sodsbury.SodSpoke == true && Sodsbury.CatQuest == false){
         	var interact = [
 			{time:0.0,run:function(){
 				player.canControl = false;
@@ -64,12 +64,12 @@ class Sodsbury extends Object {
 			{time:21.0,run:function(){
 				say("They wont come down until their demands have been met.");
 				player.canControl = true;
-				CatQuest = true;
+				Sodsbury.CatQuest = true;
 			}},
 			];
 			Event.run(interact);
 		}
-		if(CatQuest == true && Catcastle.built == true && CatCome == false){
+		if(Sodsbury.CatQuest == true && Catcastle.built == true && Sodsbury.CatCome == false){
 			var interact = [
 			{time:0.0,run:function(){
 				player.say("Their demands have been met.");
@@ -82,7 +82,7 @@ class Sodsbury extends Object {
 			Event.run(interact);
 
 		}
-		if(CatCome == true){
+		if(Sodsbury.CatCome == true){
 			var interact = [
 			{time:0.0,run:function(){
 				say("Ho Ho Ho!");

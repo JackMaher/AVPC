@@ -5,11 +5,11 @@ import flixel.util.FlxColor;
 
 
 
-class Screwdriver extends Object {
+class Gifts extends Object {
 
 	public function new(x,y){
 		super (x,y);
-		customName = "Screwdriver";
+		customName = "Gifts";
 		changeScale(4);
 		layer=FORE;
 
@@ -17,25 +17,23 @@ class Screwdriver extends Object {
 	override function useOn ( other:Object ) {
 	var player:Player = room.get(Player);
 
-		if(other.name == "Cat's Castle"){
+		if(other.name == "Unfestive Albert"){
 
 		var interact = [
 			{time:0.0,run:function(){
-				player.say("Here, hopefully end their protest now.");
+				player.say("Lets Deck these halls boiiiiiiiiiiiiiiii");
 			}},
 			{time:3.0,run:function(){
-				other.animation.play("built");
+				//visible = true;
+				room.addObject(new GiftsRoom(68,41));
 				Global.inventory.remove(this);
-				Catcastle.built = true;
-				player.KittyQuest = true;
+				player.GiftQuest = true;
 			}},
 			];
 			Event.run(interact);
 			
 		}
-	}
-
-	override function look(){
-		say("Worth the wait.");
-	}
+			
+		}
+	
 }

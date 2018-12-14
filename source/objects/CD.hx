@@ -26,6 +26,7 @@ class CD extends Object {
 			}},
 			{time:3.0,run:function(){
 				Global.inventory.remove(this);
+				//FlxG.sound.play("assets/music/music.ogg");
 			}},
 			];
 			Event.run(interact);
