@@ -26,7 +26,7 @@ class Screwdriver extends Object {
 			{time:3.0,run:function(){
 				other.animation.play("built");
 				Global.inventory.remove(this);
-				cast(other,Catcastle).built = true;
+				Catcastle.built = true;
 			}},
 			];
 			Event.run(interact);

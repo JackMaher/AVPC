@@ -21,6 +21,28 @@ class Hallway extends Room {
                     //FlxG.timeScale = 2;
         			 
     }
+    public function enter(){
+            var sods = room.get (Sodsbury);
+            if (Sodsbury.CatCome == true){
+                sods.hidden = true;
+                sods.visible = false;
+            }
+            
+
+            if(sods.SodSpoke == false){
+            var interact = [
+            {time:0.0,run:function(){
+                sods.say("Come on you bloody bastards.");
+            }},
+            {time:3.0,run:function(){
+                sods.say("Get out down from there!");
+                sods.SodSpoke = true;
+            }},
+            ];
+            Event.run(interact);
+
+        }
+    }
 }
 
 class Hallfore1 extends Object {

@@ -5,13 +5,15 @@ import flixel.util.FlxColor;
 
 
 class Sodsbury extends Object {
-	var CatCome:Bool = false;
+	public static var CatCome:Bool = false;
 	var SodSpoke:Bool = false;
+	var CatQuest: Bool = false;
 
 	public function new(x,y){
 		super (x,y);
         loadGraphic("assets/images/sodsbury.png", true,10,14);
         animation.add("float",[0,1,2,3,6,5],6,true);
+        animation.add("SodFes",[7,8,9,10,11],6,true);
         animation.play("float");
 		customName = "Sodsbury";
 		layer=BACK;
@@ -24,19 +26,6 @@ class Sodsbury extends Object {
             }}
         ];
 
-        if(CatCome == false){
-        	var interact = [
-			{time:0.0,run:function(){
-				say("Come on you bloody bastards.");
-			}},
-			{time:3.0,run:function(){
-				say("Get out down from there!");
-			}},
-			];
-			Event.run(interact);
-
-        }
-
 
 	}
 
@@ -48,7 +37,7 @@ class Sodsbury extends Object {
 
 	override public function use(){
 		var player:Player = room.get(Player);
-		if (SodSpoke == false){
+		if (SodSpoke == true && CatQuest == false){
         	var interact = [
 			{time:0.0,run:function(){
 				player.say("Who are you talking too Sods?");
@@ -73,25 +62,31 @@ class Sodsbury extends Object {
 			}},
 			{time:21.0,run:function(){
 				say("They wont come down until their demands have been met.");
-				SodSpoke = true;
+				CatQuest = true;
 			}},
 			];
 			Event.run(interact);
-		}else{
-			say("I can't aruge with them.");
 		}
-		if(SodSpoke == true && room.get(Catcastle).built == true){
+		if(CatQuest == true && Catcastle.built == true && CatCome == false){
 			var interact = [
 			{time:0.0,run:function(){
 				player.say("Their demands have been met.");
 			}},
 			{time:3.0,run:function(){
 				say("Nothing good will come to meeting the terrorists demands.");
-				CatCome = true;
+				Sodsbury.CatCome = true;
 			}},
 			];
 			Event.run(interact);
 
+		}
+		if(CatCome == true){
+			var interact = [
+			{time:0.0,run:function(){
+				say("Ho Ho Ho!");
+			}},
+			];	
+			Event.run(interact);		
 		}
 
 	}

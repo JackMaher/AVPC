@@ -12,11 +12,11 @@ class Bedroom extends Room {
         //scaleFactor = 8;
         objects = [
         			new Player(10,10),
-                    new Doorbedroom1(33,15),
-                    new Albertdeco(9,23),
-                    new Bed(92,22),
-                    new Pictures(96,10),
-                    new Window(55,10)];
+                    new Doorbedroom1(28,15),
+                    new Albertdeco(70,34),
+                    new Bed(83,22),
+                    new Pictures(60,10),
+                    new Window(82,8)];
                     //FlxG.timeScale = 2;
         			 
     }

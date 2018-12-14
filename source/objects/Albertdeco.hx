@@ -9,8 +9,8 @@ class Albertdeco extends Object {
 
     public function new(x,y){
         super (x,y);
-        customName = "Box of Stuff";
-        loadGraphic("assets/images/albertdeco.png", true,23,24);
+        customName = "Bedside Table";
+        loadGraphic("assets/images/albertdeco.png", true,12,13);
         layer=BACK;
 
         ticks = [

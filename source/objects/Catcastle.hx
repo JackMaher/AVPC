@@ -6,11 +6,11 @@ import flixel.util.FlxColor;
 
 class Catcastle extends Object {
 
-    public var built:Bool = false;
+    public static var built:Bool = false;
 
     public function new(x,y){
         super (x,y);
-        loadGraphic("assets/images/catcastle.png", true,26,33);
+        loadGraphic("assets/images/catcastle.png", true,26,37);
         customName = "Cat's Castle";
         animation.add("unboc",[1],3,true);
         animation.play("unboc");

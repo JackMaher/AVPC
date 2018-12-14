@@ -13,14 +13,14 @@ class Kitchen extends Room {
         objects = [
         			new Player(10,10),
                     new Doorkitchen1(156,15),
-                    new Thefeeder(89,0),
-                    new Table(98,33),
+                    new Thefeeder(85,0),
+                    new Table(94,33),
                     new Curtin(21,4),
                     new Krug(11,46),
                     new Tea(38,23),
                     new Plate(16,24),
                     new Kcupboard(20,34)];
-                    //FlxG.timeScale = 2;
+                    
         			 
     }
 }
