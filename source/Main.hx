@@ -17,7 +17,7 @@ class Main extends Sprite
         super();
         Global.defaultScaleFactor = 8;
 #if true
-        Global.startingRoom = Room1;
+        Global.startingRoom = Cockpit;
         Player.spoketoBoss = true;
         Player.passwordHeard = true;
         addChild(new FlxGame(1920, 1080, Game));

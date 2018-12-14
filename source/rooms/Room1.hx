@@ -22,7 +22,7 @@ class Room1 extends Room {
                     new Room1rug(58,46),
                     new Sodsbury(13,30),
                     ];
-                    //FlxG.timeScale = 2;
+                    FlxG.timeScale = 2;
                    
     }
 

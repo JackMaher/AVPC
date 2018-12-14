@@ -20,6 +20,7 @@ class Player extends Object {
     public static var maxxSex = false;
     public static var std = false;
     public static var complete = false;
+    public var intro = true;
 
     public function new(x,y) {
         super(x,y);

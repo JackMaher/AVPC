@@ -14,9 +14,11 @@ class Bedroom extends Room {
         			new Player(10,10),
                     new Doorbedroom1(28,15),
                     new Albertdeco(70,34),
+                    new Underthebed(99,45),
                     new Bed(83,22),
-                    new Pictures(60,10),
-                    new Window(82,8)];
+                    new Pictures(50,10),
+                    new Window(82,8),
+                    new Twinkbot(11,14)];
                     //FlxG.timeScale = 2;
         			 
     }

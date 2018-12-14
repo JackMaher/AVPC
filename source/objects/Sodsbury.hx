@@ -40,6 +40,7 @@ class Sodsbury extends Object {
 		if (SodSpoke == true && CatQuest == false){
         	var interact = [
 			{time:0.0,run:function(){
+				player.canControl = false;
 				player.say("Who are you talking too Sods?");
 			}},
 			{time:3.0,run:function(){
@@ -62,6 +63,7 @@ class Sodsbury extends Object {
 			}},
 			{time:21.0,run:function(){
 				say("They wont come down until their demands have been met.");
+				player.canControl = true;
 				CatQuest = true;
 			}},
 			];
