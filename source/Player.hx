@@ -65,8 +65,7 @@ class Player extends Object {
         maxxSex = false;
         std = false;
         complete = false;
-        Poppers.taken = false;
-        MaxxCream.cutDone = false;
+
     }
 
     override public function use(){
